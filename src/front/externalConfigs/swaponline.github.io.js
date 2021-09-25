@@ -52,9 +52,9 @@ window.buildOptions = {
     eth: true,
     bnb: true,
     matic: true,
-    arbeth: true,
-    ghost: true,
-    next: true,
+    arbeth: false,
+    ghost: false,
+    next: false,
   },
   blockchainSwapEnabled: {
     btc: true,
