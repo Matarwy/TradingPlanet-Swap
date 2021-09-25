@@ -21,17 +21,6 @@ const __webpack_public_path__ = `${config.publicPath}images/` // It makes webpac
 const rootEl = document.getElementById('root')
 
 if (
-  !window?.STATISTIC_DISABLED &&
-  process.env.NODE_ENV !== 'development'
-) {
-  Sentry.init({
-    dsn: 'https://d35a56c4518c4a6987b0c36b9b0bf123@sentry.wpmix.net/2',
-    integrations: [new Integrations.BrowserTracing()],
-    tracesSampleRate: 1.0,
-  });
-}
-
-if (
   window.location.protocol === 'http:' &&
   window.location.hostname !== 'localhost' &&
   !isLocalIP(window.location.hostname)
