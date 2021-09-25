@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import routes from 'shared/routes'
 import store, { history } from 'redux/store'
 import * as Sentry from '@sentry/react';
-import { Integrations } from "@sentry/tracing";
 
 import Root from 'shared/containers/Root/Root'
 import { migrate } from 'helpers'
