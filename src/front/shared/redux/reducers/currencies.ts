@@ -132,7 +132,7 @@ const initialState = {
       value: 'arbeth',
       fullTitle: 'arbitrum eth',
       blockchain: BLOCKCHAIN_TYPE.ARBITRUM,
-      addAssets: true,
+      addAssets: false,
     }] : [],
     //@ts-ignore
     ...(!buildOpts.curEnabled || buildOpts.curEnabled.ghost) ? [{
@@ -142,7 +142,7 @@ const initialState = {
       value: 'ghost',
       fullTitle: 'ghost',
       blockchain: BLOCKCHAIN_TYPE.GHOST,
-      addAssets: true,
+      addAssets: false,
     }] : [],
     //@ts-ignore
     ...(!buildOpts.curEnabled || buildOpts.curEnabled.next) ? [{
@@ -152,7 +152,7 @@ const initialState = {
       value: 'next',
       fullTitle: 'next',
       blockchain: BLOCKCHAIN_TYPE.NEXT,
-      addAssets: true,
+      addAssets: false,
     }] : [],
     //@ts-ignore
     ...(!buildOpts.curEnabled || buildOpts.curEnabled.btc) ? [{
@@ -222,29 +222,29 @@ const initialState = {
       fullTitle: 'matic token',
     }] : [],
     //@ts-ignore
-    ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.arbeth) ? [{
-      name: 'ARBETH',
-      title: 'ARBETH',
-      icon: 'arbeth',
-      value: 'arbeth',
-      fullTitle: 'arbitrum eth',
-    }] : [],
-    //@ts-ignore
-    ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.ghost) ? [{
-      name: 'GHOST',
-      title: 'GHOST',
-      icon: 'ghost',
-      value: 'ghost',
-      fullTitle: 'ghost',
-    }] : [],
-    //@ts-ignore
-    ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.next) ? [{
-      name: 'NEXT',
-      title: 'NEXT',
-      icon: 'next',
-      value: 'next',
-      fullTitle: 'next',
-    }] : [],
+    // ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.arbeth) ? [{
+    //   name: 'ARBETH',
+    //   title: 'ARBETH',
+    //   icon: 'arbeth',
+    //   value: 'arbeth',
+    //   fullTitle: 'arbitrum eth',
+    // }] : [],
+    // //@ts-ignore
+    // ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.ghost) ? [{
+    //   name: 'GHOST',
+    //   title: 'GHOST',
+    //   icon: 'ghost',
+    //   value: 'ghost',
+    //   fullTitle: 'ghost',
+    // }] : [],
+    // //@ts-ignore
+    // ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.next) ? [{
+    //   name: 'NEXT',
+    //   title: 'NEXT',
+    //   icon: 'next',
+    //   value: 'next',
+    //   fullTitle: 'next',
+    // }] : [],
     //@ts-ignore
     ...(!buildOpts.blockchainSwapEnabled || buildOpts.blockchainSwapEnabled.btc) ? [{
       name: 'BTC',
@@ -283,13 +283,13 @@ if (config.isWidget) {
       value: 'matic',
       fullTitle: 'matic token',
     },
-    {
-      name: 'ARBETH',
-      title: 'ARBETH',
-      icon: 'arbeth',
-      value: 'arbeth',
-      fullTitle: 'arbitrum eth',
-    },
+    // {
+    //   name: 'ARBETH',
+    //   title: 'ARBETH',
+    //   icon: 'arbeth',
+    //   value: 'arbeth',
+    //   fullTitle: 'arbitrum eth',
+    // },
     {
       name: 'BTC',
       title: 'BTC',
@@ -297,20 +297,20 @@ if (config.isWidget) {
       value: 'btc',
       fullTitle: 'bitcoin',
     },
-    {
-      name: 'GHOST',
-      title: 'GHOST',
-      icon: 'ghost',
-      value: 'ghost',
-      fullTitle: 'ghost',
-    },
-    {
-      name: 'NEXT',
-      title: 'NEXT',
-      icon: 'next',
-      value: 'next',
-      fullTitle: 'next',
-    },
+    // {
+    //   name: 'GHOST',
+    //   title: 'GHOST',
+    //   icon: 'ghost',
+    //   value: 'ghost',
+    //   fullTitle: 'ghost',
+    // },
+    // {
+    //   name: 'NEXT',
+    //   title: 'NEXT',
+    //   icon: 'next',
+    //   value: 'next',
+    //   fullTitle: 'next',
+    // },
   ]
 
   initialState.partialItems = [
@@ -335,13 +335,13 @@ if (config.isWidget) {
       value: 'matic',
       fullTitle: 'matic token',
     },
-    {
-      name: 'ARBETH',
-      title: 'ARBETH',
-      icon: 'arbeth',
-      value: 'arbeth',
-      fullTitle: 'arbitrum eth',
-    },
+    // {
+    //   name: 'ARBETH',
+    //   title: 'ARBETH',
+    //   icon: 'arbeth',
+    //   value: 'arbeth',
+    //   fullTitle: 'arbitrum eth',
+    // },
     {
       name: 'BTC',
       title: 'BTC',
@@ -349,20 +349,20 @@ if (config.isWidget) {
       value: 'btc',
       fullTitle: 'bitcoin',
     },
-    {
-      name: 'GHOST',
-      title: 'GHOST',
-      icon: 'ghost',
-      value: 'ghost',
-      fullTitle: 'ghost',
-    },
-    {
-      name: 'NEXT',
-      title: 'NEXT',
-      icon: 'next',
-      value: 'next',
-      fullTitle: 'next',
-    },
+    // {
+    //   name: 'GHOST',
+    //   title: 'GHOST',
+    //   icon: 'ghost',
+    //   value: 'ghost',
+    //   fullTitle: 'ghost',
+    // },
+    // {
+    //   name: 'NEXT',
+    //   title: 'NEXT',
+    //   icon: 'next',
+    //   value: 'next',
+    //   fullTitle: 'next',
+    // },
   ]
 
   // Мульти валюта с обратной совместимостью одиночного билда
