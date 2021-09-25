@@ -10,8 +10,8 @@ import ui from './ui'
 import filter from './filter'
 import oneinch from './oneinch'
 import btc from './btc'
-import ghost from './ghost'
-import next from './next'
+// import ghost from './ghost'
+// import next from './next'
 import btcmultisig from './btcmultisig'
 import EthLikeAction from './ethLikeAction'
 import Erc20LikeAction from './erc20LikeAction'
@@ -44,12 +44,12 @@ export default {
   eth: EthLikeAction.ETH,
   bnb: EthLikeAction.BNB,
   matic: EthLikeAction.MATIC,
-  arbeth: EthLikeAction.ARBETH,
+  //arbeth: EthLikeAction.ARBETH,
   erc20: Erc20LikeAction.erc20,
   bep20: Erc20LikeAction.bep20,
   erc20matic: Erc20LikeAction.erc20matic,
-  ghost,
-  next,
+  // ghost,
+  // next,
 
   feed,
   analytics,

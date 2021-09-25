@@ -5,9 +5,9 @@ const allowedCoins = [
   ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.eth ? ['ETH'] : []),
   ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.bnb ? ['BNB'] : []),
   ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.matic ? ['MATIC'] : []),
-  ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.arbeth ? ['ARBETH'] : []),
-  ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.ghost ? ['GHOST'] : []),
-  ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.next ? ['NEXT'] : []),
+  // ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.arbeth ? ['ARBETH'] : []),
+  // ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.ghost ? ['GHOST'] : []),
+  // ...(!config.opts.blockchainSwapEnabled || config.opts.blockchainSwapEnabled.next ? ['NEXT'] : []),
 ]
 
 const isExchangeAllowed = (currencies) =>

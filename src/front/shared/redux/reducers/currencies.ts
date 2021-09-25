@@ -125,35 +125,35 @@ const initialState = {
       addAssets: true,
     }] : [],
     //@ts-ignore
-    ...(!buildOpts.curEnabled || buildOpts.curEnabled.arbeth) ? [{
-      name: 'ARBETH',
-      title: 'ARBETH',
-      icon: 'arbeth',
-      value: 'arbeth',
-      fullTitle: 'arbitrum eth',
-      blockchain: BLOCKCHAIN_TYPE.ARBITRUM,
-      addAssets: false,
-    }] : [],
-    //@ts-ignore
-    ...(!buildOpts.curEnabled || buildOpts.curEnabled.ghost) ? [{
-      name: 'GHOST',
-      title: 'GHOST',
-      icon: 'ghost',
-      value: 'ghost',
-      fullTitle: 'ghost',
-      blockchain: BLOCKCHAIN_TYPE.GHOST,
-      addAssets: false,
-    }] : [],
-    //@ts-ignore
-    ...(!buildOpts.curEnabled || buildOpts.curEnabled.next) ? [{
-      name: 'NEXT',
-      title: 'NEXT',
-      icon: 'next',
-      value: 'next',
-      fullTitle: 'next',
-      blockchain: BLOCKCHAIN_TYPE.NEXT,
-      addAssets: false,
-    }] : [],
+    // ...(!buildOpts.curEnabled || buildOpts.curEnabled.arbeth) ? [{
+    //   name: 'ARBETH',
+    //   title: 'ARBETH',
+    //   icon: 'arbeth',
+    //   value: 'arbeth',
+    //   fullTitle: 'arbitrum eth',
+    //   blockchain: BLOCKCHAIN_TYPE.ARBITRUM,
+    //   addAssets: false,
+    // }] : [],
+    // //@ts-ignore
+    // ...(!buildOpts.curEnabled || buildOpts.curEnabled.ghost) ? [{
+    //   name: 'GHOST',
+    //   title: 'GHOST',
+    //   icon: 'ghost',
+    //   value: 'ghost',
+    //   fullTitle: 'ghost',
+    //   blockchain: BLOCKCHAIN_TYPE.GHOST,
+    //   addAssets: false,
+    // }] : [],
+    // //@ts-ignore
+    // ...(!buildOpts.curEnabled || buildOpts.curEnabled.next) ? [{
+    //   name: 'NEXT',
+    //   title: 'NEXT',
+    //   icon: 'next',
+    //   value: 'next',
+    //   fullTitle: 'next',
+    //   blockchain: BLOCKCHAIN_TYPE.NEXT,
+    //   addAssets: false,
+    // }] : [],
     //@ts-ignore
     ...(!buildOpts.curEnabled || buildOpts.curEnabled.btc) ? [{
       name: 'BTC',

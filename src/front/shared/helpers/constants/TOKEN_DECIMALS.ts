@@ -6,9 +6,9 @@ const decimals = {
   bnb: 18,
   eth: 18,
   matic: 18,
-  arbeth: 18,
-  ghost: 8,
-  next: 8,
+  // arbeth: 18,
+  // ghost: 8,
+  // next: 8,
 }
 
 Object.keys(TOKEN_STANDARDS).forEach((key) => {
