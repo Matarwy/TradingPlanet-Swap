@@ -69,10 +69,10 @@ const backupUserData = {
           eth:                              get(`eth`),
           bnb:                              get(`bnb`),
           matic:                            get(`matic`),
-          arbeth:                           get(`arbeth`),
+          //arbeth:                           get(`arbeth`),
           btc:                              get(`btc`),
-          ghost:                            get(`ghost`),
-          next:                             get(`next`),
+          // ghost:                            get(`ghost`),
+          // next:                             get(`next`),
           twentywords:                      get(`twentywords`),
           btcMultisig:                      get(`btcMultisig`),
           btcMultisigOtherOwnerKey:         get(`btcMultisigOtherOwnerKey`),
@@ -173,8 +173,8 @@ const backupUserData = {
             const data = req.data.data
 
             set(`btc`, data.btc)
-            set(`ghost`, data.ghost)
-            set(`next`, data.next)
+            // set(`ghost`, data.ghost)
+            // set(`next`, data.next)
             set(`btcMultisig`, data.btcMultisig)
             set(`btcMultisigOtherOwnerKey`, data.btcMultisigOtherOwnerKey)
             set(`btcPinMnemonicKey`, data.btcPinMnemonicKey)
@@ -183,7 +183,7 @@ const backupUserData = {
             set(`eth`, data.eth)
             set(`bnb`, data.bnb)
             set(`matic`, data.matic)
-            set(`arbeth`, data.arbeth)
+            //set(`arbeth`, data.arbeth)
             set(`twentywords`, data.twentywords)
 
             // set other params to true (user has on tour and other pages)

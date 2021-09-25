@@ -36,7 +36,7 @@ const routes = (
       <Route path={`${links.atomicSwap}/:orderId`} component={SwapComponent} />
       <Route path={`${links.turboSwap}/:orderId`} component={TurboSwap} />
 
-      <Route path={`/:ticker(btc|eth|bnb|matic|arbeth|ghost|next)/tx/:tx?`} component={Transaction} />
+      <Route path={`/:ticker(btc|eth|bnb|matic${/*|arbeth|ghost|next*/''})/tx/:tx?`} component={Transaction} />
       <Route path={`/:token(token)/:ticker/tx/:tx?`} component={Transaction} />
 
       <Route

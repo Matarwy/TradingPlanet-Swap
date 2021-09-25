@@ -293,7 +293,7 @@ class SwapApp extends EventEmitter {
   getMyEthAddress() { return this.getEvmLikeAddress(`eth`) }
   getMyBnbAddress() { return this.getEvmLikeAddress(`bnb`) }
   getMyMaticAddress() { return this.getEvmLikeAddress(`matic`) }
-  getMyArbitrumAddress() { return this.getEvmLikeAddress(`arbeth`) }
+  //getMyArbitrumAddress() { return this.getEvmLikeAddress(`arbeth`) }
 
   getEthWeb3Adapter() {
     return this.env.getWeb3().eth
@@ -347,7 +347,7 @@ class SwapApp extends EventEmitter {
   getParticipantEthAddress(swap) { return this.getParticipantEvmLikeAddress(`eth`, swap) }
   getParticipantBnbAddress(swap) { return this.getParticipantEvmLikeAddress(`bnb`, swap) }
   getParticipantMaticAddress(swap) { return this.getParticipantEvmLikeAddress(`matic`, swap) }
-  getParticipantArbitrumAddress(swap) { return this.getParticipantEvmLikeAddress(`arbeth`, swap) }
+  //getParticipantArbitrumAddress(swap) { return this.getParticipantEvmLikeAddress(`arbeth`, swap) }
 
 
   static is(app) {
