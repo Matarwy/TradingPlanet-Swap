@@ -878,13 +878,13 @@
 
       const isHomePath = (urlHash === '#/' || urlHash === '#/createWallet' || urlHash === '' )
 
-      if (host === 'bsc.swap.io' && isHomePath) {
-        redirectionTo('#/exchange/btc-to-{BNB}btcb}')
-      }
+      // if (host === 'bsc.swap.io' && isHomePath) {
+      //   redirectionTo('#/exchange/btc-to-{BNB}btcb}')
+      // }
 
-      if (host === 'matic.swap.io' && isHomePath) {
-        redirectionTo('#/exchange/btc-to-{MATIC}wbtc')
-      }
+      // if (host === 'matic.swap.io' && isHomePath) {
+      //   redirectionTo('#/exchange/btc-to-{MATIC}wbtc')
+      // }
 
       const btnCreateWallet = document.getElementById('preloaderCreateBtn');
       const btnConnectWallet = document.getElementById('preloaderConnectBtn');
@@ -930,7 +930,7 @@
       //   window.location.hostname === "swaponline.io"
       // ) {
         // used by Loader component
-        window.loaderLogoUrl = "/img/TradingPlanet.png";
+        window.loaderLogoUrl = "/img/TradingPlanet.svg";
         document.getElementById("loaderImg").src = window.loaderLogoUrl;
       // } else {
       //   if (window.logoUrl != '#') {
