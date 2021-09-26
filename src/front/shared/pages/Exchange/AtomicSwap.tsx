@@ -2218,7 +2218,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
                 </ThemeTooltip>
               )}
             </>
-            {(!isWidgetBuild || isDevBuild) && (
+            {/* {(!isWidgetBuild || isDevBuild) && (
               <>
                 <div styleName="link button-like liquidity">
                   <a href={!isChromeExtention ? `#${links.marketmaker}/` : `#${links.marketmaker}/{MATIC}WBTC`}>
@@ -2226,7 +2226,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
                   </a>
                 </div>
               </>
-            )}
+            )} */}
 
             {isIncompletedSwaps && (
               <Button blue styleName="buttonContinueSwap" onClick={this.showIncompleteSwap}>
