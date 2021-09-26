@@ -132,7 +132,7 @@ const initialState = {
       value: 'arbeth',
       fullTitle: 'arbitrum eth',
       blockchain: BLOCKCHAIN_TYPE.ARBITRUM,
-      addAssets: true,
+      addAssets: false,
     }] : [],
     //@ts-ignore
     ...(!buildOpts.curEnabled || buildOpts.curEnabled.ghost) ? [{
