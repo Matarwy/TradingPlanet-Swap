@@ -3,7 +3,7 @@ import express from 'express'
 import bodyparser from 'body-parser'
 import path from 'path'
 
-import SwapApp from './swapApp'
+import TradingPlanetApp from './TradingPlanetApp'
 import ws from './ws'
 
 import router from './routes'
@@ -16,14 +16,14 @@ import {
 } from 'common/utils/colorString'
 
 
-const { app, wallet } = SwapApp
+const { app, wallet } = TradingPlanetApp
 
 app.ready = new Promise(resolve => app.services.room.once('ready', resolve))
 app.sync = new Promise(resolve => app.ready.then(() => setTimeout(resolve, 20000)))
 
 
 app.services.room.once('ready', () => {
-  console.log('swapApp ready')
+  console.log('TradingPlanetApp ready')
 
   console.log('btc', wallet.auth.accounts.btc.getAddress())
   console.log('eth', wallet.auth.accounts.eth.address)

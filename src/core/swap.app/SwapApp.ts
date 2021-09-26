@@ -10,22 +10,22 @@ import SwapOrders from 'swap.orders'
 import EventEmitter from 'events'
 
 
-interface SwapAppServices {
+interface TradingPlanetAppServices {
   auth?: SwapAuth,
   room?: SwapRoom,
   orders?: SwapOrders,
 }
 
-interface SwapAppOptions {
+interface TradingPlanetAppOptions {
   network?: string,
   env: any,
-  services: SwapAppServices | Array<ServiceInterface>,
+  services: TradingPlanetAppServices | Array<ServiceInterface>,
   swaps: Array<SwapInterface>,
   flows: Array<Flow>,
   whitelistBtc?: Array<string>,
 }
 
-class SwapApp extends EventEmitter {
+class TradingPlanetApp extends EventEmitter {
   // White list BTC. Dont wait confirm
   private whitelistBtc: Array<string> = [
     'mzgKwRsfYLgApStDLwcN9Y6ce9qYPnTJNx', // @eneeseene testnet
@@ -38,12 +38,12 @@ class SwapApp extends EventEmitter {
   inited: boolean = false
   network: any
   env: any
-  services: SwapAppServices = {}
+  services: TradingPlanetAppServices = {}
   swaps: Array<SwapInterface>
   flows: Array<Flow>
   
 
-  static _swapAppInstance = null
+  static _TradingPlanetAppInstance = null
 
   /**
    *
@@ -54,7 +54,7 @@ class SwapApp extends EventEmitter {
    * @param {array}   options.swaps
    * @param {array}   options.flows
    */
-  constructor(options: SwapAppOptions) {
+  constructor(options: TradingPlanetAppOptions) {
     super()
     this.options = options
     this.network = options.network || constants.NETWORKS.TESTNET
@@ -78,7 +78,7 @@ class SwapApp extends EventEmitter {
   static onInit(cb) {
     const waitInit = () => {
       //@ts-ignore: strictNullChecks
-      if (SwapApp._swapAppInstance && SwapApp._swapAppInstance.isInited()) {
+      if (TradingPlanetApp._TradingPlanetAppInstance && TradingPlanetApp._TradingPlanetAppInstance.isInited()) {
         cb()
       } else {
         setTimeout(waitInit, 100)
@@ -91,23 +91,23 @@ class SwapApp extends EventEmitter {
     return this.inited
   }
 
-  static init(options: SwapAppOptions, makeShared: boolean = false) {
+  static init(options: TradingPlanetAppOptions, makeShared: boolean = false) {
     if (makeShared) {
       //@ts-ignore: strictNullChecks
-      SwapApp._swapAppInstance = new SwapApp(options)
-      return SwapApp._swapAppInstance
+      TradingPlanetApp._TradingPlanetAppInstance = new TradingPlanetApp(options)
+      return TradingPlanetApp._TradingPlanetAppInstance
     }
-    return new SwapApp(options)
+    return new TradingPlanetApp(options)
   }
 
   setWeb3Provider(web3provider) {
-    if (!SwapApp._swapAppInstance) {
-      throw new Error(`Shared instance not initialized. Use SwapApp.setup() first.`)
+    if (!TradingPlanetApp._TradingPlanetAppInstance) {
+      throw new Error(`Shared instance not initialized. Use TradingPlanetApp.setup() first.`)
     }
     //@ts-ignore: strictNullChecks
-    SwapApp._swapAppInstance.env.web3 = web3provider
+    TradingPlanetApp._TradingPlanetAppInstance.env.web3 = web3provider
     //@ts-ignore: strictNullChecks
-    SwapApp._swapAppInstance.initFlows()
+    TradingPlanetApp._TradingPlanetAppInstance.initFlows()
   }
 
   initFlows() {
@@ -116,19 +116,19 @@ class SwapApp extends EventEmitter {
   }
 
   static setup(options, forceFreshSetup = false) {
-    if (SwapApp._swapAppInstance && !forceFreshSetup) {
-      throw new Error(`Shared instance already initialized. Use SwapApp.shared() to access it.`)
+    if (TradingPlanetApp._TradingPlanetAppInstance && !forceFreshSetup) {
+      throw new Error(`Shared instance already initialized. Use TradingPlanetApp.shared() to access it.`)
     }
     //@ts-ignore: strictNullChecks
-    SwapApp._swapAppInstance = new SwapApp(options)
+    TradingPlanetApp._TradingPlanetAppInstance = new TradingPlanetApp(options)
   }
 
   static shared() {
-    SwapApp.required(
-      SwapApp._swapAppInstance,
-      `Shared instance not initialized. Call SwapApp.setup(config) first.`
+    TradingPlanetApp.required(
+      TradingPlanetApp._TradingPlanetAppInstance,
+      `Shared instance not initialized. Call TradingPlanetApp.setup(config) first.`
     )
-    return SwapApp._swapAppInstance
+    return TradingPlanetApp._TradingPlanetAppInstance
   }
 
   attachSwap(swap: Swap): Swap {
@@ -171,7 +171,7 @@ class SwapApp extends EventEmitter {
   _addEnv(env) {
     Object.keys(env).forEach((name) => {
       if (Object.values(constants.ENV).indexOf(name) < 0) {
-        throw new Error(`SwapApp.addEnv(): Only ${Object.values(constants.ENV)} available`)
+        throw new Error(`TradingPlanetApp.addEnv(): Only ${Object.values(constants.ENV)} available`)
       }
     })
 
@@ -187,18 +187,18 @@ class SwapApp extends EventEmitter {
 
   _addService(service) {
     if (!service._serviceName) {
-      throw new Error('SwapApp service should contain "_serviceName" property')
+      throw new Error('TradingPlanetApp service should contain "_serviceName" property')
     }
 
     if (!Object.values(constants.SERVICES).includes(service._serviceName)) {
       throw new Error(
-        `SwapApp service should contain "_serviceName" property should be one of ${Object.values(
+        `TradingPlanetApp service should contain "_serviceName" property should be one of ${Object.values(
           constants.SERVICES
         )}, got "${service._serviceName}"`
       )
     }
 
-    service._attachSwapApp(this)
+    service._attachTradingPlanetApp(this)
     this.services[service._serviceName] = service
   }
 
@@ -217,14 +217,14 @@ class SwapApp extends EventEmitter {
 
   _addSwap(swap) {
     if (!swap._swapName) {
-      throw new Error('SwapApp swap should contain "_swapName" property')
+      throw new Error('TradingPlanetApp swap should contain "_swapName" property')
     }
 
     const swapKey = (swap.blockchainName) ? `{${swap.blockchainName}}${swap._swapName}` : swap._swapName
 
     if (!Object.values(constants.COINS).includes(swapKey.toUpperCase())) {
       throw new Error(
-        `SwapApp swap should contain "_swapName" property should be one of ${Object.values(
+        `TradingPlanetApp swap should contain "_swapName" property should be one of ${Object.values(
           constants.COINS
         )}, got "${swap._swapName.toUpperCase()}"`
       )
@@ -252,7 +252,7 @@ class SwapApp extends EventEmitter {
         !Object.values(constants.COINS).includes(Flow.getToName())
       ) {
         throw new Error(
-          `SwapApp flow "_flowName" property should contain only: ${Object.values(
+          `TradingPlanetApp flow "_flowName" property should contain only: ${Object.values(
             constants.COINS
           )}. Got: "${flowName.toUpperCase()}"`
         )
@@ -278,7 +278,7 @@ class SwapApp extends EventEmitter {
     return this.network.toLowerCase() === constants.NETWORKS.TESTNET
   }
 
-  isSwapApp() {
+  isTradingPlanetApp() {
     return true
   }
 
@@ -351,14 +351,14 @@ class SwapApp extends EventEmitter {
 
 
   static is(app) {
-    return app && app.isSwapApp && app.isSwapApp() && app instanceof SwapApp
+    return app && app.isTradingPlanetApp && app.isTradingPlanetApp() && app instanceof TradingPlanetApp
   }
 
   static required(app, errorMessage = ``) {
-    if (!SwapApp.is(app)) {
-      throw new Error(`SwapApp required, got: ${app}. ${errorMessage}`)
+    if (!TradingPlanetApp.is(app)) {
+      throw new Error(`TradingPlanetApp required, got: ${app}. ${errorMessage}`)
     }
   }
 }
 
-export default SwapApp
+export default TradingPlanetApp

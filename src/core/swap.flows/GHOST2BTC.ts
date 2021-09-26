@@ -1,6 +1,6 @@
 import debug from 'debug'
 import crypto from 'bitcoinjs-lib/src/crypto' // move to BtcSwap
-import SwapApp, { constants } from 'swap.app'
+import TradingPlanetApp, { constants } from 'swap.app'
 import { Flow } from 'swap.swap'
 
 

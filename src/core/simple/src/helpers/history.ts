@@ -1,4 +1,4 @@
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 import debug from 'debug'
 
 let app
@@ -8,7 +8,7 @@ const checkHistoryInit = (_app) => {
 }
 
 export const init = (_app) => {
-  SwapApp.required(_app)
+  TradingPlanetApp.required(_app)
 
   app = _app
 }

@@ -14,7 +14,7 @@ class Wallet {
   network: any
   ethereum: any
   bitcoin: any
-  swapApp: any
+  TradingPlanetApp: any
   constants: any
   auth: any
   balances: any
@@ -24,7 +24,7 @@ class Wallet {
     this.network = app.network
     this.ethereum = ethereum
     this.bitcoin = bitcoin
-    this.swapApp = app
+    this.TradingPlanetApp = app
     this.constants = constants
     this.auth = app.services.auth
     this.balances = {}
@@ -72,7 +72,7 @@ class Wallet {
 
     const fetchBalances = currencies.map(symbol => {
       try {
-        const instance = this.swapApp.swaps[symbol]
+        const instance = this.TradingPlanetApp.swaps[symbol]
         const address = addresses[symbol]
 
         return instance ? instance.fetchBalance(address) : '-'
@@ -95,7 +95,7 @@ class Wallet {
     const data = this.auth.getPublicData()
     let account = data.eth
     if (data[symbol.toLowerCase()]) account = data[symbol.toLowerCase()]
-    const instance = this.swapApp.swaps[symbol]
+    const instance = this.TradingPlanetApp.swaps[symbol]
 
     return instance ? instance.fetchBalance(account.address) : '-'
   }
@@ -123,10 +123,10 @@ class Wallet {
     return {
       id: this.id,
       network: this.network,
-      mainnet: this.swapApp.isMainNet(),
-      'etherscan.io': `${ETHERSCANIO(this.swapApp.isMainNet())}/address/${this.auth.accounts.eth.address}`,
-      'blockchain.info': `${BLOCKCHAININFO(this.swapApp.isMainNet())}/address/${this.auth.accounts.btc.getAddress()}`,
-      room: this.swapApp.services.room.roomName,
+      mainnet: this.TradingPlanetApp.isMainNet(),
+      'etherscan.io': `${ETHERSCANIO(this.TradingPlanetApp.isMainNet())}/address/${this.auth.accounts.eth.address}`,
+      'blockchain.info': `${BLOCKCHAININFO(this.TradingPlanetApp.isMainNet())}/address/${this.auth.accounts.btc.getAddress()}`,
+      room: this.TradingPlanetApp.services.room.roomName,
       ...this.auth.getPublicData(),
     }
   }

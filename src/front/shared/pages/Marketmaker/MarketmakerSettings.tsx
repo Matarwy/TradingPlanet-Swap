@@ -4,7 +4,7 @@ import CSSModules from 'react-css-modules'
 import { BigNumber } from 'bignumber.js'
 
 import actions from 'redux/actions'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 import Swap from 'swap.swap'
 
 import { constants, links, feedback } from 'helpers'
@@ -228,9 +228,9 @@ class MarketmakerSettings extends Component<any, any> {
   async componentDidMount() {
     const { mnemonicSaved } = this.state
 
-    SwapApp.onInit(() => {
+    TradingPlanetApp.onInit(() => {
       //@ts-ignore: strictNullChecks
-      let isMarketEnabled = (SwapApp.shared().services.orders.getMyOrders().length > 0)
+      let isMarketEnabled = (TradingPlanetApp.shared().services.orders.getMyOrders().length > 0)
 
       if (isMarketEnabled && metamask.isConnected()) {
         isMarketEnabled = false
@@ -256,13 +256,13 @@ class MarketmakerSettings extends Component<any, any> {
       if (!(lsSwapId === null || lsSwapId.length === 0)) {
         const swapsCore = lsSwapId.map((id) => {
           try {
-            return new Swap(id, SwapApp.shared())
+            return new Swap(id, TradingPlanetApp.shared())
           } catch (e) {}
         })
       }
 
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().attachedSwaps.items.forEach((swap) => {
+      TradingPlanetApp.shared().attachedSwaps.items.forEach((swap) => {
         if (swap && swap.flow) {
           const swapState = this.extractSwapStatus(swap)
           //@ts-ignore: strictNullChecks
@@ -272,9 +272,9 @@ class MarketmakerSettings extends Component<any, any> {
       })
 
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().on('swap attached', this._handleSwapAttachedHandle)
+      TradingPlanetApp.shared().on('swap attached', this._handleSwapAttachedHandle)
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().on('swap enter step', this._handleSwapEnterStep)
+      TradingPlanetApp.shared().on('swap enter step', this._handleSwapEnterStep)
 
       this.setState({
         swapsIds,
@@ -328,9 +328,9 @@ class MarketmakerSettings extends Component<any, any> {
 
     if (mnemonicSaved) {
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().off('swap attached', this._handleSwapAttachedHandle)
+      TradingPlanetApp.shared().off('swap attached', this._handleSwapAttachedHandle)
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().off('swap enter step', this._handleSwapEnterStep)
+      TradingPlanetApp.shared().off('swap enter step', this._handleSwapEnterStep)
     }
   }
 
@@ -468,9 +468,9 @@ class MarketmakerSettings extends Component<any, any> {
 
   cleanupMarketMakerOrder() {
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.orders.getMyOrders().forEach((order) => {
+    TradingPlanetApp.shared().services.orders.getMyOrders().forEach((order) => {
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().services.orders.remove(order.id)
+      TradingPlanetApp.shared().services.orders.remove(order.id)
     })
   }
 
@@ -522,7 +522,7 @@ class MarketmakerSettings extends Component<any, any> {
       }
       console.log(sellTokenOrderData)
       //@ts-ignore: strictNullChecks
-      const sellOrder = SwapApp.shared().services.orders.create(sellTokenOrderData)
+      const sellOrder = TradingPlanetApp.shared().services.orders.create(sellTokenOrderData)
       console.log('sellOrder', sellOrder)
       actions.core.setupPartialOrder(sellOrder)
     }
@@ -555,7 +555,7 @@ class MarketmakerSettings extends Component<any, any> {
       }
       console.log(buyTokenOrderData)
       //@ts-ignore: strictNullChecks
-      const buyOrder = SwapApp.shared().services.orders.create(buyTokenOrderData)
+      const buyOrder = TradingPlanetApp.shared().services.orders.create(buyTokenOrderData)
       console.log('buyOrder', buyOrder)
       actions.core.setupPartialOrder(buyOrder)
     }

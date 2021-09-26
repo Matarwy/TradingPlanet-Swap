@@ -13,7 +13,7 @@ import CSSModules from "react-css-modules";
 import styles from "./App.scss";
 import "scss/app.scss";
 
-import { createSwapApp } from "instances/newSwap";
+import { createTradingPlanetApp } from "instances/newSwap";
 import Core from "containers/Core/Core";
 import Transactions from 'containers/Transactions'
 import ErrorBoundary from 'components/ErrorBoundary'
@@ -328,9 +328,9 @@ class App extends React.Component<RouteComponentProps<any>, any> {
   completeAppCreation = async () => {
     console.group('App >%c loading...', 'color: green;')
 
-    if(!window.SwapApp){
+    if(!window.TradingPlanetApp){
       await actions.user.sign()
-      await createSwapApp()
+      await createTradingPlanetApp()
     }
 
     if (config.entry === 'mainnet') { 

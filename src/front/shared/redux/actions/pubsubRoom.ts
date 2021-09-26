@@ -1,6 +1,6 @@
 import reducers from 'redux/core/reducers'
 import { getState } from 'redux/core'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 
 const set = payload => {
@@ -43,7 +43,7 @@ const waitPeer = (peer, cbSuccess, cbFail, timeOut) => {
     const waitFunc = () => {
       if (isWaiting) {
         //@ts-ignore: strictNullChecks
-        if (SwapApp.shared().services.room.connection.hasPeer(peer)) {
+        if (TradingPlanetApp.shared().services.room.connection.hasPeer(peer)) {
           clearTimeout(failtTimer)
           if (cbSuccess) cbSuccess()
         } else {

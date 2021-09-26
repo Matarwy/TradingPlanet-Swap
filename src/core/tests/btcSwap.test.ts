@@ -1,7 +1,7 @@
 //import bitcoin from 'bitcoinjs-lib'
 
 
-import SwapApp, { SwapInterface } from 'swap.app'
+import TradingPlanetApp, { SwapInterface } from 'swap.app'
 // @ToDo - use common/utils/coin/btc
 // @ts-ignore
 import { testnet } from '../simple/src/instances/bitcoin'

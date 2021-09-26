@@ -1,10 +1,10 @@
-import SwapApp from './microbot'
+import TradingPlanetApp from './microbot'
 
 
-const { app } = SwapApp
+const { app } = TradingPlanetApp
 
 
-export default SwapApp
+export default TradingPlanetApp
 export {
   app,
 }

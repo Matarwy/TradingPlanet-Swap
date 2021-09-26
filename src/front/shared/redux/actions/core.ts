@@ -1,7 +1,7 @@
 import reducers from 'redux/core/reducers'
 import actions from 'redux/actions'
 import { getState } from 'redux/core'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 import Swap from 'swap.swap'
 import getCoinInfo from 'common/coins/getCoinInfo'
 import { constants } from 'helpers'
@@ -77,7 +77,7 @@ const addCurrencyFromOrders = (orders) => {
   }
 }
 //@ts-ignore
-const getSwapById = (id) => new Swap(id, SwapApp.shared())
+const getSwapById = (id) => new Swap(id, TradingPlanetApp.shared())
 
 const getUserData = (currency) => {
   const { user } = getState()
@@ -96,13 +96,13 @@ const setFilter = (filter) => {
 
 const acceptRequest = (orderId, participantPeer) => {
   //@ts-ignore: strictNullChecks
-  const order = SwapApp.shared().services.orders.getByKey(orderId)
+  const order = TradingPlanetApp.shared().services.orders.getByKey(orderId)
   order.acceptRequest(participantPeer)
 }
 
 const declineRequest = (orderId, participantPeer) => {
   //@ts-ignore: strictNullChecks
-  const order = SwapApp.shared().services.orders.getByKey(orderId)
+  const order = TradingPlanetApp.shared().services.orders.getByKey(orderId)
   order.declineRequest(participantPeer)
 }
 
@@ -133,27 +133,27 @@ const forgetOrders = (orderId) => {
 const removeOrder = (orderId) => {
   actions.feed.deleteItemToFeed(orderId)
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.orders.remove(orderId)
+  TradingPlanetApp.shared().services.orders.remove(orderId)
   actions.core.updateCore()
 }
 
 const showMyOrders = () => {
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.orders.showMyOrders()
+  TradingPlanetApp.shared().services.orders.showMyOrders()
 }
 
 const hideMyOrders = () => {
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.orders.hideMyOrders()
+  TradingPlanetApp.shared().services.orders.hideMyOrders()
 }
 
 const deletedPartialCurrency = (orderId) => {
   //@ts-ignore: strictNullChecks
-  const deletedOrder = SwapApp.shared().services.orders.getByKey(orderId)
+  const deletedOrder = TradingPlanetApp.shared().services.orders.getByKey(orderId)
   const deletedOrderSellCurrency = deletedOrder.sellCurrency
   const deletedOrderBuyCurrency = deletedOrder.buyCurrency
   //@ts-ignore: strictNullChecks
-  const orders = SwapApp.shared().services.orders.items
+  const orders = TradingPlanetApp.shared().services.orders.items
 
   const deletedOrderSell = orders.filter(
     (item) => item.sellCurrency.toUpperCase() === deletedOrderSellCurrency
@@ -182,14 +182,14 @@ const deletedPartialCurrency = (orderId) => {
 }
 
 //@ts-ignore: strictNullChecks
-const hasHiddenOrders = () => SwapApp.shared().services.orders.hasHiddenOrders()
+const hasHiddenOrders = () => TradingPlanetApp.shared().services.orders.hasHiddenOrders()
 
 const sendRequest = (orderId, destination = {}, callback) => {
   //@ts-ignore
   const { address: destinationAddress } = destination
 
   //@ts-ignore: strictNullChecks
-  const order = SwapApp.shared().services.orders.getByKey(orderId)
+  const order = TradingPlanetApp.shared().services.orders.getByKey(orderId)
   const { address, reputation, reputationProof } = getUserData(order.buyCurrency)
 
   const requestOptions = {
@@ -209,7 +209,7 @@ const sendRequestForPartial = (orderId, newValues, destination = {}, callback) =
   const { address: destinationAddress } = destination
 
   //@ts-ignore: strictNullChecks
-  const order = SwapApp.shared().services.orders.getByKey(orderId)
+  const order = TradingPlanetApp.shared().services.orders.getByKey(orderId)
 
   const { address, reputation, reputationProof } = getUserData(order.buyCurrency)
 
@@ -246,7 +246,7 @@ const sendRequestForPartial = (orderId, newValues, destination = {}, callback) =
 
 const createOrder = (data, isPartial = false) => {
   //@ts-ignore: strictNullChecks
-  const order = SwapApp.shared().services.orders.create(data)
+  const order = TradingPlanetApp.shared().services.orders.create(data)
 
   if (!order) return
 
@@ -310,7 +310,7 @@ const setupPartialOrder = (order) => {
 
 const initPartialOrders = () => {
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.orders.items.forEach((order) => {
+  TradingPlanetApp.shared().services.orders.items.forEach((order) => {
     if (order && order.isMy && order.isPartial) {
       actions.core.setupPartialOrder(order)
     }
@@ -319,13 +319,13 @@ const initPartialOrders = () => {
 
 const requestToPeer = (event, peer, data, callback) => {
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.orders.requestToPeer(event, peer, data, callback)
+  TradingPlanetApp.shared().services.orders.requestToPeer(event, peer, data, callback)
 }
 
 const updateCore = () => {
-  SwapApp.onInit(() => {
+  TradingPlanetApp.onInit(() => {
     //@ts-ignore: strictNullChecks
-    const orders = SwapApp.shared().services.orders.items
+    const orders = TradingPlanetApp.shared().services.orders.items
 
     getOrders(orders)
 
@@ -350,9 +350,9 @@ const getInformationAboutSwap = (swapId) => {
   if (swapId.length > 0 && typeof swapId === 'string') {
     return {
       //@ts-ignore: strictNullChecks
-      ...SwapApp.shared().env.storage.getItem(`swap.${swapId}`),
+      ...TradingPlanetApp.shared().env.storage.getItem(`swap.${swapId}`),
       //@ts-ignore: strictNullChecks
-      ...SwapApp.shared().env.storage.getItem(`flow.${swapId}`),
+      ...TradingPlanetApp.shared().env.storage.getItem(`flow.${swapId}`),
     }
   }
 }

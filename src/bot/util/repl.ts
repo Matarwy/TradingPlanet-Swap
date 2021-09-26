@@ -42,11 +42,11 @@ const _ = (async () => {
 
     swap_repl.context.swap = swap
   } else {
-    console.log(`Available: SwapApp, auth, room, wallet, orders`)
+    console.log(`Available: TradingPlanetApp, auth, room, wallet, orders`)
     console.log()
   }
 
-  swap_repl.context.SwapApp = app
+  swap_repl.context.TradingPlanetApp = app
   swap_repl.context.auth = auth
   swap_repl.context.room = room
   swap_repl.context.wallet = wallet

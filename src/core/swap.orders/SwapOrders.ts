@@ -1,6 +1,6 @@
 import debug from 'debug'
 import BigNumber from 'bignumber.js'
-import SwapApp, { Collection, ServiceInterface, util, constants } from 'swap.app'
+import TradingPlanetApp, { Collection, ServiceInterface, util, constants } from 'swap.app'
 import SwapRoom from 'swap.room'
 import aggregation from './aggregation'
 import events from './events'

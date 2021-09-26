@@ -1,5 +1,5 @@
 import debug from 'debug'
-import SwapApp, { Events } from 'swap.app'
+import TradingPlanetApp, { Events } from 'swap.app'
 
 
 class Room {
@@ -17,11 +17,11 @@ class Room {
     this._events          = new Events()
     this.app              = null
 
-    this._attachSwapApp(app)
+    this._attachTradingPlanetApp(app)
   }
 
-  _attachSwapApp(app) {
-    SwapApp.required(app)
+  _attachTradingPlanetApp(app) {
+    TradingPlanetApp.required(app)
 
     this.app = app
   }

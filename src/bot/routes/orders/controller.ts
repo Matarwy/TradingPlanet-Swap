@@ -1,10 +1,10 @@
-import swapApp from '../../swapApp'
+import TradingPlanetApp from '../../TradingPlanetApp'
 
 import { findOrder, orderView } from '../../helpers'
 
 
-const app = swapApp.app
-const Orders = swapApp.app.services.orders
+const app = TradingPlanetApp.app
+const Orders = TradingPlanetApp.app.services.orders
 
 let orders
 

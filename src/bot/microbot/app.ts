@@ -55,16 +55,16 @@ const ERC20TOKENS = Object.keys(TOKENS)
   }))
 
 
-let SwapApp, app, auth, wallet, room, orders, services
+let TradingPlanetApp, app, auth, wallet, room, orders, services
 
 try {
-  SwapApp = setup({
+  TradingPlanetApp = setup({
     network,
     ERC20TOKENS,
     mnemonic: configStorage.getMnemonic() || process.env.SECRET_PHRASE,
   })
 
-  let { app, auth, wallet, room, orders, services } = SwapApp
+  let { app, auth, wallet, room, orders, services } = TradingPlanetApp
 
   ready(room).then(() => {
     debug('room ready')
@@ -92,10 +92,10 @@ try {
     orders.on('new order request', handleRequest(app, wallet, orders))
   })
 } catch (err) {
-  console.log('Fail create swapApp', err)
+  console.log('Fail create TradingPlanetApp', err)
   handleError(err)
 }
 
 export {
-  SwapApp
+  TradingPlanetApp
 }

@@ -1,4 +1,4 @@
-import SwapApp, { SwapInterface } from 'swap.app'
+import TradingPlanetApp, { SwapInterface } from 'swap.app'
 
 import swap from './../'
 
@@ -21,7 +21,7 @@ import { LocalStorage } from 'node-localstorage'
 
 import config from './config'
 
-SwapApp.setup({
+TradingPlanetApp.setup({
   network: 'testnet',
 
   env: {
@@ -55,4 +55,4 @@ SwapApp.setup({
   ],
 })
 
-export default SwapApp.shared()
+export default TradingPlanetApp.shared()

@@ -1,5 +1,5 @@
 import debug from 'debug'
-import SwapApp, { SwapInterface, constants, util } from 'swap.app'
+import TradingPlanetApp, { SwapInterface, constants, util } from 'swap.app'
 import BigNumber from 'bignumber.js'
 import { Flow } from 'swap.swap'
 
@@ -42,7 +42,7 @@ class UTXOBlockchain extends SwapInterface {
   sendTransaction: Function
 
   //@ts-ignore: strictNullChecks
-  app: SwapApp = undefined
+  app: TradingPlanetApp = undefined
   /**
    *
    * @param options

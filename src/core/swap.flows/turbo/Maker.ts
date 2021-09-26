@@ -1,5 +1,5 @@
 import debug from 'debug'
-import SwapApp, { constants, util } from 'swap.app'
+import TradingPlanetApp, { constants, util } from 'swap.app'
 import { Flow } from 'swap.swap'
 import { BigNumber } from 'bignumber.js'
 

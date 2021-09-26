@@ -6,13 +6,13 @@ import { util } from 'swap.app'
 
 const WS_PORT = 7333
 
-const init = (app, SwapApp, router, port) => {
+const init = (app, TradingPlanetApp, router, port) => {
   const server = http.createServer(app)
 
   // initialize the WebSocket server instance
   const wss = new WebSocket.Server({ server })
 
-  const swap = SwapApp.services
+  const swap = TradingPlanetApp.services
 
   const json = (obj) => JSON.stringify(obj)
 
@@ -74,7 +74,7 @@ const init = (app, SwapApp, router, port) => {
     ws.send(json({
       event: 'ready',
       payload: {
-        mainnet: SwapApp.isMainNet()
+        mainnet: TradingPlanetApp.isMainNet()
       }
     }))
 

@@ -4,7 +4,7 @@ import actions from 'redux/actions'
 import { cacheStorageGet, cacheStorageSet, constants } from 'helpers'
 import config from 'app-config'
 import { setMetamask, setProvider, setDefaultProvider, getWeb3 as getDefaultWeb3 } from 'helpers/web3'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 import Web3Connect from 'common/web3connect'
 import { COIN_DATA, COIN_MODEL } from 'swap.app/constants/COINS'
 import getCoinInfo from 'common/coins/getCoinInfo'
@@ -71,7 +71,7 @@ const getWeb3connect = () => web3connect
 const _onWeb3Changed = (newWeb3) => {
   setProvider(newWeb3)
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().setWeb3Provider(newWeb3)
+  TradingPlanetApp.shared().setWeb3Provider(newWeb3)
   addMetamaskWallet()
   actions.user.loginWithTokens()
   actions.user.getBalances()

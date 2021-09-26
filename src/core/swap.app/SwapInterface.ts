@@ -1,4 +1,4 @@
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 class SwapInterface {
 
@@ -11,8 +11,8 @@ class SwapInterface {
   }
 
   _initSwap(app) {
-    // init service on SwapApp mounting
-    SwapApp.required(app)
+    // init service on TradingPlanetApp mounting
+    TradingPlanetApp.required(app)
 
     this.accounts = app.services.auth.accounts
   }

@@ -21,7 +21,7 @@ import TurboIcon from 'components/ui/TurboIcon/TurboIcon'
 
 import Pair from './../../Pair'
 import RequestButton from '../RequestButton/RequestButton'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 type RowProps = {
   history: IUniversalObj
@@ -138,7 +138,7 @@ class Row extends Component<RowProps, RowState> {
 
   handleDeclineOrdersModalOpen = (indexOfDecline) => {
     //@ts-ignore: strictNullChecks
-    const orders = SwapApp.shared().services.orders.items
+    const orders = TradingPlanetApp.shared().services.orders.items
     const declineSwap = actions.core.getSwapById(this.props.decline[indexOfDecline])
 
     if (declineSwap !== undefined) {

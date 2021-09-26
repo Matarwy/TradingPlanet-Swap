@@ -13,7 +13,7 @@ import Timer from 'pages/Swap/Timer/Timer'
 import { FormattedMessage, injectIntl } from 'react-intl'
 import BigNumber from 'bignumber.js'
 
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 
 interface SwapRowProps {
@@ -152,7 +152,7 @@ class SwapRow extends Component<any, any> {
 
     if (!isFinished && !isRefunded && !isStoppedSwap && !isSwapTimeout) {
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().on('swap enter step', this._handleSwapEnterStep)
+      TradingPlanetApp.shared().on('swap enter step', this._handleSwapEnterStep)
     }
   }
 
@@ -160,7 +160,7 @@ class SwapRow extends Component<any, any> {
     console.log('History unmounted')
     this._mounted = false
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().off('swap enter step', this._handleSwapEnterStep)
+    TradingPlanetApp.shared().off('swap enter step', this._handleSwapEnterStep)
   }
 
   render() {

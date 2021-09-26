@@ -1,6 +1,6 @@
 import debug from 'debug'
 import BigNumber from 'bignumber.js'
-import SwapApp, { Events, util } from 'swap.app'
+import TradingPlanetApp, { Events, util } from 'swap.app'
 import SwapInterface from 'swap.app/SwapInterface'
 import Room from './Room'
 import { Flow as FlowType } from 'swap.swap'
@@ -25,7 +25,7 @@ class Swap {
   participantSwap: any
   destinationBuyAddress: any
   destinationSellAddress: any
-  app: SwapApp
+  app: TradingPlanetApp
   createUnixTimeStamp: number
   participantMetamaskAddress: any
   waitConfirm: boolean
@@ -34,7 +34,7 @@ class Swap {
   flow: FlowType
 
   constructor(id, app, order?) {
-    SwapApp.required(app)
+    TradingPlanetApp.required(app)
     //@ts-ignore: strictNullChecks
     this.id                     = null
     //@ts-ignore: strictNullChecks
@@ -78,9 +78,9 @@ class Swap {
 
     this.update(data)
 
-    const swapExists = this._attachSwapApp(app)
+    const swapExists = this._attachTradingPlanetApp(app)
     if (swapExists !== null) {
-      // Swap object already created and attached to SwapApp.
+      // Swap object already created and attached to TradingPlanetApp.
       // Prevent two Swap object - return exists
       return swapExists
     }
@@ -107,7 +107,7 @@ class Swap {
       `${sellCoin}2${buyCoin}`
 
     if (!this.app.flows[flowKey]) {
-      throw new Error(`Flow with name "${flowKey}" not found in SwapApp.flows`)
+      throw new Error(`Flow with name "${flowKey}" not found in TradingPlanetApp.flows`)
     }
 
     const Flow = this.app.flows[flowKey]
@@ -149,7 +149,7 @@ class Swap {
   }
 
 /* static read(app, { id }) {
-    SwapApp.required(app)
+    TradingPlanetApp.required(app)
 
     if (!id) {
       debug('swap.core:swap')(`SwapReadError: id not given: ${id}`)
@@ -169,7 +169,7 @@ class Swap {
       `${data.sellCurrency.toUpperCase()}2${data.buyCurrency.toUpperCase()}`
 
     if (!app.flows[flowKey]) {
-      throw new Error(`Flow with name "${flowKey}" not found in SwapApp.flows`)
+      throw new Error(`Flow with name "${flowKey}" not found in TradingPlanetApp.flows`)
     }
 
     const Flow = app.flows[flowKey]
@@ -182,7 +182,7 @@ class Swap {
     return this.flow.isFinished()
   }
 
-  _attachSwapApp(app): Swap {
+  _attachTradingPlanetApp(app): Swap {
     return this.app.attachSwap(this)
   }
 

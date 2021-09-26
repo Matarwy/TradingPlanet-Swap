@@ -1,4 +1,4 @@
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 
 // Проверка лимита на кол-во активных свапов
@@ -8,7 +8,7 @@ export const checkSwapsCountLimit = (): boolean => {
     && Number(process.env.MAX_PARALLEL_SWAPS) !== 0
   ) {
     //@ts-ignore: strictNullChecks
-    const activeSwapsCount = SwapApp.shared().getActiveSwaps().length
+    const activeSwapsCount = TradingPlanetApp.shared().getActiveSwaps().length
     if (activeSwapsCount >= Number(process.env.MAX_PARALLEL_SWAPS)) {
       return false
     }

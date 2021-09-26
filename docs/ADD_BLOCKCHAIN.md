@@ -225,7 +225,7 @@ if you're adding a new token standard
 - `src/core/swap.app/constants/ENV.ts`
 - `src/core/swap.app/constants/TRADE_TICKERS.ts`
 - `src/core/swap.app/util/typeforce.ts`
-- `src/core/swap.app/SwapApp.ts`
+- `src/core/swap.app/TradingPlanetApp.ts`
 - `src/core/swap.auth/*.ts`
 - `src/core/swap.flows/index.ts`
 - `src/core/swap.flows/<ETH,BNB,...>2*.ts`

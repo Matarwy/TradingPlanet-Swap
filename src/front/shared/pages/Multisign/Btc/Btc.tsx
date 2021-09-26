@@ -16,7 +16,7 @@ import moment from 'moment'
 
 import CSSModules from 'react-css-modules'
 import styles from './Btc.scss'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 import config from 'app-config'
 
 @connect(({ user: { btcData } }) => {
@@ -161,7 +161,7 @@ class Btc extends PureComponent<any, any> {
 
   async componentWillUnmount() {
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.unsubscribe(
+    TradingPlanetApp.shared().services.room.unsubscribe(
       'btc multisig join ready',
       this.handleOnlineWalletConnect
     )
@@ -195,7 +195,7 @@ class Btc extends PureComponent<any, any> {
     const { peer } = this.state
     if (fromPeer === peer) {
       //@ts-ignore: strictNullChecks
-      SwapApp.shared().services.room.unsubscribe(
+      TradingPlanetApp.shared().services.room.unsubscribe(
         'btc multisig join ready',
         this.handleOnlineWalletConnect
       )
@@ -220,12 +220,12 @@ class Btc extends PureComponent<any, any> {
           action: 'onlinejoin',
         })
         //@ts-ignore: strictNullChecks
-        SwapApp.shared().services.room.subscribe(
+        TradingPlanetApp.shared().services.room.subscribe(
           'btc multisig join ready',
           this.handleOnlineWalletConnect
         )
         //@ts-ignore: strictNullChecks
-        SwapApp.shared().services.room.sendMessagePeer(peer, {
+        TradingPlanetApp.shared().services.room.sendMessagePeer(peer, {
           event: 'btc multisig join',
           data: {
             publicKey: myPublicKey,
@@ -234,7 +234,7 @@ class Btc extends PureComponent<any, any> {
         })
         this.timerWaitOnlineJoin = setTimeout(() => {
           //@ts-ignore: strictNullChecks
-          SwapApp.shared().services.room.unsubscribe(
+          TradingPlanetApp.shared().services.room.unsubscribe(
             'btc multisig join ready',
             this.handleOnlineWalletConnect
           )

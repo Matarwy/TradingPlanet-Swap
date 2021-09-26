@@ -111,16 +111,16 @@ class EthLikeTokenSwap extends SwapInterface {
 
     this.app = app
     if (typeof this.app[this.options.getWeb3Adapter] !== 'function') {
-      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: SwapApp function '${this.options.getWeb3Adapter}' not defined`)
+      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: TradingPlanetApp function '${this.options.getWeb3Adapter}' not defined`)
     }
     if (typeof this.app[this.options.getWeb3Utils] !== 'function') {
-      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: SwapApp function '${this.options.getWeb3Utils}' not defined`)
+      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: TradingPlanetApp function '${this.options.getWeb3Utils}' not defined`)
     }
     if (typeof this.app[this.options.getMyAddress] !== 'function') {
-      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: SwapApp function '${this.options.getMyAddress}' not defined`)
+      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: TradingPlanetApp function '${this.options.getMyAddress}' not defined`)
     }
     if (typeof this.app[this.options.getParticipantAddress] !== 'function') {
-      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: SwapApp function '${this.options.getParticipantAddress}' not defined`)
+      throw new Error(`EthLikeTokenSwap ${this.blockchainName}: TradingPlanetApp function '${this.options.getParticipantAddress}' not defined`)
     }
  
     this.web3adapter = this.app[this.options.getWeb3Adapter].bind(this.app)()

@@ -1,5 +1,5 @@
 import debug from 'debug'
-import SwapApp, { SwapInterface, constants, util } from 'swap.app'
+import TradingPlanetApp, { SwapInterface, constants, util } from 'swap.app'
 import BigNumber from 'bignumber.js'
 import bitcore from 'ghost-bitcore-lib'
 const PrivateKey = bitcore.PrivateKey;

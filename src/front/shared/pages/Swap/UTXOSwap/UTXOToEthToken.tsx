@@ -4,7 +4,7 @@ import CSSModules from 'react-css-modules'
 import styles from '../Swap.scss'
 
 import crypto from 'crypto'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 import SwapProgress from './SwapProgress/SwapProgress'
 import SwapList from './SwapList/SwapList'
@@ -41,7 +41,7 @@ export default class UTXOToEthToken extends Component<any, any> {
       ethAddress: ethData.map(item => item.address),
       secret: crypto.randomBytes(32).toString('hex'),
       //@ts-ignore: strictNullChecks
-      destinationBuyAddress: (this.swap.destinationBuyAddress) ? this.swap.destinationBuyAddress : SwapApp.shared().services.auth.accounts.eth.address,
+      destinationBuyAddress: (this.swap.destinationBuyAddress) ? this.swap.destinationBuyAddress : TradingPlanetApp.shared().services.auth.accounts.eth.address,
     }
 
     this._fields = fields

@@ -10,7 +10,7 @@ import { apiLooper, constants, api } from 'helpers'
 import btc from 'helpers/btc'
 import actions from 'redux/actions'
 import config from 'helpers/externalConfig'
-import SwapApp from 'swap.app'
+import TradingPlanetApp from 'swap.app'
 
 import { MnemonicKey } from 'common/types'
 
@@ -414,11 +414,11 @@ const login_USER = (privateKey, otherOwnerPublicKey, onlyCheck) => {
     const { user: { btcMultisigUserData: { address } } } = getState()
     const onRequestEventName = `btc multisig request sign ${address}`
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.subscribe(onRequestEventName, (_data) => {
+    TradingPlanetApp.shared().services.room.subscribe(onRequestEventName, (_data) => {
       const { txData } = _data
       if (txData && txData.address && txData.amount && txData.currency && txData.txRaw) {
         //@ts-ignore: strictNullChecks
-        SwapApp.shared().services.room.sendMessagePeer(
+        TradingPlanetApp.shared().services.room.sendMessagePeer(
           _data.fromPeer,
           {
             event: `btc multisig accept tx ${address}`,
@@ -549,7 +549,7 @@ const onUserMultisigJoin = (data) => {
     console.log('checks ok - connect')
     addBtcMultisigKey(publicKey, true)
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.sendMessagePeer(fromPeer, {
+    TradingPlanetApp.shared().services.room.sendMessagePeer(fromPeer, {
       event: 'btc multisig join ready',
       data: {},
     })
@@ -573,7 +573,7 @@ const broadcastTX2Room = (txData, cbSuccess, cbFail) => {
     //@ts-ignore
     clearTimeout(failTimer)
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
+    TradingPlanetApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
     if (cbSuccess) cbSuccess()
   }
 
@@ -582,7 +582,7 @@ const broadcastTX2Room = (txData, cbSuccess, cbFail) => {
     //@ts-ignore
     clearTimeout(failTimer)
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
+    TradingPlanetApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
   }
 
   const onFailTimer = () => {
@@ -590,18 +590,18 @@ const broadcastTX2Room = (txData, cbSuccess, cbFail) => {
     //@ts-ignore
     clearTimeout(failTimer)
     //@ts-ignore: strictNullChecks
-    SwapApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
+    TradingPlanetApp.shared().services.room.unsubscribe(onSuccessEventName, onSuccessEvent)
     if (cbFail) cbFail()
   }
   //@ts-ignore
   failTimer = setTimeout(onFailTimer, 30000)
 
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.room.subscribe(onSuccessEventName, onSuccessEvent)
+  TradingPlanetApp.shared().services.room.subscribe(onSuccessEventName, onSuccessEvent)
 
   // Broadcast TX
   //@ts-ignore: strictNullChecks
-  SwapApp.shared().services.room.sendMessageRoom({
+  TradingPlanetApp.shared().services.room.sendMessageRoom({
     event: `btc multisig request sign ${address}`,
     data: {
       txData,

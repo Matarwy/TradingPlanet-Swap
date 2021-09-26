@@ -1,5 +1,5 @@
 import debug from 'debug'
-import SwapApp, { constants, util } from 'swap.app'
+import TradingPlanetApp, { constants, util } from 'swap.app'
 import { AtomicAB2UTXO } from 'swap.swap'
 
 
