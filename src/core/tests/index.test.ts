@@ -1,4 +1,4 @@
-import TradingPlanetApp from './setupTradingPlanetApp'
+import SwapApp from './setupSwapApp'
 // @ToDo - use common/utils/coin/btc
 // @ts-ignore
 import Bitcoin from './../simple/src/instances/bitcoin'
@@ -34,9 +34,9 @@ const btcSwap = new BtcSwap({
 })
 
 //@ts-ignore: strictNullChecks
-const TradingPlanetAppInstance = TradingPlanetApp.shared()
-console.log('TradingPlanetAppInstance =', TradingPlanetAppInstance)
-btcSwap._initSwap(TradingPlanetAppInstance)
+const swapAppInstance = SwapApp.shared()
+console.log('swapAppInstance =', swapAppInstance)
+btcSwap._initSwap(swapAppInstance)
 
 const btcOwnerData = btcOwnerBitcoin.login(btcOwner.privateKey)
 const ethOwnerData = ethOwnerBitcoin.login(ethOwner.privateKey)

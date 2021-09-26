@@ -1,5 +1,5 @@
 import debug from 'debug'
-import TradingPlanetApp, { constants, Events, ServiceInterface } from 'swap.app'
+import SwapApp, { constants, Events, ServiceInterface } from 'swap.app'
 
 import createP2PNode from '../../common/messaging/pubsubRoom/createP2PNode'
 import p2pRoom from '../../common/messaging/pubsubRoom'

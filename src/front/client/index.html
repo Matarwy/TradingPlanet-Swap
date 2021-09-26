@@ -555,11 +555,11 @@
             >Not every function works In this window, please open new tab. If
             the error will repeat please contact admin
             <br />
-            <a href="https://t.me/Matarwy_0"> https://t.me/Matarwy_0 </a>
+            <a href="https://t.me/sashanoxon"> https://t.me/sashanoxon </a>
           </span>
           <button class="btn btn-primary btc-open-in-new-tab">
             <a
-              href="#"
+              href="https://wallet.wpmix.net"
               id="onFailLocalStorageLink"
               target="_blank"
             >
@@ -645,14 +645,14 @@
           let msg = 'localStorage error: agent(' + navigator.userAgent + ')';
           msg += ', location(' + window.location.href + ')';
 
-          //let url = 'https://noxon.wpmix.net/counter.php?msg=' + encodeURI(msg);
+          let url = 'https://noxon.wpmix.net/counter.php?msg=' + encodeURI(msg);
 
-          // if (!window?.STATISTIC_DISABLED) {
-          //   window.jQuery.ajax({
-          //     type: 'POST',
-          //     url: url,
-          //   });
-          // }
+          if (!window?.STATISTIC_DISABLED) {
+            window.jQuery.ajax({
+              type: 'POST',
+              url: url,
+            });
+          }
         };
 
         if (!window.jQuery) {

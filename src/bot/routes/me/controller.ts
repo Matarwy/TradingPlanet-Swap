@@ -1,7 +1,7 @@
-import TradingPlanetApp from '../../TradingPlanetApp'
+import swapApp from '../../swapApp'
 
 
-const wallet = TradingPlanetApp.wallet
+const wallet = swapApp.wallet
 
 const getMe = async (req, res) => {
   res.json({

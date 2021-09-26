@@ -1,4 +1,4 @@
-import TradingPlanetApp, { constants } from 'swap.app'
+import SwapApp, { constants } from 'swap.app'
 
 import Wallet from './wallet'
 
@@ -19,18 +19,18 @@ export default (settings) => {
     } : {}
   })
 
-  const TradingPlanetApp = TradingPlanetApp.init(config, true)
+  const swapApp = SwapApp.init(config, true)
 
-  const wallet = new Wallet(TradingPlanetApp, constants, config)
-
-  //@ts-ignore: strictNullChecks
-  TradingPlanetApp.services.wallet = wallet
+  const wallet = new Wallet(swapApp, constants, config)
 
   //@ts-ignore: strictNullChecks
-  const { auth, room, orders } = TradingPlanetApp.services
+  swapApp.services.wallet = wallet
+
+  //@ts-ignore: strictNullChecks
+  const { auth, room, orders } = swapApp.services
 
   const app = {
-    app: TradingPlanetApp,
+    app: swapApp,
     wallet,
     auth,
     room,

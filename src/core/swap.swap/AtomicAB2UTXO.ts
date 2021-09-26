@@ -1,5 +1,5 @@
 import debug from 'debug'
-import TradingPlanetApp, { util } from 'swap.app'
+import SwapApp, { util } from 'swap.app'
 import Flow from './Flow'
 import { BigNumber } from 'bignumber.js'
 import * as cryptoLib from 'crypto'

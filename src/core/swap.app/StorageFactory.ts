@@ -13,7 +13,7 @@ class StorageFactory {
       this.storage.removeItem('test')
     }
     catch (err) {
-      throw new Error(`TradingPlanetApp.env.StorageFactory: ${err}`)
+      throw new Error(`SwapApp.env.StorageFactory: ${err}`)
     }
   }
 
@@ -28,7 +28,7 @@ class StorageFactory {
       return JSON.parse(value)
     }
     catch (err) {
-      console.error(`TradingPlanetApp.env.storage.getItem(${key}) parse error. Looks like the value was created w/o setItem method`)
+      console.error(`SwapApp.env.storage.getItem(${key}) parse error. Looks like the value was created w/o setItem method`)
       console.error(err)
       return undefined
     }

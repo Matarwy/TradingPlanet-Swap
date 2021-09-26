@@ -1,4 +1,4 @@
-import app from './setupTradingPlanetApp'
+import app from './setupSwapApp'
 import rimraf from 'rimraf'
 
 jest.unmock('swap.app')

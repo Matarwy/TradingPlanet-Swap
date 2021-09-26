@@ -1,4 +1,4 @@
-import TradingPlanetApp from './TradingPlanetApp'
+import SwapApp from './SwapApp'
 import ServiceInterface from './ServiceInterface'
 import SwapInterface from './SwapInterface'
 import Collection from './Collection'
@@ -8,7 +8,7 @@ import constants from './constants'
 import * as util from './util'
 
 
-export default TradingPlanetApp
+export default SwapApp
 
 export {
   ServiceInterface,

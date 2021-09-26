@@ -1,5 +1,5 @@
 import debug from 'debug'
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 import BigNumber from 'bignumber.js'
 import events from './events'
 
@@ -74,7 +74,7 @@ class Order {
     this.destination = null
 
 
-    this._attachTradingPlanetApp(app)
+    this._attachSwapApp(app)
 
     this._update({
       ...data,
@@ -84,8 +84,8 @@ class Order {
     this._onMount()
   }
 
-  _attachTradingPlanetApp(app) {
-    TradingPlanetApp.required(app)
+  _attachSwapApp(app) {
+    SwapApp.required(app)
 
     this.app = app
   }

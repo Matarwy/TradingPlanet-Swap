@@ -17,7 +17,7 @@ import { FormattedMessage, injectIntl, defineMessages } from 'react-intl'
 import links from 'helpers/links'
 import { getFullOrigin } from 'helpers/links'
 
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 
 
 const langLabels = defineMessages({
@@ -88,7 +88,7 @@ class MultisignJoinLink extends React.Component<any, any> {
     const linkAction = action || `join`
 
     //@ts-ignore: strictNullChecks
-    const joinLink = `${getFullOrigin()}${links.multisign}/btc/${linkAction}/${publicKey}/${TradingPlanetApp.shared().services.room.peer}`
+    const joinLink = `${getFullOrigin()}${links.multisign}/btc/${linkAction}/${publicKey}/${SwapApp.shared().services.room.peer}`
 
     this.setState(() => ({
       joinLink,

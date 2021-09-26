@@ -1,5 +1,5 @@
 import debug from 'debug'
-import TradingPlanetApp, { util } from 'swap.app'
+import SwapApp, { util } from 'swap.app'
 import Room from './Room'
 import Swap from './Swap'
 
@@ -8,7 +8,7 @@ class Flow {
   _flowName: string
   swap: Swap
   steps: Function[]
-  app: TradingPlanetApp
+  app: SwapApp
   stepNumbers: any
   isTakerMakerModel: boolean = false
 
@@ -116,7 +116,7 @@ class Flow {
       },
     }
 
-    this._attachTradingPlanetApp(swap.app)
+    this._attachSwapApp(swap.app)
   }
 
   isTaker(): boolean {
@@ -127,14 +127,14 @@ class Flow {
     return this.swap.isMy
   }
 
-  _attachTradingPlanetApp(app: TradingPlanetApp) {
-    TradingPlanetApp.required(app)
+  _attachSwapApp(app: SwapApp) {
+    SwapApp.required(app)
 
     this.app = app
   }
 
-  static read(app: TradingPlanetApp, { id }) {
-    TradingPlanetApp.required(app)
+  static read(app: SwapApp, { id }) {
+    SwapApp.required(app)
 
     if (!id) {
       debug('swap.core:swap')(`FlowReadError: id not given: ${id}`)

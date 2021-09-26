@@ -1,5 +1,5 @@
 import debug from 'debug'
-import TradingPlanetApp, { constants, util } from 'swap.app'
+import SwapApp, { constants, util } from 'swap.app'
 import { Flow } from 'swap.swap'
 
 

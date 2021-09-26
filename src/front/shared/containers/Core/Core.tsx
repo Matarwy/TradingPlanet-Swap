@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 import actions from 'redux/actions'
 import { connect } from 'redaction'
 import metamask from 'helpers/metamask'
@@ -19,7 +19,7 @@ export default class Core extends Component<any, any> {
       if (!this._mounted) return
       actions.core.getSwapHistory()
       //@ts-ignore: strictNullChecks
-      TradingPlanetApp.shared().services.orders
+      SwapApp.shared().services.orders
         .on('new orders', this.updateOrders)
         .on('new order', this.updateOrders)
         .on('order update', this.updateOrders)
@@ -33,7 +33,7 @@ export default class Core extends Component<any, any> {
     this._mounted = false
     try {
       //@ts-ignore: strictNullChecks
-      TradingPlanetApp.shared().services.orders
+      SwapApp.shared().services.orders
         .off('new orders', this.updateOrders)
         .off('new order', this.updateOrders)
         .off('order update', this.updateOrders)
@@ -41,14 +41,14 @@ export default class Core extends Component<any, any> {
         .off('new order request', this.updateOrders)
 
       //@ts-ignore: strictNullChecks
-      if (TradingPlanetApp.shared().services.room.connection) {
+      if (SwapApp.shared().services.room.connection) {
         console.log('leave room')
         //@ts-ignore: strictNullChecks
-        TradingPlanetApp.shared().services.room.connection
+        SwapApp.shared().services.room.connection
           .removeListener('peer joined', actions.pubsubRoom.userJoined)
           .removeListener('peer left', actions.pubsubRoom.userLeft)
         //@ts-ignore: strictNullChecks
-        TradingPlanetApp.shared().services.room.connection.leave()
+        SwapApp.shared().services.room.connection.leave()
       }
     } catch (e) {
       console.warn('Core unmount - not inited. skip')
@@ -63,14 +63,14 @@ export default class Core extends Component<any, any> {
         if (pubsubRoom.isOnline) return
 
         //@ts-ignore: strictNullChecks
-        if (!TradingPlanetApp.shared().services.room.connection) {
+        if (!SwapApp.shared().services.room.connection) {
           throw new Error(`SwapRoom not ready`)
         }
 
         //@ts-ignore: strictNullChecks
-        const isOnline = TradingPlanetApp.shared().services.room.connection.isOnline()
+        const isOnline = SwapApp.shared().services.room.connection.isOnline()
         //@ts-ignore: strictNullChecks
-        const { peer } = TradingPlanetApp.shared().services.room
+        const { peer } = SwapApp.shared().services.room
 
         this.updateOrders()
 
@@ -81,13 +81,13 @@ export default class Core extends Component<any, any> {
         }
 
         //@ts-ignore: strictNullChecks
-        TradingPlanetApp.shared().services.room.connection
+        SwapApp.shared().services.room.connection
           .on('peer joined', actions.pubsubRoom.userJoined)
           .on('peer left', actions.pubsubRoom.userLeft)
 
         // BTC Multisign
         //@ts-ignore: strictNullChecks
-        TradingPlanetApp.shared().services.room.on('btc multisig join', actions.btcmultisig.onUserMultisigJoin)
+        SwapApp.shared().services.room.on('btc multisig join', actions.btcmultisig.onUserMultisigJoin)
 
         clearInterval(pubsubLoadingInterval)
 
@@ -101,14 +101,14 @@ export default class Core extends Component<any, any> {
     }
 
     //@ts-ignore: strictNullChecks
-    TradingPlanetApp.shared().services.room.on('ready', setupPubSubRoom)
+    SwapApp.shared().services.room.on('ready', setupPubSubRoom)
 
     const pubsubLoadingInterval = setInterval(setupPubSubRoom, 5000)
   }
 
   updateOrders = () => {
     //@ts-ignore: strictNullChecks
-    const orders = TradingPlanetApp.shared().services.orders.items
+    const orders = SwapApp.shared().services.orders.items
     this.setState(() => ({
       orders,
     }))

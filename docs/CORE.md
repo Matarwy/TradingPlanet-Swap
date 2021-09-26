@@ -124,7 +124,7 @@ Simplest config:
 import Web3 from 'web3'
 import bitcoin from 'bitcoinjs-lib'
 
-import TradingPlanetApp, { constants } from 'swap.app'
+import swapApp, { constants } from 'swap.app'
 import SwapAuth from 'swap.auth'
 import SwapRoom from 'swap.room'
 import SwapOrders from 'swap.orders'
@@ -134,7 +134,7 @@ import { ETH2BTC, BTC2ETH, ETHTOKEN2BTC, BTC2ETHTOKEN } from 'swap.flows'
 
 const web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/<YOUR_KEY>'))
 
-TradingPlanetApp.setup({
+SwapApp.setup({
   network: 'testnet',
 
   env: {
@@ -204,10 +204,10 @@ TradingPlanetApp.setup({
 ```
 
 ```
-import TradingPlanetApp, { constants } from 'swap.app'
+import SwapApp, { constants } from 'swap.app'
 
 
-TradingPlanetApp.services.orders.create({
+SwapApp.services.orders.create({
   buyCurrency: constants.COINS.eth,
   sellCurrency: constants.COINS.btc,
   buyAmount: 10,
@@ -215,7 +215,7 @@ TradingPlanetApp.services.orders.create({
 })
 ```
 
-`TradingPlanetApp.services.orders.getMyOrders()` returns
+`SwapApp.services.orders.getMyOrders()` returns
 
 ```
 [
@@ -227,9 +227,9 @@ TradingPlanetApp.services.orders.create({
 
 
 
-## [swap.app] TradingPlanetApp
+## [swap.app] SwapApp
 
-#### *TradingPlanetApp is singleton!*
+#### *SwapApp is singleton!*
 
 #### Configure params
 
@@ -252,13 +252,13 @@ TradingPlanetApp.services.orders.create({
       <td>Map of environments</td>
       <td>
         Environment for API. Available env names: <b>web3</b>, <b>bitcoin</b>, <b>Ipfs</b> (required),
-        <b>IpfsRoom</b> (required), <b>storage</b> (default: window.localStorage) Usage <b>TradingPlanetApp.env.{envName}<b>
+        <b>IpfsRoom</b> (required), <b>storage</b> (default: window.localStorage) Usage <b>SwapApp.env.{envName}<b>
       </td>
     </tr>
     <tr>
       <td>services</td>
       <td>Array of service instances</td>
-      <td>Usage <b>TradingPlanetApp.services.{serviceName}</b></td>
+      <td>Usage <b>SwapApp.services.{serviceName}</b></td>
     </tr>
     <tr>
       <td>swaps</td>
@@ -318,17 +318,17 @@ TradingPlanetApp.services.orders.create({
   <tbody>
     <tr>
       <td>isMainNet()</td>
-      <td>Returns <b>true</b> if TradingPlanetApp.network === 'mainnet'</td>
+      <td>Returns <b>true</b> if SwapApp.network === 'mainnet'</td>
     </tr>
     <tr>
       <td>isTestNet()</td>
-      <td>Returns <b>true</b> if TradingPlanetApp.network === 'testnet'</td>
+      <td>Returns <b>true</b> if SwapApp.network === 'testnet'</td>
     </tr>
   </tbody>
 </table>
 
 
-## * TradingPlanetApp Services
+## * SwapApp Services
 
 Each service class should extend swap.app/ServiceInterface
 
@@ -337,7 +337,7 @@ class ServiceInterface {
 
   // _constructor for aggregation
   _constructor() {
-    // service name, within it will be stored in TradingPlanetApp.services
+    // service name, within it will be stored in SwapApp.services
     this._serviceName     = null
     this._dependsOn       = []
     this._spyHandlers     = []
@@ -355,7 +355,7 @@ class ServiceInterface {
         dependsOnMap[Service.name] = {
           initialized: false,
         }
-        TradingPlanetApp.services[Service.name]._addWaitRelationHandler(() => {
+        SwapApp.services[Service.name]._addWaitRelationHandler(() => {
           this._dependsOn[Service.name].initialized = true
 
           const areAllExpectsInitialized = Object.keys(this._dependsOn).every((serviceName) => (
@@ -385,17 +385,17 @@ class ServiceInterface {
   }
 
   initService() {
-    // init service on TradingPlanetApp mounting
+    // init service on SwapApp mounting
   }
 }
 ```
 
 This interface allows services to be mounted in right order (to not care of services position in setup array).
-For example swap.orders depends on swap.room, so it must wait until swap.room be mounted in TradingPlanetApp.services.
+For example swap.orders depends on swap.room, so it must wait until swap.room be mounted in SwapApp.services.
 
 
 
-## [swap.auth] TradingPlanetApp.services.auth
+## [swap.auth] SwapApp.services.auth
 
 The service for authentication and storing auth data. Currently contains:
 
@@ -413,7 +413,7 @@ new SwapAuth({
 ```
 
 You can pass `null` or private key as value. If `null` passed new private key will be created, this key will be saved
-in `TradingPlanetApp.env.storage` by key `{network}:{coinName}:privateKey` - for network: `testnet` and coin `eth` it will be
+in `SwapApp.env.storage` by key `{network}:{coinName}:privateKey` - for network: `testnet` and coin `eth` it will be
 `testnet:eth:privateKey`
 
 #### Public props
@@ -457,7 +457,7 @@ add coin name to swap.app/constants/COINS.js
 
 
 
-## [swap.room] TradingPlanetApp.services.room
+## [swap.room] SwapApp.services.room
 
 Wrapper over [ipfs-pubsub-room](https://github.com/ipfs-shipyard/ipfs-pubsub-room) package. This service provides
 a room based on an IPFS pub-sub channel. Emits membership events, listens for messages, broadcast and direct messages
@@ -540,7 +540,7 @@ sendMessage([
 
 
 
-## [swap.orders] TradingPlanetApp.services.orders
+## [swap.orders] SwapApp.services.orders
 
 Provides the workflow with orders - create, store, update, remove orders.
 
@@ -626,10 +626,10 @@ create({
 This package contains set of classes which provide functionality for swap operations:
 deposit funds, check balance, withdraw, refund, abort swap, etc. Each file (class) written for specific
 blockchain (EthSwap, BtcSwap) / coin (EthTokenSwap). These classes used inside Swap process by swap.flows,
-developer needs only to pass necessary class to TradingPlanetApp setup config:
+developer needs only to pass necessary class to SwapApp setup config:
 
 ```
-TradingPlanetApp.setup({
+swapApp.setup({
   ...
   swaps: [
     new EthSwap({
@@ -654,17 +654,17 @@ Each *Swap should extends swap.app/SwapInterface:
 class SwapInterface {
 
   constructor() {
-    // service name, within it will be stored in TradingPlanetApp.swaps
+    // service name, within it will be stored in SwapApp.swaps
     this._swapName = null
   }
 
   _initSwap() {
-    // init service on TradingPlanetApp mounting
+    // init service on SwapApp mounting
   }
 }
 ```
 
-- `this._swapName` required by TradingPlanetApp setup process, within it will be stored in `TradingPlanetApp.swaps[_swapName]`
+- `this._swapName` required by SwapApp setup process, within it will be stored in `SwapApp.swaps[_swapName]`
 - `_initSwap()` will be called when swap be mounted
 
 

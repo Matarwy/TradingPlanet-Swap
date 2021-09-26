@@ -2,7 +2,7 @@ import crypto from 'crypto'
 
 import { helpers } from 'simple.swap.core'
 
-import { app } from '../../TradingPlanetApp'
+import { app } from '../../swapApp'
 import { findSwap, swapView, decodeFlow, removeSwap } from '../../helpers'
 import Pair from '../../microbot/Pair'
 

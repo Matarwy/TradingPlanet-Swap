@@ -19,7 +19,7 @@ import { FormattedMessage, injectIntl } from 'react-intl'
 import { localisedUrl } from 'helpers/locale'
 import config from 'helpers/externalConfig'
 import swapsHelper from 'helpers/swaps'
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 
 import helpers, {
   localStorage,
@@ -439,9 +439,9 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
     }
     timerProcess()
 
-    TradingPlanetApp.onInit(() => {
+    SwapApp.onInit(() => {
       //@ts-ignore: strictNullChecks
-      TradingPlanetApp.shared().services.room.on('new orders', () => this.checkPair())
+      SwapApp.shared().services.room.on('new orders', () => this.checkPair())
     })
 
     setTimeout(() => {
@@ -1015,10 +1015,10 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
       (isEvmCoinSell && sellCoin) ||
       (isEvmCoinBuy && buyCoin)
 
-    if (!actionType || TradingPlanetApp === null || !orderId) return
+    if (!actionType || SwapApp === null || !orderId) return
 
     //@ts-ignore: strictNullChecks
-    const order = TradingPlanetApp.shared().services.orders.getByKey(orderId)
+    const order = SwapApp.shared().services.orders.getByKey(orderId)
 
     const orderOwnerEvmAddress = order.owner[orderOwnerEvmCoin.toLowerCase()].address
 
@@ -1099,7 +1099,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
 
   getLinkToDeclineSwap = () => {
     //@ts-ignore: strictNullChecks
-    const orders = TradingPlanetApp.shared().services.orders.items
+    const orders = SwapApp.shared().services.orders.items
 
     const unfinishedOrder = orders
       .filter((item) => item.isProcessing === true)

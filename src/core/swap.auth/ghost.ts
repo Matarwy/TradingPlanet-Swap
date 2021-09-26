@@ -1,4 +1,4 @@
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 import * as mnemonicUtils from '../../common/utils/mnemonic'
 
 const loginMnemonic = (mnemonic, walletNumber=0, path, app) => {
@@ -13,7 +13,7 @@ const loginMnemonic = (mnemonic, walletNumber=0, path, app) => {
 }
 
 const login = (_privateKey, app) => {
-  TradingPlanetApp.required(app)
+  SwapApp.required(app)
 
   const storageKey = `${app.network}:ghost:privateKey`
   let privateKey = _privateKey || app.env.storage.getItem(storageKey)

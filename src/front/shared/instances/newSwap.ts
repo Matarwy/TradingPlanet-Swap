@@ -13,7 +13,7 @@ import config, { initExternalConfig } from 'helpers/externalConfig'
 import helpers, { constants as privateKeys, utils } from 'helpers'
 import actions from 'redux/actions'
 
-import TradingPlanetApp, { constants } from 'swap.app'
+import SwapApp, { constants } from 'swap.app'
 import SwapAuth from 'swap.auth'
 import SwapRoom from 'swap.room'
 import SwapOrders from 'swap.orders'
@@ -93,12 +93,12 @@ const onInit = (cb) => {
   _wait()
 }
 
-const createTradingPlanetApp = async () => {
+const createSwapApp = async () => {
   await metamask.web3connect.onInit(async () => {
     const web3 = actions.eth.getWeb3()
     const NETWORK = process.env.MAINNET ? `MAINNET` : `TESTNET`
 
-    TradingPlanetApp.setup({
+    SwapApp.setup({
       network: process.env.MAINNET ? 'mainnet' : 'testnet',
 
       env: {
@@ -135,7 +135,7 @@ const createTradingPlanetApp = async () => {
 
       services: [
         new SwapAuth({
-          // TODO need init TradingPlanetApp only after private keys created!!!!!!!!!!!!!!!!!!!
+          // TODO need init swapApp only after private keys created!!!!!!!!!!!!!!!!!!!
           eth: localStorage.getItem(privateKeys.privateKeyNames.eth),
           // for evm compatible blockchains use eth private key
           bnb: localStorage.getItem(privateKeys.privateKeyNames.eth),
@@ -370,12 +370,12 @@ const createTradingPlanetApp = async () => {
     }, true)
 
 
-    window.TradingPlanetApp = TradingPlanetApp.shared()
+    window.SwapApp = SwapApp.shared()
     _inited = true
   })
 }
 
 export {
-  createTradingPlanetApp,
+  createSwapApp,
   onInit,
 }

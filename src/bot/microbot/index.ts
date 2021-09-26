@@ -1,4 +1,4 @@
-import { TradingPlanetApp } from './app'
+import { SwapApp } from './app'
 
 
-export default TradingPlanetApp
+export default SwapApp

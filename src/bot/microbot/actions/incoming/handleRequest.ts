@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import _debug from 'debug'
 
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 
 import handleError from '../../../app/actions/errors/handleError'
 import beginSwap from '../start/beginSwap'

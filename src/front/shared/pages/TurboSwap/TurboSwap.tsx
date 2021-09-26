@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react'
 
 import BigNumber from 'bignumber.js'
 import Swap from 'swap.swap'
-import TradingPlanetApp from 'swap.app'
+import SwapApp from 'swap.app'
 
 import cssModules from 'react-css-modules'
 import styles from './TurboSwap.scss'
@@ -92,7 +92,7 @@ class TurboSwap extends PureComponent<any, ITurboSwapState> {
     }
 
     try {
-      const swap = new Swap(orderId, TradingPlanetApp.shared())
+      const swap = new Swap(orderId, SwapApp.shared())
       console.log(`Front uses flow ${swap.flow._flowName}`);
 
       this.setState(() => ({

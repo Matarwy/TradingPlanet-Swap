@@ -1,4 +1,4 @@
-import TradingPlanetApp from './TradingPlanetApp'
+import SwapApp from './SwapApp'
 
 
 class ServiceInterface {
@@ -21,14 +21,14 @@ class ServiceInterface {
     this._constructor()
   }
 
-  _attachTradingPlanetApp(app) {
-    TradingPlanetApp.required(app)
+  _attachSwapApp(app) {
+    SwapApp.required(app)
 
     this.app = app
   }
 
   _waitRelationsResolve() {
-    TradingPlanetApp.required(this.app)
+    SwapApp.required(this.app)
 
     if (this._dependsOn && this._dependsOn.length) {
       const dependsOnMap = {}
@@ -58,8 +58,8 @@ class ServiceInterface {
   }
 
   _tryInitService() {
-    // init service on TradingPlanetApp mounting
-    TradingPlanetApp.required(this.app)
+    // init service on SwapApp mounting
+    SwapApp.required(this.app)
 
     if (!this._dependsOn || !this._dependsOn.length) {
       this.initService()
@@ -69,7 +69,7 @@ class ServiceInterface {
   }
 
   initService() {
-    // init service on TradingPlanetApp mounting
+    // init service on SwapApp mounting
   }
 }
 

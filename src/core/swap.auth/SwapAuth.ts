@@ -1,4 +1,4 @@
-import TradingPlanetApp, { ServiceInterface, constants } from 'swap.app'
+import SwapApp, { ServiceInterface, constants } from 'swap.app'
 
 
 let _privateKeys
@@ -28,7 +28,7 @@ class SwapAuth extends ServiceInterface {
   initService() {
     const app = this.app
 
-    TradingPlanetApp.required(app)
+    SwapApp.required(app)
 
     Object.keys(_privateKeys).forEach((name) => {
       if (Object.keys(constants.COINS).indexOf(name) < 0) {
