@@ -157,22 +157,22 @@ const UTXO_to_MATIC = (coinName) => {
   return _UTXO_to_MATIC
 }
 
-// const UTXO_to_ARBITRUM = (coinName) => {
-//   class _UTXO_to_ARBITRUM extends UTXOToEthLike {
-//     constructor(props) {
-//       super({
-//         ...props,
-//         fields: {
-//           currencyName: coinName,
-//           ethLikeCoin: `ARBITRUM`,
-//           etherscanLink: config.link.arbitrum,
-//           ...config.swapConfig[coinName],
-//         },
-//       })
-//     }
-//   }
-//   return _UTXO_to_ARBITRUM
-// }
+const UTXO_to_ARBITRUM = (coinName) => {
+  class _UTXO_to_ARBITRUM extends UTXOToEthLike {
+    constructor(props) {
+      super({
+        ...props,
+        fields: {
+          currencyName: coinName,
+          ethLikeCoin: `ARBITRUM`,
+          etherscanLink: config.link.arbitrum,
+          ...config.swapConfig[coinName],
+        },
+      })
+    }
+  }
+  return _UTXO_to_ARBITRUM
+}
 
 const ETH_to_UTXO = (coinName) => {
   class _ETH_to_UTXO extends EthLikeToUTXO {
@@ -225,22 +225,22 @@ const MATIC_to_UTXO = (coinName) => {
   return _MATIC_to_UTXO
 }
 
-// const ARBITRUM_to_UTXO = (coinName) => {
-//   class _ARBITRUM_to_UTXO extends EthLikeToUTXO {
-//     constructor(props) {
-//       super({
-//         ...props,
-//         fields: {
-//           currencyName: coinName,
-//           ethLikeCoin: `ARBITRUM`,
-//           etherscanLink: config.link.arbitrum,
-//           ...config.swapConfig[coinName],
-//         },
-//       })
-//     }
-//   }
-//   return _ARBITRUM_to_UTXO
-// }
+const ARBITRUM_to_UTXO = (coinName) => {
+  class _ARBITRUM_to_UTXO extends EthLikeToUTXO {
+    constructor(props) {
+      super({
+        ...props,
+        fields: {
+          currencyName: coinName,
+          ethLikeCoin: `ARBITRUM`,
+          etherscanLink: config.link.arbitrum,
+          ...config.swapConfig[coinName],
+        },
+      })
+    }
+  }
+  return _ARBITRUM_to_UTXO
+}
 
 export {
   UTXO_to_ERC20,
@@ -253,9 +253,9 @@ export {
   UTXO_to_ETH,
   UTXO_to_BNB,
   UTXO_to_MATIC,
-  //UTXO_to_ARBITRUM,
+  UTXO_to_ARBITRUM,
   ETH_to_UTXO,
   BNB_to_UTXO,
   MATIC_to_UTXO,
-  //ARBITRUM_to_UTXO,
+  ARBITRUM_to_UTXO,
 }

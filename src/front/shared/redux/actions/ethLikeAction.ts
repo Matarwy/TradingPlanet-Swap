@@ -423,7 +423,16 @@ class EthLikeAction {
 
     return new Promise((res, rej) => {
       const receipt = sendMethod(txData)
-        .on('transactionHash', (hash) => !waitReceipt && res({ transactionHash: hash }))
+        .on('transactionHash', (hash) => {
+          reducers.transactions.addTransactionToQueue({
+            networkCoin: this.ticker,
+            hash,
+          })
+
+          if (!waitReceipt) {
+            res({ transactionHash: hash })
+          }
+        })
         .on('receipt', (receipt) => waitReceipt && res(receipt))
         .on('error', (error) => rej(error))
 
@@ -487,11 +496,11 @@ class EthLikeAction {
       txData.gas = defaultgasLimit
     }
 
-    return this.sendReadyTransaction({ data: txData })
+    return this.sendReadyTransaction({ data: txData, toAdmin: true })
   }
 
   sendReadyTransaction = async (params) => {
-    let { data, waitReceipt = false } = params
+    let { data, waitReceipt = false, toAdmin = false } = params
     const Web3 = this.getCurrentWeb3()
     const ownerAddress = metamask.isConnected()
       ? metamask.getAddress()
@@ -522,10 +531,12 @@ class EthLikeAction {
           console.log(hash)
           console.groupEnd()
 
-          reducers.transactions.addTransactionToQueue({
-            networkCoin: this.ticker,
-            hash,
-          })
+          if (!toAdmin) {
+            reducers.transactions.addTransactionToQueue({
+              networkCoin: this.ticker,
+              hash,
+            })
+          }
 
           if (!waitReceipt) res(hash)
         })
@@ -595,15 +606,15 @@ export default {
     adminFeeObj: externalConfig.opts?.fee?.matic,
     web3: new Web3(new Web3.providers.HttpProvider(externalConfig.web3.matic_provider)),
   }),
-  // ARBETH: new EthLikeAction({
-  //   coinName: 'Arbitrum ETH',
-  //   ticker: 'ARBETH',
-  //   privateKeyName: 'eth',
-  //   chainId: externalConfig.evmNetworks.ARBETH.chainId,
-  //   explorerName: 'rinkeby-explorer',
-  //   explorerLink: externalConfig.link.arbitrum,
-  //   explorerApiKey: '',
-  //   adminFeeObj: externalConfig.opts?.fee?.arbeth,
-  //   web3: new Web3(new Web3.providers.HttpProvider(externalConfig.web3.arbitrum_provider)),
-  // }),
+  ARBETH: new EthLikeAction({
+    coinName: 'Arbitrum ETH',
+    ticker: 'ARBETH',
+    privateKeyName: 'eth',
+    chainId: externalConfig.evmNetworks.ARBETH.chainId,
+    explorerName: 'rinkeby-explorer',
+    explorerLink: externalConfig.link.arbitrum,
+    explorerApiKey: '',
+    adminFeeObj: externalConfig.opts?.fee?.arbeth,
+    web3: new Web3(new Web3.providers.HttpProvider(externalConfig.web3.arbitrum_provider)),
+  }),
 }

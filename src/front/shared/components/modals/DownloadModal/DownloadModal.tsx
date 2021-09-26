@@ -28,20 +28,20 @@ const title = defineMessages({
       ethData,
       bnbData,
       maticData,
-      //arbethData,
+      arbethData,
       btcData,
-      // ghostData,
-      // nextData,
+      ghostData,
+      nextData,
     },
   }) => ({
     items: [
       ethData,
       bnbData,
       maticData,
-      //arbethData,
+      arbethData,
       btcData,
-      // ghostData,
-      // nextData,
+      ghostData,
+      nextData,
     ],
   })
 )

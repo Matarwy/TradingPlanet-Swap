@@ -26,17 +26,17 @@ import {
   ETHTOKEN2BTC,
   BTC2ETHTOKEN,
 
-  //GHOST2ETH,
-  //ETH2GHOST,
-  //ETHTOKEN2GHOST,
-  //GHOST2ETHTOKEN,
+  GHOST2ETH,
+  ETH2GHOST,
+  ETHTOKEN2GHOST,
+  GHOST2ETHTOKEN,
   //GHOST2BTC,
   //BTC2GHOST,
 
-  //NEXT2ETH,
-  //ETH2NEXT,
-  //ETHTOKEN2NEXT,
-  //NEXT2ETHTOKEN,
+  NEXT2ETH,
+  ETH2NEXT,
+  ETHTOKEN2NEXT,
+  NEXT2ETHTOKEN,
   //NEXT2BTC,
   //BTC2NEXT,
 
@@ -51,17 +51,17 @@ import {
   MATICTOKEN2BTC,
   BTC2MATICTOKEN,
 
-  //ARBITRUM2BTC,
-  //BTC2ARBITRUM,  
+  ARBITRUM2BTC,
+  BTC2ARBITRUM,  
 } from 'swap.flows'
 import {
   BtcSwap,
   EthSwap,
   BnbSwap,
   MaticSwap,
-  // ArbitrumSwap,
-  // GhostSwap,
-  // NextSwap,
+  ArbitrumSwap,
+  GhostSwap,
+  NextSwap,
 
   EthTokenSwap,
   BscTokenSwap,
@@ -108,20 +108,20 @@ const createSwapApp = async () => {
         getWeb3Bnb: actions.bnb.getWeb3,
         web3Matic: actions.matic.getWeb3(),
         getWeb3Matic: actions.matic.getWeb3,
-        // web3Arbitrum: actions.arbeth.getWeb3(),
-        // getWeb3Arbitrum: actions.arbeth.getWeb3,
+        web3Arbitrum: actions.arbeth.getWeb3(),
+        getWeb3Arbitrum: actions.arbeth.getWeb3,
         bitcoin,
         ghost,
         next,
         coininfo: {
-          // ghost: {
-          //   main: helpers.ghost.networks.mainnet,
-          //   test: helpers.ghost.networks.testnet,
-          // },
-          // next: {
-          //   main: helpers.next.networks.mainnet,
-          //   test: helpers.next.networks.mainnet,
-          // },
+          ghost: {
+            main: helpers.ghost.networks.mainnet,
+            test: helpers.ghost.networks.testnet,
+          },
+          next: {
+            main: helpers.next.networks.mainnet,
+            test: helpers.next.networks.mainnet,
+          },
         },
         storage: window.localStorage,
         sessionStorage: window.sessionStorage,
@@ -140,10 +140,10 @@ const createSwapApp = async () => {
           // for evm compatible blockchains use eth private key
           bnb: localStorage.getItem(privateKeys.privateKeyNames.eth),
           matic: localStorage.getItem(privateKeys.privateKeyNames.eth),
-          //arbeth: localStorage.getItem(privateKeys.privateKeyNames.eth),
+          arbeth: localStorage.getItem(privateKeys.privateKeyNames.eth),
           btc: localStorage.getItem(privateKeys.privateKeyNames.btc),
-          // ghost: localStorage.getItem(privateKeys.privateKeyNames.ghost),
-          // next: localStorage.getItem(privateKeys.privateKeyNames.next),
+          ghost: localStorage.getItem(privateKeys.privateKeyNames.ghost),
+          next: localStorage.getItem(privateKeys.privateKeyNames.next),
         }),
         new SwapRoom({
           repo,
@@ -181,15 +181,15 @@ const createSwapApp = async () => {
             sendTransaction: ({ to, amount }) => actions.matic.send({ to, amount }),
           })
         ] : []),
-        // ...((config?.opts?.blockchainSwapEnabled?.arbeth) ? [
-        //   new ArbitrumSwap({
-        //     address: config.swapContract.arbitrum,
-        //     abi: EVM_CONTRACTS_ABI.NATIVE_COIN_SWAP,
-        //     fetchBalance: (address) => actions.arbeth.fetchBalance(address),
-        //     estimateGasPrice: () => ethLikeHelper.arbeth.estimateGasPrice(),
-        //     sendTransaction: ({ to, amount }) => actions.arbeth.send({ to, amount }),
-        //   })
-        // ] : []),
+        ...((config?.opts?.blockchainSwapEnabled?.arbeth) ? [
+          new ArbitrumSwap({
+            address: config.swapContract.arbitrum,
+            abi: EVM_CONTRACTS_ABI.NATIVE_COIN_SWAP,
+            fetchBalance: (address) => actions.arbeth.fetchBalance(address),
+            estimateGasPrice: () => ethLikeHelper.arbeth.estimateGasPrice(),
+            sendTransaction: ({ to, amount }) => actions.arbeth.send({ to, amount }),
+          })
+        ] : []),
         new BtcSwap({
           fetchBalance: (address) => bitcoinUtils.fetchBalance({
             address,
@@ -221,44 +221,44 @@ const createSwapApp = async () => {
           }),
           sendTransaction: ({ to, amount }) => actions.btc.sendTransaction({ to, amount }),
         }),
-        // new GhostSwap({
-        //   fetchBalance: (address) => actions.ghost.fetchBalance(address),
-        //   fetchUnspents: (scriptAddress) => actions.ghost.fetchUnspents(scriptAddress),
-        //   broadcastTx: (txRaw) => actions.ghost.broadcastTx(txRaw),
-        //   fetchTxInfo: (txid) => actions.ghost.fetchTxInfo(txid),
-        //   checkWithdraw: (scriptAddress) => actions.ghost.checkWithdraw(scriptAddress),
-        //   estimateFeeValue: ({ inSatoshis, speed, address, txSize }) => helpers.ghost.estimateFeeValue({ inSatoshis, speed, address, txSize }),
-        // }),
-        // new NextSwap({
-        //   fetchBalance: (address) => nextUtils.fetchBalance({
-        //     address,
-        //     NETWORK,
-        // //   }),
-        //   fetchUnspents: (address) => nextUtils.fetchUnspents({
-        //     address,
-        //     NETWORK,
-        //   }),
-        //   broadcastTx: (txRaw) => nextUtils.broadcastTx({
-        //     txRaw,
-        //     NETWORK,
-        //   }),
-        //   fetchTxInfo: (hash) => nextUtils.fetchTxInfo({
-        //     hash,
-        //     NETWORK,
-        //   }),
-        //   checkWithdraw: (scriptAddress) => nextUtils.checkWithdraw({
-        //     scriptAddress,
-        //     NETWORK,
-        //   }),
-        //   estimateFeeValue: (options) => nextUtils.estimateFeeValue({
-        //     ...options,
-        //     NETWORK,
-        //   }),
-        //   fetchTxInputScript: (options) => nextUtils.fetchTxInputScript({
-        //     ...options,
-        //     NETWORK,
-        //   }),
-        // }),
+        new GhostSwap({
+          fetchBalance: (address) => actions.ghost.fetchBalance(address),
+          fetchUnspents: (scriptAddress) => actions.ghost.fetchUnspents(scriptAddress),
+          broadcastTx: (txRaw) => actions.ghost.broadcastTx(txRaw),
+          fetchTxInfo: (txid) => actions.ghost.fetchTxInfo(txid),
+          checkWithdraw: (scriptAddress) => actions.ghost.checkWithdraw(scriptAddress),
+          estimateFeeValue: ({ inSatoshis, speed, address, txSize }) => helpers.ghost.estimateFeeValue({ inSatoshis, speed, address, txSize }),
+        }),
+        new NextSwap({
+          fetchBalance: (address) => nextUtils.fetchBalance({
+            address,
+            NETWORK,
+          }),
+          fetchUnspents: (address) => nextUtils.fetchUnspents({
+            address,
+            NETWORK,
+          }),
+          broadcastTx: (txRaw) => nextUtils.broadcastTx({
+            txRaw,
+            NETWORK,
+          }),
+          fetchTxInfo: (hash) => nextUtils.fetchTxInfo({
+            hash,
+            NETWORK,
+          }),
+          checkWithdraw: (scriptAddress) => nextUtils.checkWithdraw({
+            scriptAddress,
+            NETWORK,
+          }),
+          estimateFeeValue: (options) => nextUtils.estimateFeeValue({
+            ...options,
+            NETWORK,
+          }),
+          fetchTxInputScript: (options) => nextUtils.fetchTxInputScript({
+            ...options,
+            NETWORK,
+          }),
+        }),
         // Ether
         ...(Object.keys(config.erc20)
           .map(key =>
@@ -323,20 +323,20 @@ const createSwapApp = async () => {
           BTC2MATIC,
         ] : []),
 
-        // ARBITRUM2BTC,
-        // BTC2ARBITRUM,
+        ARBITRUM2BTC,
+        BTC2ARBITRUM,
 
         // GHOST2BTC,
         // BTC2GHOST,
 
-        // GHOST2ETH,
-        // ETH2GHOST,
+        GHOST2ETH,
+        ETH2GHOST,
 
         //NEXT2BTC,
         //BTC2NEXT,
 
-        // NEXT2ETH,
-        // ETH2NEXT,
+        NEXT2ETH,
+        ETH2NEXT,
 
         ...(Object.keys(config.bep20))
           .map(key => BSCTOKEN2BTC(key)),
@@ -354,17 +354,17 @@ const createSwapApp = async () => {
         ...(Object.keys(config.erc20))
           .map(key => BTC2ETHTOKEN(key)),
 
-        // ...(Object.keys(config.erc20))
-        //   .map(key => ETHTOKEN2GHOST(key)),
+        ...(Object.keys(config.erc20))
+          .map(key => ETHTOKEN2GHOST(key)),
 
-        // ...(Object.keys(config.erc20))
-        //   .map(key => GHOST2ETHTOKEN(key)),
+        ...(Object.keys(config.erc20))
+          .map(key => GHOST2ETHTOKEN(key)),
 
-        // ...(Object.keys(config.erc20))
-        //   .map(key => ETHTOKEN2NEXT(key)),
+        ...(Object.keys(config.erc20))
+          .map(key => ETHTOKEN2NEXT(key)),
 
-        // ...(Object.keys(config.erc20))
-        //   .map(key => NEXT2ETHTOKEN(key)),
+        ...(Object.keys(config.erc20))
+          .map(key => NEXT2ETHTOKEN(key)),
 
       ],
     }, true)

@@ -88,18 +88,18 @@ const sign = async () => {
     }
 
     const btcPrivateKey = localStorage.getItem(constants.privateKeyNames.btc)
-    // const ghostPrivateKey = localStorage.getItem(constants.privateKeyNames.ghost)
-    // const nextPrivateKey = localStorage.getItem(constants.privateKeyNames.next)
+    const ghostPrivateKey = localStorage.getItem(constants.privateKeyNames.ghost)
+    const nextPrivateKey = localStorage.getItem(constants.privateKeyNames.next)
     // using ETH key for all EVM compatible chains
     const ethPrivateKey = localStorage.getItem(constants.privateKeyNames.eth)
 
     actions.eth.login(ethPrivateKey, mnemonic)
     actions.bnb.login(ethPrivateKey, mnemonic)
     actions.matic.login(ethPrivateKey, mnemonic)
-    //actions.arbeth.login(ethPrivateKey, mnemonic)
+    actions.arbeth.login(ethPrivateKey, mnemonic)
     const _btcPrivateKey = actions.btc.login(btcPrivateKey, mnemonic)
-    // actions.ghost.login(ghostPrivateKey, mnemonic)
-    // actions.next.login(nextPrivateKey, mnemonic)
+    actions.ghost.login(ghostPrivateKey, mnemonic)
+    actions.next.login(nextPrivateKey, mnemonic)
 
     // btc multisig with 2fa (2of3)
     await sign_btc_2fa(_btcPrivateKey)
@@ -155,9 +155,9 @@ const getBalances = () => {
       { func: actions.eth.getBalance, name: 'eth' },
       { func: actions.bnb.getBalance, name: 'bnb' },
       { func: actions.matic.getBalance, name: 'matic' },
-      // { func: actions.arbeth.getBalance, name: 'arbeth' },
-      // { func: actions.ghost.getBalance, name: 'ghost' },
-      // { func: actions.next.getBalance, name: 'next' },
+      { func: actions.arbeth.getBalance, name: 'arbeth' },
+      { func: actions.ghost.getBalance, name: 'ghost' },
+      { func: actions.next.getBalance, name: 'next' },
       { func: actions.btcmultisig.getBalance, name: 'btc-sms' },
       { func: actions.btcmultisig.getBalanceUser, name: 'btc-ms-main' },
       { func: actions.btcmultisig.getBalancePin, name: 'btc-pin' },
@@ -259,24 +259,15 @@ const getExchangeRate = (sellCurrency, buyCurrency): Promise<number> => {
 }
 
 const customTokenExchangeRate = (name) => {
-  let customRate = ''
+  for (const key in TOKEN_STANDARDS) {
+    const standard = TOKEN_STANDARDS[key].standard
 
-  outsideLabel: {
-    for (const key in TOKEN_STANDARDS) {
-      const standard = TOKEN_STANDARDS[key].standard
-
-      for (const tokenName in config[standard]) {
-        const exRate = config[standard][tokenName].customExchangeRate
-
-        if (tokenName === name && exRate) {
-          customRate = exRate
-          break outsideLabel
-        }
-      }
+    if (config[standard][name.toLowerCase()]) {
+      return config[standard][name.toLowerCase()].customExchangeRate || ''
     }
   }
 
-  return customRate
+  return ''
 }
 
 const getInfoAboutCurrency = (currencyNames) => {
@@ -442,9 +433,9 @@ const setTransactions = async () => {
       actions.eth.getTransaction(),
       actions.bnb.getTransaction(),
       actions.matic.getTransaction(),
-      // actions.arbeth.getTransaction(),
-      // actions.ghost.getTransaction(),
-      // actions.next.getTransaction(),
+      actions.arbeth.getTransaction(),
+      actions.ghost.getTransaction(),
+      actions.next.getTransaction(),
       ...(metamask.isEnabled() && metamask.isConnected()) ? [actions.eth.getTransaction(metamask.getAddress())] : [],
       ...(metamask.isEnabled() && metamask.isConnected()) ? [actions.bnb.getTransaction(metamask.getAddress())] : [],
     ]
@@ -496,10 +487,10 @@ const getText = () => {
       ethData,
       bnbData,
       maticData,
-      //arbethData,
+      arbethData,
       btcData,
-      // ghostData,
-      // nextData,
+      ghostData,
+      nextData,
     }
   } = getState()
 
@@ -530,15 +521,13 @@ const getText = () => {
     MATIC address: ${maticData.address}\r\n
     Private key: ${maticData.privateKey}\r\n
     \r\n
-    ${
-    // # ARBITRUM CHAIN
-    // \r\n
-    // ARBITRUM address: ${arbethData.address}\r\n
-    // Private key: ${arbethData.privateKey}\r\n
-    // \r\n
-    // # BITCOIN
-    // \r\n
-    ''}
+    # ARBITRUM CHAIN
+    \r\n
+    ARBITRUM address: ${arbethData.address}\r\n
+    Private key: ${arbethData.privateKey}\r\n
+    \r\n
+    # BITCOIN
+    \r\n
     Bitcoin address: ${btcData.address}\r\n
     Private key: ${btcData.privateKey}\r\n
     \r\n
@@ -547,18 +536,16 @@ const getText = () => {
     3. Go to settings > addresses > import\r\n
     4. paste private key and click "Ok"\r\n
     \r\n
-    ${
-    // # GHOST
-    // \r\n
-    // Ghost address: ${ghostData.address}\r\n
-    // Private key: ${ghostData.privateKey}\r\n
-    // \r\n
-    // # NEXT
-    // \r\n
-    // Next address: ${nextData.address}\r\n
-    // Private key: ${nextData.privateKey}\r\n
-    // \r\n
-    ''}
+    # GHOST
+    \r\n
+    Ghost address: ${ghostData.address}\r\n
+    Private key: ${ghostData.privateKey}\r\n
+    \r\n
+    # NEXT
+    \r\n
+    Next address: ${nextData.address}\r\n
+    Private key: ${nextData.privateKey}\r\n
+    \r\n
     * We don\'t store your private keys and will not be able to restore them!
     \r\n
   `

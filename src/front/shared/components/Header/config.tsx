@@ -29,11 +29,11 @@ export const messages = defineMessages({
     description: 'Menu item "History"',
     defaultMessage: 'Transactions',
   },
-  /*marketmaker: {
+  marketmaker: {
     id: 'menu.marketmaker',
     description: 'Menu item "Marketmaker"',
     defaultMessage: 'Earn',
-  },*/
+  },
   farm: {
     id: 'menu.farm',
     description: 'Menu item "Staking & Farming"',
@@ -90,17 +90,17 @@ export const getMenuItems = (props) => {
   ]
 
   // Marketmaker pages ********
-  // if (!isWidgetBuild) {
-  //   const marketmakerItem = {
-  //     title: intl.formatMessage(messages.marketmaker),
-  //     link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
-  //     exact: true,
-  //     currentPageFlag: true,
-  //   }
+  if (!isWidgetBuild) {
+    const marketmakerItem = {
+      title: intl.formatMessage(messages.marketmaker),
+      link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
+      exact: true,
+      currentPageFlag: true,
+    }
 
-  //   itemsWithWallet.push(marketmakerItem)
-  //   itemsWithoutWallet.push(marketmakerItem)
-  // }
+    itemsWithWallet.push(marketmakerItem)
+    itemsWithoutWallet.push(marketmakerItem)
+  }
 
   // temporarily hidden
   // Farm ************************

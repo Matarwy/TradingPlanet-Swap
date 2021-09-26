@@ -36,7 +36,7 @@ const routes = (
       <Route path={`${links.atomicSwap}/:orderId`} component={SwapComponent} />
       <Route path={`${links.turboSwap}/:orderId`} component={TurboSwap} />
 
-      <Route path={`/:ticker(btc|eth|bnb|matic${/*|arbeth|ghost|next*/''})/tx/:tx?`} component={Transaction} />
+      <Route path={`/:ticker(btc|eth|bnb|matic|arbeth|ghost|next)/tx/:tx?`} component={Transaction} />
       <Route path={`/:token(token)/:ticker/tx/:tx?`} component={Transaction} />
 
       <Route
@@ -77,10 +77,10 @@ const routes = (
       <Route exact path={`/`} component={Wallet} />
       <Route exact path={`${links.connectWallet}`} component={Wallet} />
 
-      {/*<Route exact path={`${links.marketmaker}`} component={MarketmakerPromo} />
+      <Route exact path={`${links.marketmaker}`} component={MarketmakerPromo} />
       <Route exact path={`${links.marketmaker_short}`} component={MarketmakerPromo} />
       <Route path={`${links.marketmaker}/:token/:utxoCoin?`} component={MarketmakerSettings} />
-      <Route path={`${links.marketmaker_short}/:token/:utxoCoin?`} component={MarketmakerSettings} />*/}
+      <Route path={`${links.marketmaker_short}/:token/:utxoCoin?`} component={MarketmakerSettings} />
 
       {/* In desktop mode - the history is shown in the wallet design */}
       {!isMobile && (

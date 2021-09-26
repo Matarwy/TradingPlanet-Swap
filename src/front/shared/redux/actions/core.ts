@@ -168,10 +168,10 @@ const deletedPartialCurrency = (orderId) => {
     'ETH', 
     'BNB', 
     'MATIC', 
-    // 'ARBETH', 
-    // 'GHOST', 
-    // 'NEXT', 
-    // 'SWAP',
+    'ARBETH', 
+    'GHOST', 
+    'NEXT', 
+    'SWAP',
   ]
 
   if (deletedOrderSell.length === 1 && !premiumCurrencies.includes(deletedOrderSellCurrency)) {
@@ -462,15 +462,15 @@ const getWallets = (options: IUniversalObj = {}) => {
   const {
     user: {
       btcData,
-      // ghostData,
-      // nextData,
+      ghostData,
+      nextData,
       btcMultisigSMSData,
       btcMultisigUserData,
       btcMultisigPinData,
       ethData,
       bnbData,
       maticData,
-      //arbethData,
+      arbethData,
       tokensData,
       metamaskData,
     },
@@ -498,8 +498,8 @@ const getWallets = (options: IUniversalObj = {}) => {
       !enabledCurrencies ||
       enabledCurrencies.eth ||
       enabledCurrencies.bnb ||
-      enabledCurrencies.matic //||
-      //enabledCurrencies.arbeth
+      enabledCurrencies.matic ||
+      enabledCurrencies.arbeth
         ? metamaskData
           ? [metamaskData]
           : []
@@ -545,16 +545,16 @@ const getWallets = (options: IUniversalObj = {}) => {
         : [maticData]
       : []),
     // =====================================
-    // ...(!enabledCurrencies || enabledCurrencies.arbeth
-    //   ? metamaskConnected
-    //     ? withInternal
-    //       ? [arbethData]
-    //       : []
-    //     : [arbethData]
-    //   : []),
+    ...(!enabledCurrencies || enabledCurrencies.arbeth
+      ? metamaskConnected
+        ? withInternal
+          ? [arbethData]
+          : []
+        : [arbethData]
+      : []),
     // =====================================
-    //...(!enabledCurrencies || enabledCurrencies.ghost ? [ghostData] : []),
-    //...(!enabledCurrencies || enabledCurrencies.next ? [nextData] : []),
+    ...(!enabledCurrencies || enabledCurrencies.ghost ? [ghostData] : []),
+    ...(!enabledCurrencies || enabledCurrencies.next ? [nextData] : []),
     ...tokenWallets,
   ].map(({ account, keyPair, ...data }) => ({
     ...data,

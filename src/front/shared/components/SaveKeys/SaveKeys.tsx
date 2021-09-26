@@ -19,20 +19,20 @@ type SaveKeysProps = {
     ethData,
     bnbData,
     maticData,
-    //arbethData,
+    arbethData,
     btcData,
-    // ghostData,
-    // nextData,
+    ghostData,
+    nextData,
   }
 }) => ({
   data: [
     btcData,
     bnbData,
     maticData,
-    //arbethData,
+    arbethData,
     ethData,
-    // ghostData,
-    // nextData,
+    ghostData,
+    nextData,
   ]
 }))
 @CSSModules(styles)

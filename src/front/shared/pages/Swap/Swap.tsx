@@ -26,10 +26,10 @@ import feedback from 'shared/helpers/feedback'
     ethData,
     bnbData,
     maticData,
-    //arbethData,
+    arbethData,
     btcData,
-    // ghostData,
-    // nextData,
+    ghostData,
+    nextData,
     tokensData,
     activeFiat,
   },
@@ -40,10 +40,10 @@ import feedback from 'shared/helpers/feedback'
     ethData,
     bnbData,
     maticData,
-    //arbethData,
+    arbethData,
     btcData,
-    // ghostData,
-    // nextData,
+    ghostData,
+    nextData,
   ]
 
   return {

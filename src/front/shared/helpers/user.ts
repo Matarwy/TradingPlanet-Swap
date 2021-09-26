@@ -25,17 +25,17 @@ export const getActivatedCurrencies = () => {
     currencies.push('MATIC')
   }
 
-  // if (!config.opts.curEnabled || config.opts.curEnabled.arbeth) {
-  //   currencies.push('ARBETH')
-  // }
+  if (!config.opts.curEnabled || config.opts.curEnabled.arbeth) {
+    currencies.push('ARBETH')
+  }
 
-  // if (!config.opts.curEnabled || config.opts.curEnabled.ghost) {
-  //   currencies.push('GHOST')
-  // }
+  if (!config.opts.curEnabled || config.opts.curEnabled.ghost) {
+    currencies.push('GHOST')
+  }
 
-  // if (!config.opts.curEnabled || config.opts.curEnabled.next) {
-  //   currencies.push('NEXT')
-  // }
+  if (!config.opts.curEnabled || config.opts.curEnabled.next) {
+    currencies.push('NEXT')
+  }
 
   Object.keys(TOKEN_STANDARDS).forEach((key) => {
     const standard = TOKEN_STANDARDS[key].standard
@@ -60,9 +60,9 @@ export const getWidgetCurrencies = () => {
     'ETH',
     'BNB',
     'MATIC',
-    // 'ARBETH',
-    // 'GHOST',
-    // 'NEXT',
+    'ARBETH',
+    'GHOST',
+    'NEXT',
   ]
 
   if (!hiddenCoinsList.includes('BTC (PIN-Protected)')) {
