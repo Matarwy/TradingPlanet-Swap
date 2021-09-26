@@ -923,22 +923,22 @@
       if (window.localStorage.getItem('isDark')) {
         window.logoUrl = window.darkLogoUrl || window.logoUrl;
       }
-
-      if (
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "swaponline.github.io" ||
-        window.location.hostname === "swaponline.io"
-      ) {
+      
+      // if (
+      //   window.location.hostname === "localhost" ||
+      //   window.location.hostname === "swaponline.github.io" ||
+      //   window.location.hostname === "swaponline.io"
+      // ) {
         // used by Loader component
-        window.loaderLogoUrl = "./img/TradingPlanet.png";
+        window.loaderLogoUrl = "/img/TradingPlanet.png";
         document.getElementById("loaderImg").src = window.loaderLogoUrl;
-      } else {
-        if (window.logoUrl != '#') {
-          document.getElementById("loaderImg").src = window.localStorage.getItem("isDark") ? window.darkLogoUrl : window.logoUrl;
-        } else {
-          document.getElementById("loaderImg").style.display = 'none'
-        }
-      }
+      // } else {
+      //   if (window.logoUrl != '#') {
+      //     document.getElementById("loaderImg").src = window.localStorage.getItem("isDark") ? window.darkLogoUrl : window.logoUrl;
+      //   } else {
+      //     document.getElementById("loaderImg").style.display = 'none'
+      //   }
+      // }
       /* End Modal Scripts */
 
 
