@@ -4,7 +4,7 @@ export default {
   etherscan: 'https://etherscan.io',
   bscscan: 'https://bscscan.com',
   maticscan: 'https://polygonscan.com',
-  arbitrum: 'https://explorer.arbitrum.io',
+  //arbitrum: 'https://explorer.arbitrum.io',
   ghostscan: 'https://ghostscan.io',
   nextExplorer: 'https://explore.next.exchange',
 }
