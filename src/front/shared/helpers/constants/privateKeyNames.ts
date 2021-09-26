@@ -2,7 +2,7 @@ export default {
   eth: `${process.env.ENTRY}:eth:privateKey`,
   bnb: `${process.env.ENTRY}:bnb:privateKey`,
   matic: `${process.env.ENTRY}:matic:privateKey`,
-  arbitrum: `${process.env.ENTRY}:arbitrum:privateKey`,
+  //arbitrum: `${process.env.ENTRY}:arbitrum:privateKey`,
   btc: `${process.env.ENTRY}:btc:privateKey`,
   ghost: `${process.env.ENTRY}:ghost:privateKey`,
   next: `${process.env.ENTRY}:next:privateKey`,

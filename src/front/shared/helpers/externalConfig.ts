@@ -172,10 +172,10 @@ const externalConfig = () => {
     config.opts.blockchainSwapEnabled.matic = false
   }
 
-  if (window && window.CUR_ARBITRUM_DISABLED === true) {
-    config.opts.curEnabled.arbeth = false
-    config.opts.blockchainSwapEnabled.arbeth = false
-  }
+  // if (window && window.CUR_ARBITRUM_DISABLED === true) {
+  //   config.opts.curEnabled.arbeth = false
+  //   config.opts.blockchainSwapEnabled.arbeth = false
+  // }
 
 
   // Plugins

@@ -51,15 +51,15 @@ import {
   MATICTOKEN2BTC,
   BTC2MATICTOKEN,
 
-  ARBITRUM2BTC,
-  BTC2ARBITRUM,  
+  // ARBITRUM2BTC,
+  // BTC2ARBITRUM,  
 } from 'swap.flows'
 import {
   BtcSwap,
   EthSwap,
   BnbSwap,
   MaticSwap,
-  ArbitrumSwap,
+  //ArbitrumSwap,
   GhostSwap,
   NextSwap,
 
@@ -108,8 +108,8 @@ const createSwapApp = async () => {
         getWeb3Bnb: actions.bnb.getWeb3,
         web3Matic: actions.matic.getWeb3(),
         getWeb3Matic: actions.matic.getWeb3,
-        web3Arbitrum: actions.arbeth.getWeb3(),
-        getWeb3Arbitrum: actions.arbeth.getWeb3,
+        // web3Arbitrum: actions.arbeth.getWeb3(),
+        // getWeb3Arbitrum: actions.arbeth.getWeb3,
         bitcoin,
         ghost,
         next,
@@ -181,15 +181,15 @@ const createSwapApp = async () => {
             sendTransaction: ({ to, amount }) => actions.matic.send({ to, amount }),
           })
         ] : []),
-        ...((config?.opts?.blockchainSwapEnabled?.arbeth) ? [
-          new ArbitrumSwap({
-            address: config.swapContract.arbitrum,
-            abi: EVM_CONTRACTS_ABI.NATIVE_COIN_SWAP,
-            fetchBalance: (address) => actions.arbeth.fetchBalance(address),
-            estimateGasPrice: () => ethLikeHelper.arbeth.estimateGasPrice(),
-            sendTransaction: ({ to, amount }) => actions.arbeth.send({ to, amount }),
-          })
-        ] : []),
+        // ...((config?.opts?.blockchainSwapEnabled?.arbeth) ? [
+        //   new ArbitrumSwap({
+        //     address: config.swapContract.arbitrum,
+        //     abi: EVM_CONTRACTS_ABI.NATIVE_COIN_SWAP,
+        //     fetchBalance: (address) => actions.arbeth.fetchBalance(address),
+        //     estimateGasPrice: () => ethLikeHelper.arbeth.estimateGasPrice(),
+        //     sendTransaction: ({ to, amount }) => actions.arbeth.send({ to, amount }),
+        //   })
+        // ] : []),
         new BtcSwap({
           fetchBalance: (address) => bitcoinUtils.fetchBalance({
             address,
@@ -323,8 +323,8 @@ const createSwapApp = async () => {
           BTC2MATIC,
         ] : []),
 
-        ARBITRUM2BTC,
-        BTC2ARBITRUM,
+        // ARBITRUM2BTC,
+        // BTC2ARBITRUM,
 
         // GHOST2BTC,
         // BTC2GHOST,

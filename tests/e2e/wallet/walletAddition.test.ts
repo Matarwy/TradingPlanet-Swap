@@ -16,7 +16,7 @@ describe('Adding coins', () => {
     ['eth', 'Ethereum'],
     ['bnb', 'Binance Coin'],
     ['matic', 'MATIC Token'],
-    ['arbeth', 'Arbitrum ETH'],
+    //['arbeth', 'Arbitrum ETH'],
     ['ghost', 'ghost'],
     ['next', 'NEXT.coin'],
   ]

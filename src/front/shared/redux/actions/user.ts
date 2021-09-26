@@ -487,7 +487,7 @@ const getText = () => {
       ethData,
       bnbData,
       maticData,
-      arbethData,
+      //arbethData,
       btcData,
       ghostData,
       nextData,
@@ -521,11 +521,13 @@ const getText = () => {
     MATIC address: ${maticData.address}\r\n
     Private key: ${maticData.privateKey}\r\n
     \r\n
-    # ARBITRUM CHAIN
-    \r\n
-    ARBITRUM address: ${arbethData.address}\r\n
-    Private key: ${arbethData.privateKey}\r\n
-    \r\n
+    ${
+    // # ARBITRUM CHAIN
+    // \r\n
+    // ARBITRUM address: ${arbethData.address}\r\n
+    // Private key: ${arbethData.privateKey}\r\n
+    // \r\n
+    ''}
     # BITCOIN
     \r\n
     Bitcoin address: ${btcData.address}\r\n
