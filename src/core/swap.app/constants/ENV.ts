@@ -15,7 +15,7 @@ export default {
   getWeb3Bnb: 'getWeb3Bnb',
   web3Matic: 'web3Matic',
   getWeb3Matic: 'getWeb3Matic',
-  //web3Arbitrum: 'web3Arbitrum',
-  //getWeb3Arbitrum: 'getWeb3Arbitrum',
+  web3Arbitrum: 'web3Arbitrum',
+  getWeb3Arbitrum: 'getWeb3Arbitrum',
   isTest: 'isTest',
 }
