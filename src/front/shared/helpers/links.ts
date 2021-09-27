@@ -35,10 +35,10 @@ const linksManager = {
 
   // social networks
   medium: '#',
-  twitter: 'https://twitter.com/SwapOnlineTeam',
+  twitter: '#',
   facebook: '#',
-  github: 'https://github.com/swaponline/MultiCurrencyWallet',
-  telegram: 'https://t.me/swaponline',
+  github: '#',
+  telegram: '#',
   bitcointalk: '#',
   discord: '#',
   reddit: '#',
