@@ -33,7 +33,7 @@ const Footer = () => {
         <WidthContainer styleName="container">
           <SwitchLang />
 
-          {!config.isWidget && (
+          {/* {!config.isWidget && (
             <p styleName="swapDescription">
               <FormattedMessage
                 id="FooterSwapDescription"
@@ -44,7 +44,7 @@ const Footer = () => {
                 }}
               />
             </p>
-          )}
+          )} */}
           {!config.isWidget && <SocialMenu />}
 
           <div styleName="version">
