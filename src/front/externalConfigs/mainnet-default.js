@@ -30,26 +30,23 @@ window.widgetEvmLikeTokens = [
     iconBgColor: '#ccc',
   },
 ]
-
+*/
 window.buildOptions = {
+  showWalletBanners: false, // Allow to see banners
   ownTokens: false, // Will be inited from window.widgetEvmLikeTokens
   addCustomTokens: true, // Allow user add custom evm like tokens
   curEnabled: { // Or 'false' if enabled all
     btc: true,
-    eth: true,
+    bnb: true,
   },
   blockchainSwapEnabled: { // Or 'false' if enabled all
     btc: true,
-    eth: true,
+    bnb: true,
   },
   defaultExchangePair: {
     buy: 'eth',
     sell: 'btc',
-  }
+  },
   invoiceEnabled: false, // Allow create invoices
 }
-*/
 
-window.buildOptions = {
-  showWalletBanners: true, // Allow to see banners
-}
