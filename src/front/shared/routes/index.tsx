@@ -15,8 +15,8 @@ import CurrencyWallet from 'pages/CurrencyWallet/CurrencyWallet'
 import Transaction from 'pages/Transaction/Transaction'
 import BtcMultisignProcessor from 'pages/Multisign/Btc/Btc'
 
-import MarketmakerPromo from 'pages/Marketmaker/MarketmakerPromo'
-import MarketmakerSettings from 'pages/Marketmaker/MarketmakerSettings'
+// import MarketmakerPromo from 'pages/Marketmaker/MarketmakerPromo'
+// import MarketmakerSettings from 'pages/Marketmaker/MarketmakerSettings'
 
 import CreateInvoice from 'pages/Invoices/CreateInvoice'
 import InvoicesList from 'pages/Invoices/InvoicesList'
@@ -77,10 +77,10 @@ const routes = (
       <Route exact path={`/`} component={Wallet} />
       <Route exact path={`${links.connectWallet}`} component={Wallet} />
 
-      <Route exact path={`${links.marketmaker}`} component={MarketmakerPromo} />
+      {/* <Route exact path={`${links.marketmaker}`} component={MarketmakerPromo} />
       <Route exact path={`${links.marketmaker_short}`} component={MarketmakerPromo} />
       <Route path={`${links.marketmaker}/:token/:utxoCoin?`} component={MarketmakerSettings} />
-      <Route path={`${links.marketmaker_short}/:token/:utxoCoin?`} component={MarketmakerSettings} />
+      <Route path={`${links.marketmaker_short}/:token/:utxoCoin?`} component={MarketmakerSettings} /> */}
 
       {/* In desktop mode - the history is shown in the wallet design */}
       {!isMobile && (
