@@ -37,17 +37,13 @@ const Footer = () => {
             <p styleName="swapDescription">
               <FormattedMessage
                 id="FooterSwapDescription"
-                defaultMessage="Online since 2018. Check our {twitter} and {github} history"
-                values={{
-                  github: <a href={links.github} target="_blank">github</a>,
-                  twitter: <a href={links.twitter} target="_blank">twitter</a>,
-                }}
+                defaultMessage="Copyright © 2021 Trading Planet | All Rights Reserved"
               />
             </p>
           )}
           {!config.isWidget && <SocialMenu />}
 
-          <div styleName="version">
+          {/* <div styleName="version">
             {version.link && version.name ?
               <a href={version.link} target="_blank">
                 {version.name}
@@ -55,7 +51,7 @@ const Footer = () => {
               :
               <span>-</span>
             }
-          </div>
+          </div> */}
         </WidthContainer>
       )}
     </footer>
