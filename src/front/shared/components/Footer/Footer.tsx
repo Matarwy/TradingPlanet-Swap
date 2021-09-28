@@ -47,7 +47,7 @@ const Footer = () => {
           )} */}
           {!config.isWidget && <SocialMenu />}
 
-          <div styleName="version">
+          {/* <div styleName="version">
             {version.link && version.name ?
               <a href={version.link} target="_blank">
                 {version.name}
@@ -55,7 +55,7 @@ const Footer = () => {
               :
               <span>-</span>
             }
-          </div>
+          </div> */}
         </WidthContainer>
       )}
     </footer>
