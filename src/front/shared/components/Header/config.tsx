@@ -29,6 +29,11 @@ export const messages = defineMessages({
     description: 'Menu item "History"',
     defaultMessage: 'Transactions',
   },
+  marketmaker: {
+    id: 'menu.marketmaker',
+    description: 'Menu item "Marketmaker"',
+    defaultMessage: 'Earn',
+  },
   farm: {
     id: 'menu.farm',
     description: 'Menu item "Staking & Farming"',
