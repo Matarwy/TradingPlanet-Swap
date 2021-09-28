@@ -38,7 +38,7 @@ window.buildOptions = {
   curEnabled: { // Or 'false' if enabled all
     btc: true,
     bnb: true,
-    eth: false,
+    eth: true,
     matic: false,
     arbeth: false,
     ghost: false,
@@ -47,7 +47,7 @@ window.buildOptions = {
   blockchainSwapEnabled: { // Or 'false' if enabled all
     btc: true,
     bnb: true,
-    eth: false,
+    eth: true,
     matic: false,
     arbeth: false,
     ghost: false,
