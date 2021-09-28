@@ -53,7 +53,7 @@ const FAQ = (props) => {
     eth: 0,
     bnb: 0,
     matic: 0,
-    arbeth: 0,
+    //arbeth: 0,
   })
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const FAQ = (props) => {
         const bnbGasPrice = await ethLikeHelper.bnb.estimateGasPrice()
         const ethGasPrice = await ethLikeHelper.eth.estimateGasPrice()
         const maticGasPrice = await ethLikeHelper.matic.estimateGasPrice()
-        const arbethGasPrice = await ethLikeHelper.arbeth.estimateGasPrice()
+        // const arbethGasPrice = await ethLikeHelper.arbeth.estimateGasPrice()
 
         // remove memory leak
         if (_mounted) {
@@ -78,7 +78,7 @@ const FAQ = (props) => {
             eth: convertToGwei(bnbGasPrice),
             bnb: convertToGwei(ethGasPrice),
             matic: convertToGwei(maticGasPrice),
-            arbeth: convertToGwei(arbethGasPrice),
+            //arbeth: convertToGwei(arbethGasPrice),
           }))
         }
       } catch (error) {
@@ -117,11 +117,11 @@ const FAQ = (props) => {
       fee: fees.matic,
       unit: 'gwei',
     },
-    {
-      ticker: 'ARBETH',
-      fee: fees.arbeth,
-      unit: 'gwei',
-    },
+    // {
+    //   ticker: 'ARBETH',
+    //   fee: fees.arbeth,
+    //   unit: 'gwei',
+    // },
   ]
 
   const adminFeeItems = [
@@ -141,10 +141,10 @@ const FAQ = (props) => {
       ticker: 'MATIC',
       percentFee: adminFee.isEnabled('MATIC'),
     },
-    {
-      ticker: 'ARBETH',
-      percentFee: adminFee.isEnabled('ARBETH'),
-    },
+    // {
+    //   ticker: 'ARBETH',
+    //   percentFee: adminFee.isEnabled('ARBETH'),
+    // },
   ]
 
   return (

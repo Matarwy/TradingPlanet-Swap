@@ -4,7 +4,7 @@ export const initialState = {
     eth: false,
     bnb: false,
     matic: false,
-    arbeth: false,
+    //arbeth: false,
     ghost: false,
     next: false,
     '{eth}usdt': false,

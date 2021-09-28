@@ -96,7 +96,7 @@ const sign = async () => {
     actions.eth.login(ethPrivateKey, mnemonic)
     actions.bnb.login(ethPrivateKey, mnemonic)
     actions.matic.login(ethPrivateKey, mnemonic)
-    actions.arbeth.login(ethPrivateKey, mnemonic)
+    //actions.arbeth.login(ethPrivateKey, mnemonic)
     const _btcPrivateKey = actions.btc.login(btcPrivateKey, mnemonic)
     actions.ghost.login(ghostPrivateKey, mnemonic)
     actions.next.login(nextPrivateKey, mnemonic)
@@ -155,7 +155,7 @@ const getBalances = () => {
       { func: actions.eth.getBalance, name: 'eth' },
       { func: actions.bnb.getBalance, name: 'bnb' },
       { func: actions.matic.getBalance, name: 'matic' },
-      { func: actions.arbeth.getBalance, name: 'arbeth' },
+      // { func: actions.arbeth.getBalance, name: 'arbeth' },
       { func: actions.ghost.getBalance, name: 'ghost' },
       { func: actions.next.getBalance, name: 'next' },
       { func: actions.btcmultisig.getBalance, name: 'btc-sms' },
@@ -433,7 +433,7 @@ const setTransactions = async () => {
       actions.eth.getTransaction(),
       actions.bnb.getTransaction(),
       actions.matic.getTransaction(),
-      actions.arbeth.getTransaction(),
+      // actions.arbeth.getTransaction(),
       actions.ghost.getTransaction(),
       actions.next.getTransaction(),
       ...(metamask.isEnabled() && metamask.isConnected()) ? [actions.eth.getTransaction(metamask.getAddress())] : [],
@@ -487,7 +487,7 @@ const getText = () => {
       ethData,
       bnbData,
       maticData,
-      arbethData,
+      //arbethData,
       btcData,
       ghostData,
       nextData,
@@ -521,11 +521,13 @@ const getText = () => {
     MATIC address: ${maticData.address}\r\n
     Private key: ${maticData.privateKey}\r\n
     \r\n
-    # ARBITRUM CHAIN
-    \r\n
-    ARBITRUM address: ${arbethData.address}\r\n
-    Private key: ${arbethData.privateKey}\r\n
-    \r\n
+    // ${
+    // # ARBITRUM CHAIN
+    // \r\n
+    // ARBITRUM address: ${arbethData.address}\r\n
+    // Private key: ${arbethData.privateKey}\r\n
+    // \r\n
+    ''}
     # BITCOIN
     \r\n
     Bitcoin address: ${btcData.address}\r\n

@@ -5,7 +5,7 @@ export default [
   'ETH',
   'BNB',
   'MATIC',
-  'ARBETH',
+  // 'ARBETH',
   'GHOST',
   'NEXT',
   '{ETH}SWAP',

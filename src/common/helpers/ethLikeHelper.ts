@@ -89,11 +89,11 @@ export default {
       new Web3.providers.HttpProvider(config.web3.matic_provider)
     ),
   }),
-  arbeth: new ethLikeHelper({
-    currency: 'ARBETH',
-    defaultParams: DEFAULT_CURRENCY_PARAMETERS.arbeth,
-    web3: new Web3(
-      new Web3.providers.HttpProvider(config.web3.arbitrum_provider)
-    ),
-  }),
+  // arbeth: new ethLikeHelper({
+  //   currency: 'ARBETH',
+  //   defaultParams: DEFAULT_CURRENCY_PARAMETERS.arbeth,
+  //   web3: new Web3(
+  //     new Web3.providers.HttpProvider(config.web3.arbitrum_provider)
+  //   ),
+  // }),
 }

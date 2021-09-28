@@ -1,24 +1,24 @@
-import ethLikeHelper from 'common/helpers/ethLikeHelper'
+// import ethLikeHelper from 'common/helpers/ethLikeHelper'
 
-// TODO: =================================
+// // TODO: =================================
 
-// ! Deprecated. Use common/helpers/ethLikeHelper.arbitrum
+// // ! Deprecated. Use common/helpers/ethLikeHelper.arbitrum
 
-// TODO: =================================
+// // TODO: =================================
 
-type EstimateFeeParams = {
-  method: string
-}
+// type EstimateFeeParams = {
+//   method: string
+// }
 
-const estimateFeeValue = async (params: EstimateFeeParams) => {
-  return ethLikeHelper.arbeth.estimateFeeValue(params)
-}
+// const estimateFeeValue = async (params: EstimateFeeParams) => {
+//   return ethLikeHelper.arbeth.estimateFeeValue(params)
+// }
 
-const estimateGasPrice = async (): Promise<number> => {
-  return ethLikeHelper.arbeth.estimateGasPrice()
-}
+// const estimateGasPrice = async (): Promise<number> => {
+//   return ethLikeHelper.arbeth.estimateGasPrice()
+// }
 
-export default {
-  estimateFeeValue,
-  estimateGasPrice,
-}
+// export default {
+//   estimateFeeValue,
+//   estimateGasPrice,
+// }

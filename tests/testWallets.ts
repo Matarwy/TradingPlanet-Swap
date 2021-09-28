@@ -47,11 +47,11 @@ export default {
     address: '0xa5c881C6942edAc164aFFD5194420c1CceDC77E9',
     privateKey: '0xe7dfb6dc43416771b8aa7b4d31a1d9e4027ec11ea94e51e68a525eb80addf063',
   },
-  arbeth: {
-    seedPhrase: 'glare bargain balcony load lady crowd pizza calm snack attitude fiber flavor',
-    address: '0xa5c881C6942edAc164aFFD5194420c1CceDC77E9',
-    privateKey: '0xe7dfb6dc43416771b8aa7b4d31a1d9e4027ec11ea94e51e68a525eb80addf063',
-  },
+  // arbeth: {
+  //   seedPhrase: 'glare bargain balcony load lady crowd pizza calm snack attitude fiber flavor',
+  //   address: '0xa5c881C6942edAc164aFFD5194420c1CceDC77E9',
+  //   privateKey: '0xe7dfb6dc43416771b8aa7b4d31a1d9e4027ec11ea94e51e68a525eb80addf063',
+  // },
   evmAdmin: {
     seedPhrase: 'time month cost what bounce scissors weapon rescue annual point appear aim',
     address: '0x66F333D7c94A471096e753D9E0C00e8A78B52802',
