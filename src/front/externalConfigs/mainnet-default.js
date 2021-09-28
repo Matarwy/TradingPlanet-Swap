@@ -44,7 +44,7 @@ window.buildOptions = {
     bnb: true,
   },
   defaultExchangePair: {
-    buy: 'eth',
+    buy: 'bnb',
     sell: 'btc',
   },
   invoiceEnabled: false, // Allow create invoices
