@@ -221,7 +221,7 @@ class Header extends Component<any, any> {
       //@ts-ignore
       location: { hash, pathname },
     } = finishProps
-    const { wallet, exchange } = links
+    const { wallet, exchange, marketmaker, marketmaker_short } = links
     const isGuestLink = !(!hash || hash.slice(1) !== 'guest')
 
     if (isGuestLink) {
@@ -241,7 +241,7 @@ class Header extends Component<any, any> {
     const isWalletPage = path.includes(wallet) || path === `/`
     const isPartialPage = path.includes(exchange)
 
-    // const isMarketPage = path.includes(marketmaker) || path.includes(marketmaker_short)
+    const isMarketPage = path.includes(marketmaker) || path.includes(marketmaker_short)
     const didOpenWalletCreate = localStorage.getItem(isWalletCreate)
 
     const wasOnWalletLs = localStorage.getItem(wasOnWallet)
@@ -388,6 +388,17 @@ class Header extends Component<any, any> {
       toggle()
     }
 
+
+    if ((pathname.substr(0, links.marketmaker.length) === links.marketmaker)
+      || (pathname.substr(0, links.marketmaker_short) === links.marketmaker_short)
+    ) {
+      const swap = new Swap(orderId, SwapApp.shared())
+      actions.core.rememberSwap(swap)
+      window.active_swap = swap
+    } else {
+      await history.replace(localisedUrl(locale, link))
+      await history.push(localisedUrl(locale, link))
+    }
   }
 
   handleLogout = () => {
