@@ -38,10 +38,20 @@ window.buildOptions = {
   curEnabled: { // Or 'false' if enabled all
     btc: true,
     bnb: true,
+    eth: false,
+    matic: false,
+    arbeth: false,
+    ghost: false,
+    next: false,
   },
   blockchainSwapEnabled: { // Or 'false' if enabled all
     btc: true,
     bnb: true,
+    eth: false,
+    matic: false,
+    arbeth: false,
+    ghost: false,
+    next: false,
   },
   defaultExchangePair: {
     buy: 'bnb',
