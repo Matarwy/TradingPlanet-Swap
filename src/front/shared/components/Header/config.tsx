@@ -90,17 +90,17 @@ export const getMenuItems = (props) => {
   ]
 
   // Marketmaker pages ********
-  if (!isWidgetBuild) {
-    const marketmakerItem = {
-      title: intl.formatMessage(messages.marketmaker),
-      link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
-      exact: true,
-      currentPageFlag: true,
-    }
+  // if (!isWidgetBuild) {
+  //   const marketmakerItem = {
+  //     title: intl.formatMessage(messages.marketmaker),
+  //     link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
+  //     exact: true,
+  //     currentPageFlag: true,
+  //   }
 
-    itemsWithWallet.push(marketmakerItem)
-    itemsWithoutWallet.push(marketmakerItem)
-  }
+  //   itemsWithWallet.push(marketmakerItem)
+  //   itemsWithoutWallet.push(marketmakerItem)
+  // }
 
   // temporarily hidden
   // Farm ************************
@@ -127,7 +127,7 @@ export const getMenuItems = (props) => {
 export const getMenuItemsMobile = (props, isWalletCreate, dinamicPath) => {
   const { intl } = props
   const { exchange, wallet, createWallet, history } = messages
-  const { 
+  const {
     exchange: exchangeLink,
     quickSwap,
     // farm,
