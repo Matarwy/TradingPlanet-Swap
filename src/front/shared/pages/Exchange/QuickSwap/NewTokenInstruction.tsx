@@ -74,6 +74,14 @@ function NewTokenInstruction(props) {
               />
             </li>
           </ol>
+
+          <a
+            styleName="liquiditySourcesLink"
+            href="https://github.com/TradingPlanet/TradingPlanet-Swap/blob/main/docs/LIQUIDITY_SOURCES.md"
+            target="_blank"
+          >
+            <FormattedMessage id="detailedInformation" defaultMessage="Detailed information" />
+          </a>
         </div>
       )}
     </section>
