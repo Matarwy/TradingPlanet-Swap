@@ -3,7 +3,7 @@ export default {
     address: '0x14a52cf6B4F68431bd5D9524E4fcD6F41ce4ADe9',
     decimals: 18,
     fullName: 'SWAP',
-    canSwap: true,
+    canSwap: false,
   },
   pay: {
     address: '0x1fe72034da777ef22533eaa6dd7cbe1d80be50fa',
