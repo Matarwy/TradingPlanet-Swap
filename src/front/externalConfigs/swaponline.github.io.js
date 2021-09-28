@@ -49,9 +49,9 @@ window.buildOptions = {
   showHowItsWork: true, // Allow show block 'How its work' on exchange page
   curEnabled: {
     btc: true,
-    eth: true,
+    eth: false,
     bnb: true,
-    matic: true,
+    matic: false,
     //arbeth: false,
     ghost: false,
     next: false,
@@ -59,7 +59,7 @@ window.buildOptions = {
   blockchainSwapEnabled: {
     btc: true,
     eth: false,
-    bnb: false,
+    bnb: true,
     matic: false,
     //arbeth: false,
     ghost: false,
