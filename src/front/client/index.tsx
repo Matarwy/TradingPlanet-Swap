@@ -25,7 +25,7 @@ if (
   process.env.NODE_ENV !== 'development'
 ) {
   Sentry.init({
-    dsn: 'https://d35a56c4518c4a6987b0c36b9b0bf123@sentry.wpmix.net/2',
+    dsn: 'https://d33d525a6515411e8301ee13728c090b@o1014533.ingest.sentry.io/5979747',
     integrations: [new Integrations.BrowserTracing()],
     tracesSampleRate: 1.0,
   });
