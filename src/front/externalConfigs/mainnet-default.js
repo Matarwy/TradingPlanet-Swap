@@ -52,23 +52,4 @@ window.buildOptions = {
 
 window.buildOptions = {
   showWalletBanners: false, // Allow to see banners
-  showHowItsWork: true, // Allow show block 'How its work' on exchange page
-  curEnabled: {
-    btc: true,
-    eth: false,
-    bnb: true,
-    matic: false,
-    //arbeth: false,
-    ghost: false,
-    next: false,
-  },
-  blockchainSwapEnabled: {
-    btc: true,
-    eth: false,
-    bnb: true,
-    matic: false,
-    //arbeth: false,
-    ghost: false,
-    next: false,
-  },
 }
