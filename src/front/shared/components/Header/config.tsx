@@ -44,7 +44,7 @@ export const messages = defineMessages({
 export const getMenuItems = (props) => {
   const { intl } = props
   const { exchange, wallet, createWallet, history } = messages
-  const { 
+  const {
     exchange: exchangeLink,
     quickSwap,
     createWallet: create,
