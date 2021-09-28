@@ -41,7 +41,7 @@ const linksManager = {
   telegram: 'https://t.me/TradingPlanetExchange',
   bitcointalk: '#',
   discord: '#',
-  reddit: '#',
+  reddit: 'https://www.reddit.com/user/TradingPlanet',
   youtube: '#',
 
   transactionRate: 'https://en.bitcoin.it/wiki/Maximum_transaction_rate#:~:text=Each%20transaction%20input%20requires%20at,the%20minimum-sized%20Bitcoin%20transaction',
