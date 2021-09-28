@@ -5799,7 +5799,7 @@
   },
   {
     "id": "FooterSwapDescription",
-    "message": "Online since 2018. Check our {twitter} and {github} history",
+    "message": "Copyright © 2021 Trading Planet | All Rights Reserved",
     "files": [
       "src/front/shared/components/Footer/Footer.tsx"
     ]

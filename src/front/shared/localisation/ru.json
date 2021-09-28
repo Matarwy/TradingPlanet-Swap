@@ -5803,7 +5803,7 @@
   },
   {
     "id": "FooterSwapDescription",
-    "message": "Онлайн с 2018 года. Проверьте нашу историю {twitter} и {github}",
+    "message": "Авторские права © 2021 Trading Planet | Все права защищены",
     "files": [
       "src/front/shared/components/Footer/Footer.tsx"
     ]

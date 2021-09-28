@@ -5803,7 +5803,7 @@
   },
   {
     "id": "FooterSwapDescription",
-    "message": "Online od 2018. Sprawdź naszą historię {twitter} i {github}",
+    "message": "Copyright © 2021 Trading Planet | All Rights Reserved",
     "files": [
       "src/front/shared/components/Footer/Footer.tsx"
     ]
