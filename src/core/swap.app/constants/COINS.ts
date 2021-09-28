@@ -150,28 +150,35 @@ export const NATIVE = {
 }
 
 export const BNB_TOKENS = {
-  btcb: 'BTCB',
+  btcb: '{BEP20}BTCB',
+  busd: '{BEP20}BUSD',
+  eth: '{BEP20}ETH',
+  doge: '{BEP20}DOGE',
+  wbnb: '{BEP20}WBNB',
+  ada: '{BEP20}ADA',
+
 }
 
 export const MATIC_TOKENS = {
-  wbtc: 'WBTC',
+  wbtc: '{ERC20MATIC}WBTC',
 }
 
 export const ETH_TOKENS = {
-  usdt: '{ETH}USDT',
-  eurs: '{ETH}EURS',
-  swap: '{ETH}SWAP',
-  pay: '{ETH}PAY',
+  usdt: '{ERC20}USDT',
+  wbtc: '{ERC20}WBTC',
+  // eurs: '{ETH}EURS',
+  // swap: '{ETH}SWAP',
+  // pay: '{ETH}PAY',
 
   // needs for the front
-  proxima: '{ETH}PROXIMA',
-  snm: '{ETH}SNM',
-  noxon: '{ETH}NOXON',
-  pbl: '{ETH}PBL',
-  xsat: '{ETH}XSAT',
-  hdp: '{ETH}HDP',
-  scro: '{ETH}SCRO',
-  xeur: '{ETH}XEUR',
+  // proxima: '{ETH}PROXIMA',
+  // snm: '{ETH}SNM',
+  // noxon: '{ETH}NOXON',
+  // pbl: '{ETH}PBL',
+  // xsat: '{ETH}XSAT',
+  // hdp: '{ETH}HDP',
+  // scro: '{ETH}SCRO',
+  // xeur: '{ETH}XEUR',
 
 }
 
