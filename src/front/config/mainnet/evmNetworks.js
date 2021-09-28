@@ -26,12 +26,12 @@ export default {
     rpcUrls: [web3.matic_provider],
     blockExplorerUrls: [link.maticscan],
   },
-  // ARBETH: {
-  //   currency: 'ARBETH',
-  //   chainId: '0xA4B1',
-  //   networkVersion: 42161,
-  //   chainName: 'Arbitrum',
-  //   rpcUrls: [web3.arbitrum_provider],
-  //   blockExplorerUrls: [link.arbitrum]
-  // },
+  ARBETH: {
+    currency: 'ARBETH',
+    chainId: '0xA4B1',
+    networkVersion: 42161,
+    chainName: 'Arbitrum',
+    rpcUrls: [web3.arbitrum_provider],
+    blockExplorerUrls: [link.arbitrum]
+  },
 }

@@ -51,5 +51,5 @@ window.buildOptions = {
 */
 
 window.buildOptions = {
-  showWalletBanners: false, // Allow to see banners
+  showWalletBanners: true, // Allow to see banners
 }

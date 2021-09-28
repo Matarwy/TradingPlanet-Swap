@@ -743,14 +743,21 @@
         'pl',
       ]
 
-      const isLangAvailable = availableLangs.includes(lang)
+      const isLangAvailable = lang ? availableLangs.includes(lang.toLowerCase()) : false
+      const defaultLanguage = window.defaultLanguage
 
       if (!lang || !isLangAvailable) {
-        const browserLang = getNavigatorLanguage().split("-")[0];
-        lang = availableLangs.includes(browserLang) ? browserLang : (function () {
-          console.log('Set English by default')
-          return 'en';
-        })()
+        if (defaultLanguage) {
+          lang = defaultLanguage
+        } else {
+          const browserLang = getNavigatorLanguage().split("-")[0];
+
+          lang = availableLangs.includes(browserLang) ? browserLang : (function () {
+            console.log('Set English by default')
+            return 'en';
+          })()
+        }
+
         setCookie('mylang', lang);
       }
 
@@ -811,7 +818,7 @@
       }
 
       window.prerenderReady = false;
-      window.isUserRegisteredAndLoggedIn = true;
+      window.isUserRegisteredAndLoggedIn = false;
       window.DEFAULT_FIAT = 'USD';
       window.DefaultCountryCode = '+1';
       window.widgetName = 'own widget name';
@@ -878,13 +885,13 @@
 
       const isHomePath = (urlHash === '#/' || urlHash === '#/createWallet' || urlHash === '' )
 
-      // if (host === 'bsc.swap.io' && isHomePath) {
-      //   redirectionTo('#/exchange/btc-to-{BNB}btcb}')
-      // }
+      if (host === 'bsc.swap.io' && isHomePath) {
+        redirectionTo('#/exchange/btc-to-{BNB}btcb}')
+      }
 
-      // if (host === 'matic.swap.io' && isHomePath) {
-      //   redirectionTo('#/exchange/btc-to-{MATIC}wbtc')
-      // }
+      if (host === 'matic.swap.io' && isHomePath) {
+        redirectionTo('#/exchange/btc-to-{MATIC}wbtc')
+      }
 
       const btnCreateWallet = document.getElementById('preloaderCreateBtn');
       const btnConnectWallet = document.getElementById('preloaderConnectBtn');
@@ -923,23 +930,23 @@
       if (window.localStorage.getItem('isDark')) {
         window.logoUrl = window.darkLogoUrl || window.logoUrl;
       }
-      
-       if (
-         window.location.hostname === "localhost" ||
-         window.location.hostname === "swaponline.github.io" ||
+
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "swaponline.github.io" ||
         window.location.hostname === "swaponline.io"
-       ) {
+      ) {
         // used by Loader component
-        window.loaderLogoUrl = "TradingPlanet.svg";
+        window.loaderLogoUrl = "https://wiki.swaponline.io/assets/swaponline_io.svg";
         document.getElementById("loaderImg").src = window.loaderLogoUrl;
-       } else {
-         if (window.logoUrl != '#') {
-           document.getElementById("loaderImg").src = window.localStorage.getItem("isDark") ? window.darkLogoUrl : window.logoUrl;
-         } else {
-           document.getElementById("loaderImg").style.display = 'none'
-         }
-       }
-      // /* End Modal Scripts */
+      } else {
+        if (window.logoUrl != '#') {
+          document.getElementById("loaderImg").src = window.localStorage.getItem("isDark") ? window.darkLogoUrl : window.logoUrl;
+        } else {
+          document.getElementById("loaderImg").style.display = 'none'
+        }
+      }
+      /* End Modal Scripts */
 
 
       /* Google Analytics */

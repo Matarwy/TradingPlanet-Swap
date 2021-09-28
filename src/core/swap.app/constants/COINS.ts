@@ -18,7 +18,7 @@ export const BLOCKCHAIN = Object.freeze({
   ETH: 'ETH',
   BNB: 'BNB', // TODO: rename with BSC
   MATIC: 'MATIC',
-  //ARBITRUM: 'ARBITRUM',
+  ARBITRUM: 'ARBITRUM',
 })
 
 export const BASE_TOKEN_CURRENCY = Object.freeze({
@@ -65,14 +65,14 @@ export const COIN_DATA = {
     model: COIN_MODEL.AB,
     precision: 18,
   },
-  // 'ARBETH': {
-  //   ticker: 'ARBETH',
-  //   name: 'Arbitrum ETH',
-  //   type: COIN_TYPE.NATIVE,
-  //   blockchain: BLOCKCHAIN.ARBITRUM,
-  //   model: COIN_MODEL.AB,
-  //   precision: 18,
-  // },
+  'ARBETH': {
+    ticker: 'ARBETH',
+    name: 'Arbitrum ETH',
+    type: COIN_TYPE.NATIVE,
+    blockchain: BLOCKCHAIN.ARBITRUM,
+    model: COIN_MODEL.AB,
+    precision: 18,
+  },
   'USDT': {
     ticker: 'USDT',
     name: 'Tether',
@@ -144,41 +144,34 @@ export const NATIVE = {
   eth: 'ETH',
   bnb: 'BNB',
   matic: 'MATIC',
-  //arbeth: 'ARBETH',
+  arbeth: 'ARBETH',
   ghost: 'GHOST',
   next: 'NEXT',
 }
 
 export const BNB_TOKENS = {
-  btcb: '{BEP20}BTCB',
-  busd: '{BEP20}BUSD',
-  eth: '{BEP20}ETH',
-  doge: '{BEP20}DOGE',
-  wbnb: '{BEP20}WBNB',
-  ada: '{BEP20}ADA',
-
+  btcb: 'BTCB',
 }
 
 export const MATIC_TOKENS = {
-  wbtc: '{ERC20MATIC}WBTC',
+  wbtc: 'WBTC',
 }
 
 export const ETH_TOKENS = {
-  usdt: '{ERC20}USDT',
-  wbtc: '{ERC20}WBTC',
-  eurs: '{ERC20}EURS',
-  swap: '{ERC20}SWAP',
-  pay: '{ERC20}PAY',
+  usdt: '{ETH}USDT',
+  eurs: '{ETH}EURS',
+  swap: '{ETH}SWAP',
+  pay: '{ETH}PAY',
 
   // needs for the front
-  proxima: '{ERC20}PROXIMA',
-  snm: '{ERC20}SNM',
-  noxon: '{ERC20}NOXON',
-  pbl: '{ERC20}PBL',
-  xsat: '{ERC20}XSAT',
-  hdp: '{ERC20}HDP',
-  scro: '{ERC20}SCRO',
-  xeur: '{ERC20}XEUR',
+  proxima: '{ETH}PROXIMA',
+  snm: '{ETH}SNM',
+  noxon: '{ETH}NOXON',
+  pbl: '{ETH}PBL',
+  xsat: '{ETH}XSAT',
+  hdp: '{ETH}HDP',
+  scro: '{ETH}SCRO',
+  xeur: '{ETH}XEUR',
 
 }
 

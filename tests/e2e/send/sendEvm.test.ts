@@ -39,13 +39,13 @@ describe('Send EVM coins from the withdraw form', () => {
         amount: 0.001,
       },
     ],
-    // [
-    //   'ARBETH',
-    //   {
-    //     to: testWallets.arbeth.address.toLowerCase(),
-    //     amount: 0.0001,
-    //   },
-    // ],
+    [
+      'ARBETH',
+      {
+        to: testWallets.arbeth.address.toLowerCase(),
+        amount: 0.0001,
+      },
+    ],
   ]
 
   let browser: undefined | puppeteer.Browser = undefined

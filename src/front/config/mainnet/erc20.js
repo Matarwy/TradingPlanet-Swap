@@ -3,7 +3,7 @@ export default {
     address: '0x14a52cf6B4F68431bd5D9524E4fcD6F41ce4ADe9',
     decimals: 18,
     fullName: 'SWAP',
-    canSwap: false,
+    canSwap: true,
   },
   pay: {
     address: '0x1fe72034da777ef22533eaa6dd7cbe1d80be50fa',
@@ -33,7 +33,7 @@ export default {
     address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
     decimals: 6,
     fullName: 'Tether',
-    canSwap: true,
+    canSwap: false,
   },
   wbtc: {
     address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',

@@ -168,7 +168,7 @@ const deletedPartialCurrency = (orderId) => {
     'ETH', 
     'BNB', 
     'MATIC', 
-    //'ARBETH', 
+    'ARBETH', 
     'GHOST', 
     'NEXT', 
     'SWAP',
@@ -470,7 +470,7 @@ const getWallets = (options: IUniversalObj = {}) => {
       ethData,
       bnbData,
       maticData,
-      //arbethData,
+      arbethData,
       tokensData,
       metamaskData,
     },
@@ -498,8 +498,8 @@ const getWallets = (options: IUniversalObj = {}) => {
       !enabledCurrencies ||
       enabledCurrencies.eth ||
       enabledCurrencies.bnb ||
-      enabledCurrencies.matic //||
-      //enabledCurrencies.arbeth
+      enabledCurrencies.matic ||
+      enabledCurrencies.arbeth
         ? metamaskData
           ? [metamaskData]
           : []
@@ -545,13 +545,13 @@ const getWallets = (options: IUniversalObj = {}) => {
         : [maticData]
       : []),
     // =====================================
-    // ...(!enabledCurrencies || enabledCurrencies.arbeth
-    //   ? metamaskConnected
-    //     ? withInternal
-    //       ? [arbethData]
-    //       : []
-    //     : [arbethData]
-    //   : []),
+    ...(!enabledCurrencies || enabledCurrencies.arbeth
+      ? metamaskConnected
+        ? withInternal
+          ? [arbethData]
+          : []
+        : [arbethData]
+      : []),
     // =====================================
     ...(!enabledCurrencies || enabledCurrencies.ghost ? [ghostData] : []),
     ...(!enabledCurrencies || enabledCurrencies.next ? [nextData] : []),

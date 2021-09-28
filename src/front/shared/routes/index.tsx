@@ -15,8 +15,8 @@ import CurrencyWallet from 'pages/CurrencyWallet/CurrencyWallet'
 import Transaction from 'pages/Transaction/Transaction'
 import BtcMultisignProcessor from 'pages/Multisign/Btc/Btc'
 
-//import MarketmakerPromo from 'pages/Marketmaker/MarketmakerPromo'
-//import MarketmakerSettings from 'pages/Marketmaker/MarketmakerSettings'
+import MarketmakerPromo from 'pages/Marketmaker/MarketmakerPromo'
+import MarketmakerSettings from 'pages/Marketmaker/MarketmakerSettings'
 
 import CreateInvoice from 'pages/Invoices/CreateInvoice'
 import InvoicesList from 'pages/Invoices/InvoicesList'
@@ -36,11 +36,11 @@ const routes = (
       <Route path={`${links.atomicSwap}/:orderId`} component={SwapComponent} />
       <Route path={`${links.turboSwap}/:orderId`} component={TurboSwap} />
 
-      <Route path={`/:ticker(btc|eth|bnb|matic${/*|arbeth*/''}|ghost|next)/tx/:tx?`} component={Transaction} />
+      <Route path={`/:ticker(btc|eth|bnb|matic|arbeth|ghost|next)/tx/:tx?`} component={Transaction} />
       <Route path={`/:token(token)/:ticker/tx/:tx?`} component={Transaction} />
 
       <Route
-        path={`/:ticker(btc|eth|bnb|matic${/*|arbeth*/''}|ghost|next)/:address/:action(receive|send)?`}
+        path={`/:ticker(btc|eth|bnb|matic|arbeth|ghost|next)/:address/:action(receive|send)?`}
         component={CurrencyWallet}
       />
       <Route path={`/:token(token)/:ticker/:address`} component={CurrencyWallet} />
@@ -76,13 +76,11 @@ const routes = (
       <Route exact path={`${links.notFound}`} component={NotFound} />
       <Route exact path={`/`} component={Wallet} />
       <Route exact path={`${links.connectWallet}`} component={Wallet} />
-      {/*
+
       <Route exact path={`${links.marketmaker}`} component={MarketmakerPromo} />
       <Route exact path={`${links.marketmaker_short}`} component={MarketmakerPromo} />
-      
       <Route path={`${links.marketmaker}/:token/:utxoCoin?`} component={MarketmakerSettings} />
       <Route path={`${links.marketmaker_short}/:token/:utxoCoin?`} component={MarketmakerSettings} />
-      */}
 
       {/* In desktop mode - the history is shown in the wallet design */}
       {!isMobile && (

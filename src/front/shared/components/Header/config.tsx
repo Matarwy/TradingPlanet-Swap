@@ -89,19 +89,18 @@ export const getMenuItems = (props) => {
     },
   ]
 
-  // temporarily hidden
   // Marketmaker pages ********
-  // if (!isWidgetBuild) {
-  //   const marketmakerItem = {
-  //     title: intl.formatMessage(messages.marketmaker),
-  //     link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
-  //     exact: true,
-  //     currentPageFlag: true,
-  //   }
+  if (!isWidgetBuild) {
+    const marketmakerItem = {
+      title: intl.formatMessage(messages.marketmaker),
+      link: !isChromeExtension ? `${links.marketmaker}/` : `${links.marketmaker}/{MATIC}WBTC`,
+      exact: true,
+      currentPageFlag: true,
+    }
 
-  //   itemsWithWallet.push(marketmakerItem)
-  //   itemsWithoutWallet.push(marketmakerItem)
-  // }
+    itemsWithWallet.push(marketmakerItem)
+    itemsWithoutWallet.push(marketmakerItem)
+  }
 
   // temporarily hidden
   // Farm ************************

@@ -42,7 +42,7 @@ const externalConfig = () => {
       eth: true,
       bnb: true,
       matic: true,
-      //arbeth: true,
+      arbeth: true,
       btc: true,
       ghost: true,
       next: true,
@@ -52,7 +52,7 @@ const externalConfig = () => {
       eth: true,
       bnb: false,
       matic: false,
-      //arbeth: false,
+      arbeth: false,
       ghost: true,
       next: true,
     },
@@ -172,10 +172,10 @@ const externalConfig = () => {
     config.opts.blockchainSwapEnabled.matic = false
   }
 
-  // if (window && window.CUR_ARBITRUM_DISABLED === true) {
-  //   config.opts.curEnabled.arbeth = false
-  //   config.opts.blockchainSwapEnabled.arbeth = false
-  // }
+  if (window && window.CUR_ARBITRUM_DISABLED === true) {
+    config.opts.curEnabled.arbeth = false
+    config.opts.blockchainSwapEnabled.arbeth = false
+  }
 
 
   // Plugins

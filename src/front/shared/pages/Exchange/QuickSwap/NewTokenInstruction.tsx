@@ -77,7 +77,7 @@ function NewTokenInstruction(props) {
 
           <a
             styleName="liquiditySourcesLink"
-            href="https://github.com/TradingPlanet/TradingPlanet-Swap/blob/main/docs/LIQUIDITY_SOURCES.md"
+            href="https://github.com/swaponline/MultiCurrencyWallet/blob/master/docs/LIQUIDITY_SOURCES.md"
             target="_blank"
           >
             <FormattedMessage id="detailedInformation" defaultMessage="Detailed information" />
