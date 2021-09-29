@@ -17,24 +17,24 @@ export default {
   //   fullName: 'snm',
   //   canSwap: false,
   // },
-  // eurs: {
-  //   address: '0xdb25f211ab05b1c97d595516f45794528a807ad8',
-  //   decimals: 2,
-  //   fullName: 'EURS',
-  //   canSwap: true,
-  // },
+  eurs: {
+    address: '0xdb25f211ab05b1c97d595516f45794528a807ad8',
+    decimals: 2,
+    fullName: 'EURS',
+    canSwap: true,
+  },
   // xeur: {
   //   address: '0xC31C61cf55fB5E646684AD8E8517793ec9A22c5e',
   //   decimals: 0,
   //   fullName: 'XEUR',
   //   canSwap: false,
   // },
-  // usdt: {
-  //   address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-  //   decimals: 6,
-  //   fullName: 'Tether',
-  //   canSwap: true,
-  // },
+  usdt: {
+    address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+    decimals: 6,
+    fullName: 'Tether',
+    canSwap: true,
+  },
   wbtc: {
     address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
     decimals: 8,
