@@ -36,7 +36,7 @@ class Flow {
     makerTxHash?: null | string
     isMakerTxPended?: boolean
 
-    // Atomic swaps state
+    // P2P swaps state
     // -- AB-UTXO
     participantHasLockedUTXO?: boolean
     secretHash?: string
@@ -87,7 +87,7 @@ class Flow {
       isBalanceFetching: false,
       isBalanceEnough: true,
 
-      /** -------------- Atomic Swaps States ---------------- **/
+      /** -------------- P2P Swaps States ---------------- **/
       ...{
         /** AB-UTXO **/
         // Partical (btc-seller) has unconfirmed txs in mempool

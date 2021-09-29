@@ -1,5 +1,5 @@
 import { constants } from 'swap.app'
-import BtcToEthLikeToken from './atomic/BtcToEthLikeToken'
+import BtcToEthLikeToken from './P2P/BtcToEthLikeToken'
 
 
 export default (tokenName) => {

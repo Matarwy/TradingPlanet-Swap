@@ -1,4 +1,4 @@
-## Risks associated with the Atomic Swap process
+## Risks associated with the P2P Swap process
 At the moment, the biggest risk is the inaccessibility of public nodes or spam of the blockchain. For example, let’s take such situation
 
 1. Alice and Bob have frozen funds in smart contracts

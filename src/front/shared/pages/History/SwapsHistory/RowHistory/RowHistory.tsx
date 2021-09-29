@@ -127,7 +127,7 @@ class RowHistory extends Component<any, any> {
     const swapUri = isTurbo ?
       `${links.turboSwap}/${id}`
       :
-      `${links.atomicSwap}/${id}`
+      `${links.P2PSwap}/${id}`
 
     buyAmount = new BigNumber(buyAmount)
     sellAmount = new BigNumber(sellAmount)

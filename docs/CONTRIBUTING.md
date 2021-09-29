@@ -9,7 +9,7 @@ SWAP token is NOT a money, no guarantee you will exchange this to visa, paypal, 
 | Volunteer (less than 3 pull requests)                        | 1 SWAP per hour             |
 | Junior (can change interface, wallet)                        | 5 SWAP per hour             |
 | Middle (can add new blockchain to wallet)                    | 10 SWAP per hour            |
-| Senior (can add new blockchain to atomic swap)               | 15 SWAP per hour            |
+| Senior (can add new blockchain to P2P swap)               | 15 SWAP per hour            |
 | Lead (can reduce codebase, make app more developer friendly) | 20 SWAP per hour            |
 
 Q: why don't you pay in USD or btc? <br>

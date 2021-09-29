@@ -214,7 +214,7 @@
   },
   {
     "id": "Home153",
-    "message": "What is atomic swap? ",
+    "message": "What is P2P swap? ",
     "files": [
       "src/front/shared/pages/Exchange/Orders/Orders.tsx"
     ]
@@ -330,7 +330,7 @@
     "id": "MyOrdersYouSend",
     "message": "Jij stuurt",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/Orders/MyOrders/MyOrders.tsx",
       "src/front/shared/pages/Exchange/Orders/OrderBook/Row/Row.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
@@ -374,7 +374,7 @@
     "id": "orders128",
     "message": "Creёer aanbod",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -483,7 +483,7 @@
     "id": "partial291",
     "message": "Waiting for another participant (30 sec)",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -506,7 +506,7 @@
     "files": [
       "src/front/shared/components/LimitOrders/OrderSettings.tsx",
       "src/front/shared/components/LimitOrders/index.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
     ]
   },
@@ -598,35 +598,35 @@
     "id": "PartialPriceNoOrdersReduce",
     "message": "No orders found, try later or change the currency pair",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialPriceNoOrdersReduceAllInfo",
     "message": "This trade amount is too high for present market liquidity. Please reduce amount to {maxForSell}. ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialOfferCantProceed1",
     "message": "Request is declined. {link}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialOfferCantProceed1_1",
     "message": "Why?",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "ErrorBtcLowAmount",
     "message": "{btcAmount} BTC - Dit bedrag is te laag, dekt geen mijnvergoeding",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -656,20 +656,20 @@
     "id": "partial541",
     "message": "Exchange nu",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "partial767",
     "message": "Balance: ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
     ]
   },
   {
     "id": "partialVideoAndFeatures0",
-    "message": "Based on Atomic Swap technology",
+    "message": "Based on P2P Swap technology",
     "files": [
       "src/front/shared/pages/Exchange/VideoAndFeatures/VideoAndFeatures.tsx"
     ]
@@ -912,21 +912,21 @@
   },
   {
     "id": "CurrencyWallet154",
-    "message": "Atomic Swap Wallet allows you to manage and securely exchange ${fullName} (${currency}) with 0% fees. Based on Multi-Sig and Atomic Swap technologies.",
+    "message": "P2P Swap Wallet allows you to manage and securely exchange ${fullName} (${currency}) with 0% fees. Based on Multi-Sig and P2P Swap technologies.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
   },
   {
     "id": "Orders121",
-    "message": "Atomic Swap {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}) Instant Exchange",
+    "message": "P2P Swap {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}) Instant Exchange",
     "files": [
       "src/front/shared/pages/Exchange/Orders/OrderBook/OrderBook.tsx"
     ]
   },
   {
     "id": "Orders127",
-    "message": "Best exchange rate for {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}). Swap.Online wallet provides instant exchange using Atomic Swap Protocol.",
+    "message": "Best exchange rate for {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}). Swap.Online wallet provides instant exchange using P2P Swap Protocol.",
     "files": [
       "src/front/shared/pages/Exchange/Orders/OrderBook/OrderBook.tsx"
     ]
@@ -1162,14 +1162,14 @@
   },
   {
     "id": "CurrencyWalletTitle",
-    "message": "Swap.Online - {fullName} ({currency}) Web Wallet with Atomic Swap.",
+    "message": "Swap.Online - {fullName} ({currency}) Web Wallet with P2P Swap.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
   },
   {
     "id": "CurrencyWalletWidgetBuildTitle",
-    "message": "{fullName} ({currency}) Web Wallet with Atomic Swap.",
+    "message": "{fullName} ({currency}) Web Wallet with P2P Swap.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
@@ -1928,7 +1928,7 @@
   },
   {
     "id": "tour-step-3",
-    "message": "Onze unieke peer-to-peer exchange is beschikbaar in onze wallet en is gebouwd op Atomic Swap technology. U kunt uw cryptovaluta toevoegen in onze wallet.",
+    "message": "Onze unieke peer-to-peer exchange is beschikbaar in onze wallet en is gebouwd op P2P Swap technology. U kunt uw cryptovaluta toevoegen in onze wallet.",
     "files": [
       "src/front/shared/components/Header/WalletTour/WalletTour.tsx"
     ]
@@ -2381,21 +2381,21 @@
     "id": "continueDeclined977",
     "message": "Continue your swaps",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "chooseCorrectNetwork",
     "message": "Open de verbonden portemonnee en kies {br}{chainName}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "switchToCorrectNetwork",
     "message": "Overschakelen naar {br}{chainName}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -3199,7 +3199,7 @@
   },
   {
     "id": "MainFAQ2_content1",
-    "message": "Voor {tokenType} tokens is het nodig dat u tenminste 0.001 {currency} in uw wallet heeft. Onthoud! Bij het zenden van {tokenType} tokens, is het nodig om {currency} the hebben voor de miner fee^ Dit is geldt ook voor alle atomic swaps voor {currency} & {tokenType}. Opmerkiing: U kunt de benodigde 'miner fee' voor elke valuto vinden via google.",
+    "message": "Voor {tokenType} tokens is het nodig dat u tenminste 0.001 {currency} in uw wallet heeft. Onthoud! Bij het zenden van {tokenType} tokens, is het nodig om {currency} the hebben voor de miner fee^ Dit is geldt ook voor alle P2P swaps voor {currency} & {tokenType}. Opmerkiing: U kunt de benodigde 'miner fee' voor elke valuto vinden via google.",
     "files": [
       "src/front/shared/components/FAQ/FAQ.tsx"
     ]
@@ -3271,14 +3271,14 @@
     "id": "Exchange_FromAddress",
     "message": "Van adres",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_ToAddress",
     "message": "Naar address",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -3335,7 +3335,7 @@
     "id": "Exchange_BestPrice",
     "message": "Beste prijs:",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4240,7 +4240,7 @@
     "id": "AlertOrderNonEnoughtBalance",
     "message": "Please top up your balance before you start the swap.",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -4248,7 +4248,7 @@
     "id": "AlertOrderNonEnoughtBalanceTitle",
     "message": "Not enough balance.",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4355,7 +4355,7 @@
     "id": "Exchange_AvialableBalance",
     "message": "Available: ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4405,21 +4405,21 @@
     "id": "Swap_NeedMoreAmount",
     "message": "Je saldo moet minimaal {amount} {currency} hebben. {br} Mijnwerkerscommissie {sellFee} {sellCoin} en {buyFee} {buyCoin}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_MinerFees",
     "message": "Mijnvergoeding",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_ServiceFee",
     "message": "Servicekosten",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4506,21 +4506,21 @@
     "id": "createOrderMessageForUser",
     "message": "U moet de hele tijd online zijn, anders zal uw order niet zichtbaar zijn voor andere gebruikers",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "createOrderNoManyMessageForUser",
     "message": "Uw balans bijvullen",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "AddLiquidity",
     "message": "Liquiditeit toevoegen",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5000,7 +5000,7 @@
     "id": "enterYouSend",
     "message": "Enter \"U verstuurd\" bedrag",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -5008,70 +5008,70 @@
     "id": "swapDisabled",
     "message": "Swap uitgeschakeld",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "noOffers",
     "message": "Geen aanbiedingen",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectFromAddress",
     "message": "Selecteer \"Van adres\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectToAddress",
     "message": "Selecteer \"Naar address\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "enterToAddress",
     "message": "Voer de bestemmingsportefeuille in",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "connectDestinationWallet",
     "message": "Verbind uw bestemmingsportefeuille",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "setDestination",
     "message": "Bestemming instellen",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "connectYourWallet",
     "message": "Verbind uw portemonnee in \"Van adres\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectSendType",
     "message": "Selecteer het type \"Van adres\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "errorWithGetAmount",
     "message": "\"U ontvangt\" niet meer dan 0",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5080,7 +5080,7 @@
     "files": [
       "src/front/shared/components/modals/LimitOrder/ModalForm.tsx",
       "src/front/shared/components/modals/WalletConnectAccount/WalletConnectAccount.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -5088,36 +5088,36 @@
     "id": "lowAmount",
     "message": "Laag bedrag",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "waitPeerAnswer",
     "message": "Wacht peer-antwoord",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "enterLesserAmount",
     "message": "Voer een lager bedrag in bij \"U verstuurd\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "contactSupport",
     "message": "Neem dan contact op met ondersteuning",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
-    "id": "AtomicSwap_Title",
-    "message": "Atomic swap",
+    "id": "P2PSwap_Title",
+    "message": "P2P swap",
     "files": [
       "src/front/shared/components/modals/OfferModal/AddOffer/AddOffer.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5125,7 +5125,7 @@
     "message": "Turbo swap",
     "files": [
       "src/front/shared/components/modals/OfferModal/AddOffer/AddOffer.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/TurboSwap/TurboSwap.tsx"
     ]
   },
@@ -5204,7 +5204,7 @@
     "message": "Godkende {token}",
     "files": [
       "src/front/shared/components/modals/LimitOrder/ModalForm.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/index.tsx"
     ]
   },
@@ -5289,14 +5289,14 @@
     "id": "ExchangeTokenWasApproved",
     "message": "Token was approved.{br}Explorer link: {txLink}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Orderbook",
     "message": "Orderboek",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5815,7 +5815,7 @@
     "id": "NotEnoughForBuy",
     "message": "Je moet tenminste mijn Commissie {buyFee} {buyCoin}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5919,8 +5919,8 @@
     ]
   },
   {
-    "id": "atomicSwap",
-    "message": "Atomic swap",
+    "id": "P2PSwap",
+    "message": "P2P swap",
     "files": [
       "src/front/shared/pages/Exchange/index.tsx"
     ]

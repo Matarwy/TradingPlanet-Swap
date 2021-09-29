@@ -187,7 +187,7 @@ const FAQ = (props) => {
             <p>
               <FormattedMessage
                 id="MainFAQ2_content1"
-                defaultMessage="For {tokenType} tokens, it is required that you have at least 0.001 {currency} on your wallets. Remember! when sending {tokenType} tokens, you are required to hold some {currency} as miners fees for transactions. This is also the case for all atomic swaps for {currency} & {tokenType} tokens."
+                defaultMessage="For {tokenType} tokens, it is required that you have at least 0.001 {currency} on your wallets. Remember! when sending {tokenType} tokens, you are required to hold some {currency} as miners fees for transactions. This is also the case for all P2P swaps for {currency} & {tokenType} tokens."
                 values={{
                   currency: 'ETH',
                   tokenType: 'ERC20'

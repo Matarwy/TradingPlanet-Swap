@@ -34,7 +34,7 @@ export default class WalletTour extends Component<any, any> {
           target: '.data-tut-address',
         },
         {
-          content: <FormattedMessage id="tour-step-3" defaultMessage="Наша уникальная функция peer-to-peer обмена доступна в нашем кольке, основанном на технологии Atomic Swap. Вы можете разместить вашу криптовалюту в нашем кошельке." />,
+          content: <FormattedMessage id="tour-step-3" defaultMessage="Наша уникальная функция peer-to-peer обмена доступна в нашем кольке, основанном на технологии P2P Swap. Вы можете разместить вашу криптовалюту в нашем кошельке." />,
           floaterProps: {
             disableAnimation: true,
           },

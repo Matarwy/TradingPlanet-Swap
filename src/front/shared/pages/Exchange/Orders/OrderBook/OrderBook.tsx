@@ -219,14 +219,14 @@ class OrderBook extends Component<OrderBookProps, OrderBookState> {
     const title = defineMessages({
       metaTitle: {
         id: 'Orders121',
-        defaultMessage: 'Atomic Swap {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}) Instant Exchange',
+        defaultMessage: 'P2P Swap {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}) Instant Exchange',
       },
     })
     const description = defineMessages({
       metaDescription: {
         id: 'Orders127',
         defaultMessage: `Best exchange rate for {buyCurrencyFullName} ({buyCurrency}) to {sellCurrencyFullName} ({sellCurrency}).
-         Swap.Online wallet provides instant exchange using Atomic Swap Protocol.`,
+         Swap.Online wallet provides instant exchange using P2P Swap Protocol.`,
       },
     })
 

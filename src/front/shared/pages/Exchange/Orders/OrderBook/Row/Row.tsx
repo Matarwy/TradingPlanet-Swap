@@ -234,7 +234,7 @@ class Row extends Component<RowProps, RowState> {
               const swapUri = row.isTurbo ?
                 `${links.turboSwap}/${id}`
                 :
-                `${links.atomicSwap}/${id}`
+                `${links.P2PSwap}/${id}`
               
               console.log(`Redirect to swap: ${swapUri}`)
               //@ts-ignore: strictNullChecks
@@ -342,7 +342,7 @@ class Row extends Component<RowProps, RowState> {
       priceOut = price
     }
 
-    const swapUri = `${links.atomicSwap}/${id}`
+    const swapUri = `${links.P2PSwap}/${id}`
 
     const mobileFormatCrypto = (value, currency) => {
       if (currency === 'USDT' || currency == 'EUR') {

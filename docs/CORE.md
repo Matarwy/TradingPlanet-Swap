@@ -1,14 +1,14 @@
 # Swap Core (`src/core`)
 
-In-browser atomic swap protocol based on HTLC
+In-browser P2P swap protocol based on HTLC
 
 Try demo at https://swaponline.io/#/exchange
 
 **THIS IS ALPHA VERSION AND CAN BE CHANGED SIGNIFICANTLY**
 
-Swap Core is a decentralized exchange protocol (DEP) for crosschain atomic swaps, based on HTLC. It is written on JavaScript and can be run in browser or via NodeJS.
+Swap Core is a decentralized exchange protocol (DEP) for crosschain P2P swaps, based on HTLC. It is written on JavaScript and can be run in browser or via NodeJS.
 
-*tags: HTLC, atomic swap, javascript, browser, crypto, bitcoin, ethereum, erc20*
+*tags: HTLC, P2P swap, javascript, browser, crypto, bitcoin, ethereum, erc20*
 
 
 ## Supported currencies

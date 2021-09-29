@@ -207,7 +207,7 @@
   },
   {
     "id": "Home153",
-    "message": " Que es un Atomic Swap? ",
+    "message": " Que es un P2P Swap? ",
     "files": [
       "src/front/shared/pages/Exchange/Orders/Orders.tsx"
     ]
@@ -323,7 +323,7 @@
     "id": "MyOrdersYouSend",
     "message": "Enviarás",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/Orders/MyOrders/MyOrders.tsx",
       "src/front/shared/pages/Exchange/Orders/OrderBook/Row/Row.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
@@ -367,7 +367,7 @@
     "id": "orders128",
     "message": "Crear oferta",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -483,7 +483,7 @@
     "id": "partial291",
     "message": "Esperando por otro participante (30 sec): ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -506,7 +506,7 @@
     "files": [
       "src/front/shared/components/LimitOrders/OrderSettings.tsx",
       "src/front/shared/components/LimitOrders/index.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
     ]
   },
@@ -605,35 +605,35 @@
     "id": "PartialPriceNoOrdersReduce",
     "message": "No se encontraron pedidos, intenta mas tarde o cambia el tipo de moneda.",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialPriceNoOrdersReduceAllInfo",
     "message": "Esta cantidad de intercambio es demasiado alto para la actual liquidez del mercado. Por favor reduce la cantidad a {maxForSell}. ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialOfferCantProceed1",
     "message": "Solicitud rechazada. {link}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "PartialOfferCantProceed1_1",
     "message": "Por que?",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "ErrorBtcLowAmount",
     "message": "{btcAmount} BTC - Esta cantidad es demasiado baja, no cubre la tarifa de minería",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -663,20 +663,20 @@
     "id": "partial541",
     "message": "Intercambiar ahora",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "partial767",
     "message": "Saldo: ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/ExchangeForm.tsx"
     ]
   },
   {
     "id": "partialVideoAndFeatures0",
-    "message": "Basado en tecnología Atomic Swap",
+    "message": "Basado en tecnología P2P Swap",
     "files": [
       "src/front/shared/pages/Exchange/VideoAndFeatures/VideoAndFeatures.tsx"
     ]
@@ -919,21 +919,21 @@
   },
   {
     "id": "CurrencyWallet154",
-    "message": "Billetera Atomic Swap te permite manegar e intercambiar de forma segura  ${fullName} (${currency}) con 0% comisiones. Basado en multifirma y tecnología Atomic Swap.",
+    "message": "Billetera P2P Swap te permite manegar e intercambiar de forma segura  ${fullName} (${currency}) con 0% comisiones. Basado en multifirma y tecnología P2P Swap.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
   },
   {
     "id": "Orders121",
-    "message": "Atomic Swap {buyCurrencyFullName} ({buyCurrency}) a {sellCurrencyFullName} ({sellCurrency}) Intercambio instantaneo",
+    "message": "P2P Swap {buyCurrencyFullName} ({buyCurrency}) a {sellCurrencyFullName} ({sellCurrency}) Intercambio instantaneo",
     "files": [
       "src/front/shared/pages/Exchange/Orders/OrderBook/OrderBook.tsx"
     ]
   },
   {
     "id": "Orders127",
-    "message": "Mejor tasa de intercambio {buyCurrencyFullName} ({buyCurrency}) a {sellCurrencyFullName} ({sellCurrency}). Billetera GhostX provee intercambio instantaneo utilizando Atomic Swap Protocol.",
+    "message": "Mejor tasa de intercambio {buyCurrencyFullName} ({buyCurrency}) a {sellCurrencyFullName} ({sellCurrency}). Billetera GhostX provee intercambio instantaneo utilizando P2P Swap Protocol.",
     "files": [
       "src/front/shared/pages/Exchange/Orders/OrderBook/OrderBook.tsx"
     ]
@@ -1169,14 +1169,14 @@
   },
   {
     "id": "CurrencyWalletTitle",
-    "message": "Swap.Online - {fullName} ({currency}) Billetera web con Atomic Swap.",
+    "message": "Swap.Online - {fullName} ({currency}) Billetera web con P2P Swap.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
   },
   {
     "id": "CurrencyWalletWidgetBuildTitle",
-    "message": "{fullName} ({currency}) Billetera web con Atomic Swap.",
+    "message": "{fullName} ({currency}) Billetera web con P2P Swap.",
     "files": [
       "src/front/shared/pages/CurrencyWallet/CurrencyWallet.tsx"
     ]
@@ -1935,7 +1935,7 @@
   },
   {
     "id": "tour-step-3",
-    "message": "Nuestro exclusivo intercambio peer-to-peer está disponible en nuestra billetera que se basa en la tecnología Atomic Swap. Puede incluir su criptomoneda en nuestra billetera.",
+    "message": "Nuestro exclusivo intercambio peer-to-peer está disponible en nuestra billetera que se basa en la tecnología P2P Swap. Puede incluir su criptomoneda en nuestra billetera.",
     "files": [
       "src/front/shared/components/Header/WalletTour/WalletTour.tsx"
     ]
@@ -2396,21 +2396,21 @@
     "id": "continueDeclined977",
     "message": "Continúe sus intercambios",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "chooseCorrectNetwork",
     "message": "Abra la billetera conectada y elija {br}{chainName}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "switchToCorrectNetwork",
     "message": "Cambiar a {br}{chainName}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4195,7 +4195,7 @@
     "id": "AlertOrderNonEnoughtBalance",
     "message": "Recargue su saldo antes de iniciar el intercambio",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -4203,7 +4203,7 @@
     "id": "AlertOrderNonEnoughtBalanceTitle",
     "message": "No hay suficiente credito.",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4310,7 +4310,7 @@
     "id": "Exchange_AvialableBalance",
     "message": "Disponible: ",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4338,21 +4338,21 @@
     "id": "Swap_NeedMoreAmount",
     "message": "Debes tener al menos {amount} {currency} en tu saldo. {br} Comisión de minero {sellFee} {sellCoin} y {buyFee} {buyCoin}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_MinerFees",
     "message": "Tasa de minero",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_ServiceFee",
     "message": "Tasa de servicio",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4482,21 +4482,21 @@
     "id": "Exchange_BestPrice",
     "message": "Best price:",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_FromAddress",
     "message": "From address",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Exchange_ToAddress",
     "message": "To address",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -4510,21 +4510,21 @@
     "id": "createOrderMessageForUser",
     "message": "Debe estar en línea todo el tiempo, de lo contrario su order no será visible para otros usuarios",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "createOrderNoManyMessageForUser",
     "message": "Recarga tu saldo",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "AddLiquidity",
     "message": "Agregar liquidez",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5004,7 +5004,7 @@
     "id": "enterYouSend",
     "message": "Ingrese \"Tu envias\" monto",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -5012,70 +5012,70 @@
     "id": "swapDisabled",
     "message": "Intercambiar deshabilitado",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "noOffers",
     "message": "No hay ofertas",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectFromAddress",
     "message": "Seleccione\"From address\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectToAddress",
     "message": "Seleccione \"To address\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "enterToAddress",
     "message": "Ingrese la billetera de destino",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "connectDestinationWallet",
     "message": "Conecte su billetera de Destino",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "setDestination",
     "message": "Marcar el destino",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "connectYourWallet",
     "message": "Conecte su billetera en \"From address\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "selectSendType",
     "message": "Seleccione el tipo de\"From address\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "errorWithGetAmount",
     "message": "\"Tu obtienes\" no más de 0",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5084,7 +5084,7 @@
     "files": [
       "src/front/shared/components/modals/LimitOrder/ModalForm.tsx",
       "src/front/shared/components/modals/WalletConnectAccount/WalletConnectAccount.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/NoSwapsReasons.tsx"
     ]
   },
@@ -5092,36 +5092,36 @@
     "id": "lowAmount",
     "message": "Cantidad baja",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "waitPeerAnswer",
     "message": "Espere la respuesta de sus compañeros",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "enterLesserAmount",
     "message": "Ingrese una cantidad menor a\"Tu envias\"",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "contactSupport",
     "message": "Comuníquese con el soporte",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
-    "id": "AtomicSwap_Title",
-    "message": "Atomic swap",
+    "id": "P2PSwap_Title",
+    "message": "P2P swap",
     "files": [
       "src/front/shared/components/modals/OfferModal/AddOffer/AddOffer.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5129,7 +5129,7 @@
     "message": "Turbo swap",
     "files": [
       "src/front/shared/components/modals/OfferModal/AddOffer/AddOffer.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/TurboSwap/TurboSwap.tsx"
     ]
   },
@@ -5208,7 +5208,7 @@
     "message": "Aprobar {token}",
     "files": [
       "src/front/shared/components/modals/LimitOrder/ModalForm.tsx",
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx",
+      "src/front/shared/pages/Exchange/P2PSwap.tsx",
       "src/front/shared/pages/Exchange/QuickSwap/index.tsx"
     ]
   },
@@ -5293,14 +5293,14 @@
     "id": "ExchangeTokenWasApproved",
     "message": "Token was approved.{br}Explorer link: {txLink}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
     "id": "Orderbook",
     "message": "Libro de Pedidos",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5819,7 +5819,7 @@
     "id": "NotEnoughForBuy",
     "message": "Usted debe tener al menos Mine commission {buyFee} {buyCoin}",
     "files": [
-      "src/front/shared/pages/Exchange/AtomicSwap.tsx"
+      "src/front/shared/pages/Exchange/P2PSwap.tsx"
     ]
   },
   {
@@ -5923,7 +5923,7 @@
     ]
   },
   {
-    "id": "atomicSwap",
+    "id": "P2PSwap",
     "message": "Intercambio atómico",
     "files": [
       "src/front/shared/pages/Exchange/index.tsx"

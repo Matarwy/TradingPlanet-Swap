@@ -1,5 +1,5 @@
 import { constants } from 'swap.app'
-import BtcToEthLike from './atomic/BtcToEthLike'
+import BtcToEthLike from './P2P/BtcToEthLike'
 
 
 class BTC2ARBITRUM extends BtcToEthLike {

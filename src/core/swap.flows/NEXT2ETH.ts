@@ -1,5 +1,5 @@
 import { constants } from 'swap.app'
-import NextToEvm from './atomic/NextToEvm'
+import NextToEvm from './P2P/NextToEvm'
 
 
 class NEXT2ETH extends NextToEvm {

@@ -482,13 +482,13 @@ class CurrencyWallet extends Component<any, any> {
     const titleSwapOnline = defineMessages({
       metaTitle: {
         id: 'CurrencyWalletTitle',
-        defaultMessage: 'Swap.Online - {fullName} ({currency}) Web Wallet with Atomic Swap.',
+        defaultMessage: 'Swap.Online - {fullName} ({currency}) Web Wallet with P2P Swap.',
       },
     })
     const titleWidgetBuild = defineMessages({
       metaTitle: {
         id: 'CurrencyWalletWidgetBuildTitle',
-        defaultMessage: '{fullName} ({currency}) Web Wallet with Atomic Swap.',
+        defaultMessage: '{fullName} ({currency}) Web Wallet with P2P Swap.',
       },
     })
     const title = isWidgetBuild ? titleWidgetBuild : titleSwapOnline
@@ -497,7 +497,7 @@ class CurrencyWallet extends Component<any, any> {
       metaDescription: {
         id: 'CurrencyWallet154',
         defaultMessage:
-          'Atomic Swap Wallet allows you to manage and securely exchange ${fullName} (${currency}) with 0% fees. Based on Multi-Sig and Atomic Swap technologies.',
+          'P2P Swap Wallet allows you to manage and securely exchange ${fullName} (${currency}) with 0% fees. Based on Multi-Sig and P2P Swap technologies.',
       },
     })
 

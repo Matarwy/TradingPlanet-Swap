@@ -1,6 +1,6 @@
-# Atomic swaps
+# P2P swaps
 
-## Atomic swap protocol (simplified)
+## P2P swap protocol (simplified)
 
 ### `A` locks funds
 

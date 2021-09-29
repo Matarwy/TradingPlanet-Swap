@@ -46,9 +46,9 @@
 - __Integration__: https://saturn.black/exchange/
 
 
-## [Atomic Swap Wallet](https://atomicswapwallet.io/)
+## [P2P Swap Wallet](https://P2Pswapwallet.io/)
 
-- __Integration__: https://atomicswapwallet.io/wallet/
+- __Integration__: https://P2Pswapwallet.io/wallet/
 
 
 ## Other Wordpress plugin clients

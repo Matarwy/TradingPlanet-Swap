@@ -5,7 +5,7 @@ import { BigNumber } from 'bignumber.js'
 import * as cryptoLib from 'crypto'
 
 
-class AtomicAB2UTXO extends Flow {
+class P2PAB2UTXO extends Flow {
 
   //@ts-ignore: strictNullChecks
   utxoCoin: string = null
@@ -621,4 +621,4 @@ class AtomicAB2UTXO extends Flow {
 }
 
 
-export default AtomicAB2UTXO
+export default P2PAB2UTXO

@@ -658,7 +658,7 @@ export default class AddOffer extends Component<any, any> {
           {isShowSwapModeSwitch &&
             <div styleName="toggle">
               <div styleName="toggleText">
-                <FormattedMessage id="AtomicSwap_Title" defaultMessage="Atomic swap" />
+                <FormattedMessage id="P2PSwap_Title" defaultMessage="P2P swap" />
               </div>
               <Toggle checked={isTurbo} isDisabled={!isTurboAllowed} onChange={() => this.setState((state) => ({ isTurbo: !state.isTurbo }))} />
               <div styleName="toggleText">

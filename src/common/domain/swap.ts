@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js'
 
 
 export enum SwapMode {
-  Atomic = 'Atomic',
+  P2P = 'P2P',
   Turbo = 'Turbo',
 }
 

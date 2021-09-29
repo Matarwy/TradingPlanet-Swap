@@ -1,6 +1,6 @@
 import debug from 'debug'
 import { util } from 'swap.app'
-import { AtomicAB2UTXO } from 'swap.swap'
+import { P2PAB2UTXO } from 'swap.swap'
 import { EthLikeSwap, NextSwap } from 'swap.swaps'
 
 
@@ -9,7 +9,7 @@ interface INextToEvm {
   getMyAddress: Function
   getParticipantAddress: Function
 }
-class NextToEvm extends AtomicAB2UTXO {
+class NextToEvm extends P2PAB2UTXO {
 
   _flowName: string
   evmCoin: string

@@ -303,7 +303,7 @@
 │   │   └── SwapAuth.ts
 │   ├── swap.flows
 │   │   ├── ARBITRUM2BTC.ts
-│   │   ├── atomic
+│   │   ├── P2P
 │   │   │   ├── BtcToEthLikeToken.ts
 │   │   │   ├── BtcToEthLike.ts
 │   │   │   ├── EthLikeToBtc.ts
@@ -350,7 +350,7 @@
 │   │   ├── index.ts
 │   │   └── SwapRoom.ts
 │   ├── swap.swap
-│   │   ├── AtomicAB2UTXO.ts
+│   │   ├── P2PAB2UTXO.ts
 │   │   ├── Flow.ts
 │   │   ├── index.ts
 │   │   ├── Room.ts
@@ -1115,7 +1115,7 @@
 │   │   │   │   │   └── Option
 │   │   │   │   │       ├── Option.scss
 │   │   │   │   │       └── Option.tsx
-│   │   │   │   ├── AtomicSwap
+│   │   │   │   ├── P2PSwap
 │   │   │   │   ├── Exchange.scss
 │   │   │   │   ├── Exchange.tsx
 │   │   │   │   ├── HowItWorks

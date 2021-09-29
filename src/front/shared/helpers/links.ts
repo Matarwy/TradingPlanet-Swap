@@ -23,7 +23,7 @@ const linksManager = {
   savePrivateSeed: '/savePrivateSeed',
   savePrivateKeys: '/savePrivateKeys',
   currencyWallet: '/wallet',
-  atomicSwap: '/atomic-swaps',
+  P2PSwap: '/P2P-swaps',
   turboSwap: '/turbo-swaps',
   feed: '/feed',
   test: 'https://testnet.swaponline.io',

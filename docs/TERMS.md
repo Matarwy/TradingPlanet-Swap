@@ -98,10 +98,10 @@ The peer who accepted the offer (initiated the swap)
 - example: `allowPartialSwap = true`
 
 
-### Atomic swap / Turbo swap
+### P2P swap / Turbo swap
 Two schemes for swap execution.
 
-See [atomic vs turbo swaps comparison](/docs/ATOMIC_VS_TURBO_SWAPS.md))
+See [P2P vs turbo swaps comparison](/docs/P2P_VS_TURBO_SWAPS.md))
 
 
 ## Flow

@@ -1,5 +1,5 @@
 import { constants } from 'swap.app'
-import EvmTokenToNext from './atomic/EvmTokenToNext'
+import EvmTokenToNext from './P2P/EvmTokenToNext'
 
 
 export default (tokenName) => {

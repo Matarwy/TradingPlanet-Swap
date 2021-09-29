@@ -32,7 +32,7 @@ assignees: ''
 - [ ] not latest (please try to upgrade first)
 - [ ] not sure
 
-## Does this affect atomic swap flow?
+## Does this affect P2P swap flow?
 
 - [ ] yes
 - [ ] no

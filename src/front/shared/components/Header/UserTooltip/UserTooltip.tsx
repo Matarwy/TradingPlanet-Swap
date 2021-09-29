@@ -39,7 +39,7 @@ export default class UserTooltip extends Component<any, any> {
             const swapUri = isTurbo ?
               `${links.turboSwap}/${id}`
               :
-              `${links.atomicSwap}/${id}`
+              `${links.P2PSwap}/${id}`
 
             return (
               mePeer === ownerPeer &&

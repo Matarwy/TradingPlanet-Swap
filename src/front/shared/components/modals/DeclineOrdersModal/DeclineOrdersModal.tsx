@@ -25,7 +25,7 @@ class DeclineOrdersModal extends Component<any, any> {
 
     const { intl : { locale } } = this.props
 
-    const swapUri = `${links.atomicSwap}/${id}`
+    const swapUri = `${links.P2PSwap}/${id}`
     // todo: decline turbo swaps
 
     console.log(`Redirect to swap: ${swapUri}`)

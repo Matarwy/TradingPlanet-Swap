@@ -1,5 +1,5 @@
 import { constants } from 'swap.app'
-import EthLikeToBtc from './atomic/EthLikeToBtc'
+import EthLikeToBtc from './P2P/EthLikeToBtc'
 
 
 class ETH2BTC extends EthLikeToBtc {

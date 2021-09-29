@@ -184,13 +184,13 @@ class Offers extends Component<any, any> {
               <div styleName="videoContainer">
                 <Center relative centerVertically={false}>
                   <SubTitle>
-                    <FormattedMessage id="Home153" defaultMessage="What is atomic swap?" />
+                    <FormattedMessage id="Home153" defaultMessage="What is P2P swap?" />
                   </SubTitle>
                 </Center>
 
                 <div styleName="videoFaqContainer">
                   <iframe
-                    title="What is atomic swap?"
+                    title="What is P2P swap?"
                     width="700"
                     height="480"
                     src="https://www.youtube.com/embed/Jhrb7xOT_7s"

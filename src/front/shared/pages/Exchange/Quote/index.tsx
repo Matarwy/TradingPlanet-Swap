@@ -5,7 +5,7 @@ import styles from './styles.scss'
 
 /* eslint-disable */
 const Quote = () => {
-  const href = "https://blog.qtum.org/atomic-cross-chain-swap-on-qtum-7e756a890ed7"
+  const href = "https://blog.qtum.org/P2P-cross-chain-swap-on-qtum-7e756a890ed7"
   return (
     <div styleName="container">
       <div styleName="header">
@@ -18,8 +18,8 @@ const Quote = () => {
     </div>
       <a href={href} title={href} target="_blank" rel="noopener noreferrer" styleName="href">
         <b>
-          — QTUM official Atomic Swap research
-          <span> https://blog.qtum.org/atomic-cross-chain-swap-on-qtum-7e756a890ed7</span>
+          — QTUM official P2P Swap research
+          <span> https://blog.qtum.org/P2P-cross-chain-swap-on-qtum-7e756a890ed7</span>
         </b>
       </a>
     </div>

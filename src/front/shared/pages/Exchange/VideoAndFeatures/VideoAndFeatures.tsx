@@ -8,7 +8,7 @@ const VideoAndFeatures = (props) => (
     <div styleName="VidNdFeatures__container">
       <div styleName="VidNdFeatures__item VidNdFeatures__item_features">
         <ul>
-          <li><FormattedMessage id="partialVideoAndFeatures0" defaultMessage="Based on Atomic Swap technology" /></li>
+          <li><FormattedMessage id="partialVideoAndFeatures0" defaultMessage="Based on P2P Swap technology" /></li>
           <li><FormattedMessage id="partialVideoAndFeatures1" defaultMessage="Exchange only takes 2 minutes" /></li>
           <li><FormattedMessage id="partialVideoAndFeatures2" defaultMessage="Supports BTC, ETH, USDT, ERC-20 tokens" /></li>
           <li><FormattedMessage id="partialVideoAndFeatures3" defaultMessage="Can be deployed on any website as an exchange service" /></li>

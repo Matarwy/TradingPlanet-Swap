@@ -1,4 +1,4 @@
-See also: [Atomic vs Turbo swaps comparison](/docs/ATOMIC_VS_TURBO_SWAPS.md)
+See also: [P2P vs Turbo swaps comparison](/docs/P2P_VS_TURBO_SWAPS.md)
 
 # Turbo swaps
 

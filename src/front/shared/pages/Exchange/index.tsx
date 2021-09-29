@@ -4,15 +4,15 @@ import CSSModules from 'react-css-modules'
 import styles from './index.scss'
 import { externalConfig, localStorage, constants, links } from 'helpers'
 import QuickSwap from './QuickSwap'
-import AtomicSwap from './AtomicSwap'
+import P2PSwap from './P2PSwap'
 
 // option from the WP panel
 const globalMode = window.exchangeMode
 
 const GlobalModes = {
-  atomic: 'atomic',
+  P2P: 'P2P',
   quick: 'quick',
-  only_atomic: 'only_atomic',
+  only_P2P: 'only_P2P',
   only_quick: 'only_quick',
 }
 
@@ -21,13 +21,13 @@ function Exchange(props) {
 
   const validMode = globalMode && GlobalModes[globalMode]
   const showOnlyOneType =
-    validMode === GlobalModes.only_atomic || validMode === GlobalModes.only_quick
+    validMode === GlobalModes.only_P2P || validMode === GlobalModes.only_quick
 
   const exchangeSettings = localStorage.getItem(constants.localStorage.exchangeSettings) || {}
-  let initialState = location.pathname === '/exchange/quick' ? 'quick' : 'atomic'
+  let initialState = location.pathname === '/exchange/quick' ? 'quick' : 'P2P'
 
   if (externalConfig.entry === 'testnet') {
-    initialState = 'atomic'
+    initialState = 'P2P'
   } else if (showOnlyOneType) {
     // and hide tabs next
     initialState = globalMode.replace(/only_/, '')
@@ -44,14 +44,14 @@ function Exchange(props) {
 
   const [swapMode, setSwapMode] = useState(initialState)
 
-  const openAtomicMode = () => {
-    if (exchangeSettings.atomicCurrency) {
-      const { sell, buy } = exchangeSettings.atomicCurrency
+  const openP2PMode = () => {
+    if (exchangeSettings.P2PCurrency) {
+      const { sell, buy } = exchangeSettings.P2PCurrency
 
       history.push(`${links.exchange}/${sell}-to-${buy}`)
     }
 
-    updateSwapMode('atomic')
+    updateSwapMode('P2P')
   }
 
   const openQuickMode = () => {
@@ -90,10 +90,10 @@ function Exchange(props) {
             <FormattedMessage id="quickSwap" defaultMessage="Quick swap" />
           </button>
           <button
-            styleName={`tab ${swapMode === 'atomic' ? 'active' : ''}`}
-            onClick={openAtomicMode}
+            styleName={`tab ${swapMode === 'P2P' ? 'active' : ''}`}
+            onClick={openP2PMode}
           >
-            <FormattedMessage id="atomicSwap" defaultMessage="Atomic swap" />
+            <FormattedMessage id="P2PSwap" defaultMessage="P2P swap" />
           </button>
         </div>
       )}
@@ -109,7 +109,7 @@ function Exchange(props) {
       pass props from this component into the components
       because there has to be "url" props like match, location, etc.
       but this props are only in the Router children */}
-      {swapMode === 'atomic' && <AtomicSwap {...props} />}
+      {swapMode === 'P2P' && <P2PSwap {...props} />}
     </div>
   )
 }

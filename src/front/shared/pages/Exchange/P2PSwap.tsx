@@ -217,8 +217,8 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
     const exchangeSettings = localStorage.getItem(constants.localStorage.exchangeSettings)
 
     if (exchangeSettings) {
-      haveCurrency = exchangeSettings.atomicCurrency?.sell || haveCurrency
-      getCurrency = exchangeSettings.atomicCurrency?.buy || getCurrency
+      haveCurrency = exchangeSettings.P2PCurrency?.sell || haveCurrency
+      getCurrency = exchangeSettings.P2PCurrency?.buy || getCurrency
     }
 
     if (!(buy && sell) && !props.location.hash.includes('#widget') && !isRootPage) {
@@ -356,7 +356,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
     userWalletTypes[currency] = type
 
     const newExchangeData = {
-      atomicCurrency: exchangeSettings.atomicCurrency,
+      P2PCurrency: exchangeSettings.P2PCurrency,
       userWalletTypes,
     }
 
@@ -634,7 +634,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
         [haveCurrency.toUpperCase()]: haveType,
         [getCurrency.toUpperCase()]: getType,
       },
-      atomicCurrency: {
+      P2PCurrency: {
         sell: haveCurrency,
         buy: getCurrency,
       },
@@ -1083,7 +1083,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
       clearTimeout(requestTimeout)
       if (isAccepted) {
         this.setState(() => ({
-          redirectToSwap: newOrder.isTurbo ? SwapMode.Turbo : SwapMode.Atomic,
+          redirectToSwap: newOrder.isTurbo ? SwapMode.Turbo : SwapMode.P2P,
           orderId: newOrder.id,
           isWaitForPeerAnswer: false,
         }))
@@ -1697,7 +1697,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
 
     if (redirectToSwap) {
       const swapUri = ({
-        [SwapMode.Atomic]: `${links.atomicSwap}/${orderId}`,
+        [SwapMode.P2P]: `${links.P2PSwap}/${orderId}`,
         [SwapMode.Turbo]: `${links.turboSwap}/${orderId}`
       })[redirectToSwap]
 
@@ -1769,7 +1769,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
 
     const isLowAmount = this.checkoutLowAmount()
 
-    // temporary: show atomic/turbo switch if only there are turbo offers
+    // temporary: show P2P/turbo switch if only there are turbo offers
     const isShowSwapModeSwitch = directionOrders.filter(offer => offer.isTurbo).length > 0
 
     const isTurboAllowed = (
@@ -1962,7 +1962,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
             <div styleName={`swapModeSelector ${isTurboAllowed ? '' : 'disabled'}`}>
               <div styleName="toggle">
                 <div styleName="toggleText">
-                  <FormattedMessage id="AtomicSwap_Title" defaultMessage="Atomic swap" />
+                  <FormattedMessage id="P2PSwap_Title" defaultMessage="P2P swap" />
                 </div>
                 <Toggle checked={isTurbo} isDisabled={!isTurboAllowed} onChange={() => this.setState((state) => ({ isTurbo: !state.isTurbo }))} />
                 <div styleName="toggleText">

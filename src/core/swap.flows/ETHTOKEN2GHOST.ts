@@ -1,11 +1,11 @@
 import debug from 'debug'
 import SwapApp, { constants, util } from 'swap.app'
-import { AtomicAB2UTXO } from 'swap.swap'
+import { P2PAB2UTXO } from 'swap.swap'
 
 
 export default (tokenName) => {
 
-  class ETHTOKEN2GHOST extends AtomicAB2UTXO {
+  class ETHTOKEN2GHOST extends P2PAB2UTXO {
     static blockchainName = `ETH`
 
     _flowName: string
