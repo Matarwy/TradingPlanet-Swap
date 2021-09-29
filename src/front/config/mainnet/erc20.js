@@ -41,4 +41,10 @@ export default {
     fullName: 'Wrapped Bitcoin',
     canSwap: true,
   },
+  psafemoon: {
+    address: '0x16631e53c20fd2670027c6d53efe2642929b285c',
+    decimals: 18,
+    fullName: 'SafeMoon Token',
+    canSwap: true,
+  },
 }

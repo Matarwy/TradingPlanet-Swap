@@ -174,6 +174,7 @@ export const ETH_TOKENS = {
   hdp: '{ETH}HDP',
   scro: '{ETH}SCRO',
   xeur: '{ETH}XEUR',
+  psafemoon:'{ETH}pSAFEMOON',
 
 }
 
