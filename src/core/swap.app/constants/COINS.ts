@@ -151,6 +151,7 @@ export const NATIVE = {
 
 export const BNB_TOKENS = {
   btcb: 'BTCB',
+  foreverfomo:'{BNB}ForeverFOMO',
 }
 
 export const MATIC_TOKENS = {
