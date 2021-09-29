@@ -150,12 +150,13 @@ export const NATIVE = {
 }
 
 export const BNB_TOKENS = {
-  btcb: 'BTCB',
-  foreverfomo:'{BNB}ForeverFOMO',
+  btcb: '{BNB}BTCB',
+  safemoon:'{BNB}SAFEMOON',
 }
 
 export const MATIC_TOKENS = {
   wbtc: 'WBTC',
+  
 }
 
 export const ETH_TOKENS = {
