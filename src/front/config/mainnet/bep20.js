@@ -11,4 +11,10 @@ export default {
     fullName: 'BTCB Token',
     canSwap: true,
   },
+  foreverfomo: {
+    address: '0x95637d4fbe7153dcc3e26e71bde7a2d82621f083',
+    decimals: 9,
+    fullName: 'ForeverFOMO Token',
+    canSwap: true,
+  },
 }
