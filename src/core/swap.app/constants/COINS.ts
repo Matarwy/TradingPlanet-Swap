@@ -152,6 +152,17 @@ export const NATIVE = {
 export const BNB_TOKENS = {
   btcb: '{BNB}BTCB',
   safemoon:'{BNB}SAFEMOON',
+  busd:'{BNB}BUSD',
+  eth:'{BNB}ETH',
+  wbnb:'{BNB}WBNB',
+  doge:'{BNB}DOGE',
+  usdt:'{BNB}USDT',
+  ada:'{BNB}ADA',
+  usdc:'{BNB}USDC',
+  bch:'{BNB}BCH',
+  ltc:'{BNB}LTC',
+  matic:'{BNB}MATIC',
+  trx:'{BNB}TRX',
 }
 
 export const MATIC_TOKENS = {
