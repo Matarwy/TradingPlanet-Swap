@@ -2253,9 +2253,10 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
             <>
               <Promo />
 
-              <FormattedMessage
-                defaultMessage="Coming Soon..."
-              />
+              <p
+              >
+                Coming Soon...
+              </p>
 
             </>
           </div>
