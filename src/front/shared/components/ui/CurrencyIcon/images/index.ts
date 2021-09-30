@@ -22,9 +22,27 @@ import pay from './pay.png'
 import eurs from './eurs.svg'
 import ghost from './ghost.svg'
 import next from './next.svg'
-
+import psafemoon from './psavemoon.svg'
+import safemoon from './safemoon.svg'
+import btcb from './btcb.svg'
+import busd from './busd.png'
+import wbnb from './wbnb.png'
+import doge from './doge.png'
+import ada from './ada.png'
+import usdc from './usdc.png'
+import bch from './bch.png'
+import ltc from './ltc.png'
+import trx from './trx.png'
 
 export default {
+  busd,
+  wbnb,
+  doge,
+  ada,
+  usdc,
+  bch,
+  ltc,
+  trx,
   btc,
   'btc (multisig)': btc,
   'btc (sms-protected)': btc,
@@ -52,4 +70,8 @@ export default {
   eurs,
   ghost,
   next,
+  psafemoon,
+  safemoon,
+  btcb,
+
 }
