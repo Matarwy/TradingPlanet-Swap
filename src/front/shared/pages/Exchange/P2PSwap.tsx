@@ -2254,7 +2254,6 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
               <Promo />
 
               <FormattedMessage
-                id="partial291"
                 defaultMessage="Coming Soon..."
               />
 
