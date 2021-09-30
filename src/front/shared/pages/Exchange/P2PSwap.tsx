@@ -2253,6 +2253,28 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
             <>
               <Promo />
 
+              <FormattedMessage
+                id="partial291"
+                defaultMessage="Coming Soon..."
+              />
+
+            </>
+          </div>
+        </div>
+      </div>
+    )
+
+    return (
+      <div styleName="exchangeWrap">
+        <div
+          styleName="promoContainer"
+          //@ts-ignore: strictNullChecks
+          ref={(ref) => (this.promoContainer = ref)}
+        >
+          <div styleName="container">
+            <>
+              <Promo />
+
               {Form}
 
               <Button
