@@ -22,7 +22,7 @@ import pay from './pay.png'
 import eurs from './eurs.svg'
 import ghost from './ghost.svg'
 import next from './next.svg'
-import psafemoon from './psavemoon.svg'
+import psafemoon from './psafemoon.svg'
 import safemoon from './safemoon.svg'
 import btcb from './btcb.svg'
 import busd from './busd.png'
@@ -65,13 +65,13 @@ export default {
   psafemoon,
   safemoon,
   btcb,
-  // busd,
-  // wbnb,
-  // doge,
-  // ada,
-  // usdc,
-  // bch,
-  // ltc,
-  // trx,
+  busd,
+  wbnb,
+  doge,
+  ada,
+  usdc,
+  bch,
+  ltc,
+  trx,
 
 }
