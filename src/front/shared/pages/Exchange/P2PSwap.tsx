@@ -2253,8 +2253,7 @@ class Exchange extends PureComponent<ExchangeProps, ExchangeState> {
             <>
               <Promo />
 
-              <p
-              >
+              <p>
                 Coming Soon...
               </p>
 
