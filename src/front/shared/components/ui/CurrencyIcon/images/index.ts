@@ -35,14 +35,6 @@ import ltc from './ltc.png'
 import trx from './trx.png'
 
 export default {
-  busd,
-  wbnb,
-  doge,
-  ada,
-  usdc,
-  bch,
-  ltc,
-  trx,
   btc,
   'btc (multisig)': btc,
   'btc (sms-protected)': btc,
@@ -73,5 +65,13 @@ export default {
   psafemoon,
   safemoon,
   btcb,
+  busd,
+  wbnb,
+  doge,
+  ada,
+  usdc,
+  bch,
+  ltc,
+  trx,
 
 }
