@@ -22,7 +22,7 @@ import Loader from 'components/loaders/Loader/Loader'
 import Button from 'components/controls/Button/Button'
 // Incoming swap requests and tooltips (revert)
 import UserTooltip from 'components/Header/UserTooltip/UserTooltip'
-
+import WidthContainer from 'components/layout/WidthContainer/WidthContainer';
 
 import { getMenuItems, getMenuItemsMobile } from './config'
 import { localisedUrl } from 'helpers/locale'
@@ -472,6 +472,7 @@ class Header extends Component<any, any> {
     if (isMobile) {
       return (
         <header id="header-mobile" styleName="header-mobile" className="data-tut-widget-tourFinish">
+          <WidthContainer>
           {flexebleHeaderRender}
           {createdWalletLoader && (
             <div styleName="loaderCreateWallet">
@@ -490,6 +491,7 @@ class Header extends Component<any, any> {
               <WidgetWalletTour isTourOpen={isWidgetTourOpen} closeTour={this.closeWidgetTour} />
             </div>
           )}
+          </WidthContainer>
         </header>
       )
     }
@@ -502,6 +504,7 @@ class Header extends Component<any, any> {
           [styles['header-promo']]: isWalletPage,
         })}
       >
+        <WidthContainer>
         {createdWalletLoader && (
           <div styleName="loaderCreateWallet">
             <Loader
@@ -529,6 +532,7 @@ class Header extends Component<any, any> {
             <WidgetWalletTour isTourOpen={isWidgetTourOpen} closeTour={this.closeWidgetTour} />
           </div>
         )}
+        </WidthContainer>
       </header>
     )
   }
