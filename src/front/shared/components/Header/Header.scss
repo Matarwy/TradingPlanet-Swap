@@ -28,6 +28,11 @@
   align-items: center;
   justify-content: space-between;
   transition: position 0.3s ease;
+  background: var(--color-background-elements);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .flexebleHeader {
