@@ -24,9 +24,6 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   transition: position 0.3s ease;
   background: var(--color-background-elements);
   position: sticky;
@@ -93,4 +90,7 @@
 
 .header-container {
   padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
