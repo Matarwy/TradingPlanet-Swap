@@ -150,19 +150,19 @@ export const NATIVE = {
 }
 
 export const BNB_TOKENS = {
-  btcb: '{BNB}BTCB',
-  safemoon:'{BNB}SAFEMOON',
-  busd:'{BNB}BUSD',
-  eth:'{BNB}ETH',
-  wbnb:'{BNB}WBNB',
-  doge:'{BNB}DOGE',
-  usdt:'{BNB}USDT',
-  ada:'{BNB}ADA',
-  usdc:'{BNB}USDC',
-  bch:'{BNB}BCH',
-  ltc:'{BNB}LTC',
-  matic:'{BNB}MATIC',
-  trx:'{BNB}TRX',
+  btcb: 'BTCB',
+  safemoon:'SAFEMOON',
+  busd:'BUSD',
+  eth:'ETH',
+  wbnb:'WBNB',
+  doge:'DOGE',
+  usdt:'USDT',
+  ada:'ADA',
+  usdc:'USDC',
+  bch:'BCH',
+  ltc:'LTC',
+  matic:'MATIC',
+  trx:'TRX',
 }
 
 export const MATIC_TOKENS = {
@@ -173,7 +173,7 @@ export const MATIC_TOKENS = {
 export const ETH_TOKENS = {
   usdt: '{ETH}USDT',
   eurs: '{ETH}EURS',
-  //swap: '{ETH}SWAP',
+  swap: '{ETH}SWAP',
   pay: '{ETH}PAY',
   psafemoon:'{ETH}pSAFEMOON',
   // needs for the front
