@@ -504,7 +504,7 @@ class Header extends Component<any, any> {
           [styles['header-promo']]: isWalletPage,
         })}
       >
-        <WidthContainer>
+        <WidthContainer styleName="headerContainer">
         {createdWalletLoader && (
           <div styleName="loaderCreateWallet">
             <Loader
