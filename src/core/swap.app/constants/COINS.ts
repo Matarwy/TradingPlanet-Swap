@@ -116,15 +116,15 @@ export const COIN_DATA = {
     model: COIN_MODEL.UTXO,
     precision: 8,
   },
-  'SWAP': {
-    ticker: 'SWAP',
-    name: 'SWAP',
-    type: COIN_TYPE.ETH_TOKEN,
-    blockchain: BLOCKCHAIN.ETH,
-    standard: TOKEN_STANDARD.ERC20,
-    model: COIN_MODEL.AB,
-    precision: 18,
-  },
+  // 'SWAP': {
+  //   ticker: 'SWAP',
+  //   name: 'SWAP',
+  //   type: COIN_TYPE.ETH_TOKEN,
+  //   blockchain: BLOCKCHAIN.ETH,
+  //   standard: TOKEN_STANDARD.ERC20,
+  //   model: COIN_MODEL.AB,
+  //   precision: 18,
+  // },
   'SNM': {
     ticker: 'SONM',
     name: 'SWAP',
@@ -173,9 +173,9 @@ export const MATIC_TOKENS = {
 export const ETH_TOKENS = {
   usdt: '{ETH}USDT',
   eurs: '{ETH}EURS',
-  swap: '{ETH}SWAP',
+  //swap: '{ETH}SWAP',
   pay: '{ETH}PAY',
-
+  psafemoon:'{ETH}pSAFEMOON',
   // needs for the front
   proxima: '{ETH}PROXIMA',
   snm: '{ETH}SNM',
@@ -185,7 +185,7 @@ export const ETH_TOKENS = {
   hdp: '{ETH}HDP',
   scro: '{ETH}SCRO',
   xeur: '{ETH}XEUR',
-  psafemoon:'{ETH}pSAFEMOON',
+  
 
 }
 

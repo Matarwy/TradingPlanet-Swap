@@ -57,6 +57,6 @@ window.buildOptions = {
     buy: 'bnb',
     sell: 'btc',
   },
-  invoiceEnabled: false, // Allow create invoices
+  invoiceEnabled: true, // Allow create invoices
 }
 
