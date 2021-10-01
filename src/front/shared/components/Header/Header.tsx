@@ -502,6 +502,8 @@ class Header extends Component<any, any> {
           [styles['header-promo']]: isWalletPage,
         })}
       >
+        {/* @ts-ignore */}
+        <WidthContainer styleName="header-container">
         {createdWalletLoader && (
           <div styleName="loaderCreateWallet">
             <Loader
@@ -529,6 +531,7 @@ class Header extends Component<any, any> {
             <WidgetWalletTour isTourOpen={isWidgetTourOpen} closeTour={this.closeWidgetTour} />
           </div>
         )}
+        </WidthContainer>
       </header>
     )
   }
