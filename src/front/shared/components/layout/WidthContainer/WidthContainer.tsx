@@ -6,7 +6,7 @@ import cssModules from 'react-css-modules'
 import styles from './WidthContainer.scss'
 
 
-const WidthContainer = ({ children, className, main, fullHeight, relative, contentCentering, ...rest }) => {
+const WidthContainer = ({ children, className, main, fullHeight, relative, contentCentering, ...rest }: any) => {
   const containerStyleName = cx('widthContainer', {
     'main': main,
     'fullHeight': fullHeight,
