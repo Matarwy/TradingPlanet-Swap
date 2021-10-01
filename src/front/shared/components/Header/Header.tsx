@@ -503,7 +503,10 @@ class Header extends Component<any, any> {
         })}
         styleName="header"
       >
-        <WidthContainer styleName="headerContent">
+        <WidthContainer
+        {/*
+            //@ts-ignore */}
+        styleName="headerContent">
         {createdWalletLoader && (
           <div styleName="loaderCreateWallet">
             <Loader
