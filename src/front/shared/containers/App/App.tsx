@@ -471,9 +471,9 @@ class App extends React.Component<RouteComponentProps<any>, any> {
         }
         <ErrorBoundary>
           <Transactions>
+              <Header />
             {/* @ts-ignore */}
             <WidthContainer id="swapComponentWrapper" styleName="headerAndMain">
-              <Header />
               <main>{children}</main>
             </WidthContainer>
             <Core />
