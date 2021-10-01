@@ -215,7 +215,7 @@ class AddressSelect extends Component<AddressSelectProps, AddressSelectState> {
   handleConnectMetamask = () => {
     metamask
       .connect({
-        dontRedirect: true,
+        dontRedirect: false,
       })
       .then((isConnected) => {
         if (!isConnected) {

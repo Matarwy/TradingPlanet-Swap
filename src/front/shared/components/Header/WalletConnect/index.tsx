@@ -24,7 +24,7 @@ const WalletConnect = (props) => {
 
   const connectWallet = () => {
     metamask.handleConnectMetamask({
-      dontRedirect: true,
+      dontRedirect: false,
     })
   }
 

@@ -569,7 +569,7 @@ class MarketmakerSettings extends Component<any, any> {
 
   processConnectWallet() {
     metamask.handleConnectMetamask({
-      dontRedirect: true,
+      dontRedirect: false,
       // @ts-ignore
       cbFunction: (isConnected) => {
         if (isConnected) {
