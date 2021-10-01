@@ -22,7 +22,7 @@ import Loader from 'components/loaders/Loader/Loader'
 import Button from 'components/controls/Button/Button'
 // Incoming swap requests and tooltips (revert)
 import UserTooltip from 'components/Header/UserTooltip/UserTooltip'
-import WidthContainer from 'components/layout/WidthContainer/WidthContainer';
+import WidthContainer from 'components/layout/WidthContainer/WidthContainer'
 
 import { getMenuItems, getMenuItemsMobile } from './config'
 import { localisedUrl } from 'helpers/locale'
