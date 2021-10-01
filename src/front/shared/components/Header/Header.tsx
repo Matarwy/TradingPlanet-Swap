@@ -472,7 +472,6 @@ class Header extends Component<any, any> {
     if (isMobile) {
       return (
         <header id="header-mobile" styleName="header-mobile" className="data-tut-widget-tourFinish">
-          <WidthContainer>
           {flexebleHeaderRender}
           {createdWalletLoader && (
             <div styleName="loaderCreateWallet">
@@ -491,7 +490,6 @@ class Header extends Component<any, any> {
               <WidgetWalletTour isTourOpen={isWidgetTourOpen} closeTour={this.closeWidgetTour} />
             </div>
           )}
-          </WidthContainer>
         </header>
       )
     }
@@ -503,8 +501,9 @@ class Header extends Component<any, any> {
           [styles['widgetHeader']]: isWidgetBuild,
           [styles['header-promo']]: isWalletPage,
         })}
+        styleName="header"
       >
-        <WidthContainer styleName="headerContainer">
+        <WidthContainer styleName="headerContent">
         {createdWalletLoader && (
           <div styleName="loaderCreateWallet">
             <Loader
